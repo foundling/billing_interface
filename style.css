@@ -2,17 +2,79 @@ body
 {
 	font-family: "HelveticaNeue-Light", sans-serif;
 	background: lightblue;
+	margin: 0;
+
 }
 
-.block-radiotracer, .block-isotope, .block-comments
+.block-radiotracer, 
+.block-isotope, 
+.block-comments, 
+.block-other
 {
 	margin: 20px 0px 20px 0px;
 }
 
-.block-radiotracer input.radiotracer,
-.block-isotope input.isotope
+.block-welcome
+{
+	height: 80px;
+	background: white;
+	padding-right: 2.5%;
+	padding-left: 2.5%;
+	margin: 0 auto;
+}
+
+.block-welcome h1.title
+{
+	float: left;
+	display: inline;
+}
+
+.block-welcome h2.user
+{
+	float: right;
+	display: inline;
+
+
+}
+
+
+
+.block-welcome:after
+{
+	clear:both;
+
+}
+
+.block-isotope input,
+.block-radiotracer input,
+.block-other input,
+.block-other textarea,
+.block-other label
 {
 	margin-left: 40px;
+}
+
+.container
+{
+	text-align: left;
+	width: 95%;
+	margin: 0 auto;
+	padding-top: 30px;
+}
+
+div input,
+{
+	margin-left: 40px;
+}
+
+
+
+h2.welcome
+{
+  background: white;
+  width: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 input[type=*]
@@ -22,11 +84,18 @@ input[type=*]
 
 input[type=submit]
 {
-	border: none;
-	background: white;
+	border: 3px solid white;
+	border-radius: 10px;
+	background: lightgray;
 	width: 200px;
 	height: 80px;
 	margin: 10px 0px 25px 0px;
+	font-size: 140%;
+}
+
+input[type=submit]:hover
+{
+	background: lightgreen;
 }
 
 input[type=text]
@@ -43,10 +112,33 @@ label.disabled
 	color: rgb(120,120,120);
 }
 
-label.important
+.important-heading
 {
+	display: inline-block;
+	width: 200px;
+	background: lightgreen;
+	padding: 5px 15px;
+	font-weight: bold;
+	font-size: 2em;
+}
+
+.important-indent
+{
+	margin-left: 40px;
 	font-weight: bold;
 }
+
+label
+{
+	display:inline-block;
+}
+
+label.section-heading
+{
+	background: lightgreen;
+
+}
+
 
 .validate
 {
@@ -56,4 +148,9 @@ label.important
 	display: inline-block;
 	border-radius: 50%;
 	background: rgb(240,0,0);
+}
+
+.hidden
+{
+	display: none;
 }

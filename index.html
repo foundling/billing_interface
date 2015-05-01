@@ -3,39 +3,44 @@
 <head>
   <meta charset="utf-8">
   <link rel="stylesheet" href="style.css">
-
 </head>
 <body>
-<h2>Welcome, Judit!</h2>
 
-<form>
-  <h1>Radiopharmacy Production</h1>
+<div class="block-welcome">
+	<h1 class="title">Radiopharmacy Production</h1><h2 class="user">Welcome, Judit!</h2>
+</div>
+
+<div class="container">
+
+<form method="post"> 
+
+  <!--HEADER -->
   <label>Production Date</label> <input type="text" name='production-date'>
-  <div class="required validate"></div>
-  <br>
+  <div class="required validate"></div><br>
   
   <label>Project Code   </label> <input type="text" name='project-code'   > 
-  <div class="required validate"></div>
-  <br>
+  <div class="required validate"></div><br><br>
 
-  <h1>Production</h1>
-
-  <div class="block-isotope">
-
-  	<input type="checkbox" value="isotope-only"> <label class="important">Isotope Only</label>
-  	<br><br>
+  <!--ISOTOPE BLOCK -->
+  	<input type="checkbox" value="isotope-only">
+  	<label class="section-heading important-heading">Isotope Only</label><br><br>
+  
+  <div class="block-isotope hidden">
   	<input type="checkbox" class="isotope" value="F18"> <label>F18 </label><br>
   	<input type="checkbox" class="isotope" value="C11"> <label>C11 </label><br>
   	<input type="checkbox" class="isotope" value="N13"> <label>N13 </label><br>
   	<input type="checkbox" class="isotope" value="O15"> <label>O15 </label><br>
   	<input type="checkbox" class="isotope" value="Ga68"> <label>Ga68</label><br>
   	<input type="checkbox" class="isotope" value="Cu64"> <label>Cu64</label><br>
-	<label class="important">Activity (mCi)</label><input type="text"  value=""><br>
+	<label class="important-indent">Activity (mCi)</label><input type="text"  value=""><br>
   </div>
   
-  <div class="block-radiotracer">
+  <!--RADIOTRACER BLOCK -->
 
-    <input type="checkbox" value="radiotracer"><label class="important"> Radiotracer</label><br><br>
+  <input type="checkbox" value="radiotracer">
+  <label class="section-heading important-heading"> Radiotracer</label><br><br>
+
+  <div class="block-radiotracer hidden">
   	<input type="checkbox" class="radiotracer" value="F18-5FU"><label> F18-5FU</label><br>
   	<input type="checkbox" class="radiotracer" value="Ga68-Dota-toc"><label> Ga68-Dota-toc</label><br>
   	<input type="checkbox" class="radiotracer" value="Cu64-FBP8"><label> Cu64-FBP8</label><br>
@@ -49,47 +54,52 @@
 	<input type="checkbox" class="radiotracer" value="C11-Raclopride"><label> C11-Raclopride</label><br>
 	<input type="checkbox" class="radiotracer" value="F18-T807"><label> F18-T807</label><br>
 	<input type="checkbox" class="radiotracer" value="C11-Temozolomide"><label> C11-Temozolomide</label><br>
-  </div>
 
-	<label class="important">Starting Activity (mCi)</label><input type="text"  value=""><br><br>
-	<label class="important">Synthesis OK </label><br><br>
+
+	<label class="important-indent">Starting Activity (mCi)</label><input type="text"  value=""><br><br>
+	<label class="important-indent">Synthesis OK </label><br><br>
 	<input type="checkbox" value="yes"> yes <br>
 	<input type="checkbox" value="no"> no <br><br>
 
-	<label class="important">Quality Control Pass </label> <br><br>
+	<label class="important-indent">Quality Control Pass </label> <br><br>
 	<input type="checkbox" value="yes"> yes <br>
 	<input type="checkbox" value="no"> no <br>
 	<input type="checkbox" value="na"> n/a<br><br>
 
-	<label class="important">Released for Injection </label> <br><br>
+	<label class="important-indent">Released for Injection </label> <br><br>
 	<input type="checkbox" value="yes"> yes
 	<input type="text" name="lot_number" value="e.g. 150428PBR-01" disabled><br>
 	<input type="checkbox" value="no"> no <br>
 	<input type="checkbox" value="na"> n/a <br><br>
 
-	<label class="important">Specific Activity at TOI (mCi/nmol)</label><input type="text"  value=""><br>
+	<label class="important-indent">Specific Activity at TOI (mCi/nmol)</label><input type="text"  value=""><br>
 	<input type="checkbox" value="na"> n/a <br>
 	
-	<label class="important">Batch released for Estimated TOI</label><input type="text"  value=""><br>
+	<label class="important-indent">Batch released for Estimated TOI</label><input type="text"  value=""><br>
 	<input type="checkbox" value="na"><label> n/a</label><br>
+  </div>
 
-	<input type="checkbox"><label>Other</label><br>
-	<select name="new_iso_or_radiotracer">
-		<option value="new_iso">Add Isotope</option> 
-		<option value="radiotracer">Add radiotracer</option>	
-	</select><br>
-	<label class="disabled"> New Isotope</label>     <input type="text" name="new_isotope" disabled><br>
-	<label class="disabled"> New radiotracer</label> <input type="text" name="new_radiotracer" disabled><br>
+  <!--OTHER SECTION -->
+  <input type="checkbox"><label class="section important-heading"> Other 	</label><br>
+  <div class="block-other hidden">
+		<label>add new </label><select name="new_iso_or_radiotracer">
+			<option value="new_iso">Isotope</option> 
+			<option value="radiotracer">radiotracer</option>	
+		</select><br>
+		<label class="disabled"> New Isotope</label> <input type="text" name="new_isotope" disabled><br>
+		<label class="disabled"> New radiotracer</label> <input type="text" name="new_radiotracer" disabled><br>
 
-	<div class="block-comments">
-	  <label class="important">Billing Comments</label><br><br>
-	  <textarea rows="5" cols="40"></textarea><br>
+		<div class="block-comments">
+		  <label class="important">Billing Comments</label><br><br>
+		  <textarea rows="5" cols="40"></textarea><br>
 
-	  <label class="important">Comments for IT/Development (martinos help desk)</label><br><br>
-	  <textarea rows="5" cols="40"></textarea><br>
-	</div>
-	<input type="submit">
+		  <label class="important">Comments for IT/Development (martinos help desk)</label><br><br>
+		  <textarea rows="5" cols="40"></textarea><br>
+		</div>
+		<input type="submit">
+  </div>
 </form>
 
+</div>
 </body>
 </html>
