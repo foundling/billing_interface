@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+<form>
+  <h1>Radiopharmacy Production</h1>
+  <label>Production Date</label> <input type="text" name='production-date'> <br>
+  <label>Project Code   </label> <input type="text" name='project-code'   > <br>
+  <h1>Production</h1>
+  <input type="radio" value="isotope-only"> <label>Isotope Only</label><br><br>
+  	<input type="radio" value="F18"> <label>F18 </label><br>
+  	<input type="radio" value="C11"> <label>C11 </label><br>
+  	<input type="radio" value="N13"> <label>N13 </label><br>
+  	<input type="radio" value="O15"> <label>O15 </label><br>
+  	<input type="radio" value="Ga68"> <label>Ga68</label><br>
+  	<input type="radio" value="Cu64"> <label>Cu64</label><br>
+	<label>Activity (mCi)</label><input type="text"  value=""><br>
+	<input type="submit"><br><br>
+ 
+  <input type="radio" value="isotope-only"><label> Radiotracer</label><br><br>
+  	<input type="radio" value="F18-5FU"><label> F18-5FU</label><br>
+  	<input type="radio" value="Ga68-Dota-toc"><label> Ga68-Dota-toc</label><br>
+  	<input type="radio" value="Cu64-FBP8"><label> Cu64-FBP8</label><br>
+  	<input type="radio" value="C11-Diprenorphine"><label> C11-Diprenorphine</label><br>
+  	<input type="radio" value="C11-DASB"><label> C11-DASB</label><br>
+  	<input type="radio" value="F18-Fallypride"><label> F18-Fallypride</label><br>
+	
+	<label>Starting Activity (mCi)</label><input type="text"  value=""><br>
+	<label>Synthesis OK </label>
+	<input type="radio" value="yes"> YES
+	<input type="radio" value="no"> NO<br>
+
+	<label>Quality Control Pass </label>
+	<input type="radio" value="yes"> YES
+	<input type="radio" value="no"> NO
+	<input type="radio" value="na"> N/A<br>
+
+	<label>Released for Injection </label>
+	<input type="radio" value="yes"> YES
+	<input type="radio" value="no"><br>
+
+	<label>Specific Activity at TOI (mCi/nmol)</label><input type="text"  value=""><br>
+	<label>Batch released for Estimated TOI</label><input type="text"  value=""><br>
+	<input type="submit"><br><br>
+
+	<input name="other">
+	
+	<input type="radio" value="F18-Fallypride"><label> F18-Fallypride</label><br>
+
+</form>
+
+</body>
+</html>
