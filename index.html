@@ -7,7 +7,7 @@
 <body>
 
 <div class="block-welcome">
-	<h1 class="title">Radiopharmacy Production</h1><h2 class="user">Welcome, Judit!</h2>
+	<h1 class="title">Radiopharmacy Production</h1><h2 class="user">Welcome <span class="user-text">Judit </span>!</h2>
 </div>
 
 <div class="container">
@@ -15,14 +15,14 @@
 <form method="post"> 
 
   <!--HEADER -->
-  <label>Production Date</label> <input type="text" name='production-date'>
+  <label>Production Date</label><input type="text" name='production-date'>
   <div class="required validate"></div><br>
   
   <label>Project Code   </label> <input type="text" name='project-code'   > 
   <div class="required validate"></div><br><br>
 
   <!--ISOTOPE BLOCK -->
-  	<input type="checkbox" value="isotope-only">
+  	<input type="checkbox" name="isotope-only">
   	<label class="section-heading important-heading">Isotope Only</label><br><br>
   
   <div class="block-isotope hidden">
@@ -37,7 +37,7 @@
   
   <!--RADIOTRACER BLOCK -->
 
-  <input type="checkbox" value="radiotracer">
+  <input type="checkbox" name="radiotracer">
   <label class="section-heading important-heading"> Radiotracer</label><br><br>
 
   <div class="block-radiotracer hidden">
@@ -80,7 +80,7 @@
   </div>
 
   <!--OTHER SECTION -->
-  <input type="checkbox"><label class="section important-heading"> Other 	</label><br>
+  <input name="other" type="checkbox"><label class="section important-heading"> Other 	</label><br>
   <div class="block-other hidden">
 		<label>add new </label><select name="new_iso_or_radiotracer">
 			<option value="new_iso">Isotope</option> 
@@ -89,17 +89,21 @@
 		<label class="disabled"> New Isotope</label> <input type="text" name="new_isotope" disabled><br>
 		<label class="disabled"> New radiotracer</label> <input type="text" name="new_radiotracer" disabled><br>
 
-		<div class="block-comments">
+		<div class="block-comments">			
 		  <label class="important">Billing Comments</label><br><br>
 		  <textarea rows="5" cols="40"></textarea><br>
 
 		  <label class="important">Comments for IT/Development (martinos help desk)</label><br><br>
 		  <textarea rows="5" cols="40"></textarea><br>
 		</div>
-		<input type="submit">
   </div>
-</form>
+<input type="submit">
 
+</form>
 </div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.js"></script>
+<script src="hide.js"></script>
+
 </body>
 </html>

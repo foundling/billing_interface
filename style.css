@@ -112,6 +112,7 @@ label.disabled
 	color: rgb(120,120,120);
 }
 
+
 .important-heading
 {
 	display: inline-block;
@@ -153,4 +154,9 @@ label.section-heading
 .hidden
 {
 	display: none;
+}
+
+.user-text
+{
+	color: darkgray;
 }
