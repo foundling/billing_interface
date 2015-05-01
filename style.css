@@ -2,3 +2,13 @@ input[type=text]
 {
 	margin: 5px;
 }
+
+.validate
+{
+	height: 15px;
+	width: 15px;
+	vertical-align: middle;
+	display: inline-block;
+	border-radius: 50%;
+	background: red;
+}

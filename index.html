@@ -6,11 +6,18 @@
 
 </head>
 <body>
+<h2>Welcome, Judit!</h2>
 
 <form>
   <h1>Radiopharmacy Production</h1>
-  <label>Production Date</label> <input type="text" name='production-date'> <br>
-  <label>Project Code   </label> <input type="text" name='project-code'   > <br>
+  <label>Production Date</label> <input type="text" name='production-date'>
+  <div class="required validate"></div>
+  <br>
+  
+  <label>Project Code   </label> <input type="text" name='project-code'   > 
+  <div class="required validate"></div>
+  <br>
+
   <h1>Production</h1>
   <input type="radio" value="isotope-only"> <label>Isotope Only</label><br><br>
   	<input type="radio" value="F18"> <label>F18 </label><br>
@@ -29,29 +36,54 @@
   	<input type="radio" value="C11-Diprenorphine"><label> C11-Diprenorphine</label><br>
   	<input type="radio" value="C11-DASB"><label> C11-DASB</label><br>
   	<input type="radio" value="F18-Fallypride"><label> F18-Fallypride</label><br>
-	
-	<label>Starting Activity (mCi)</label><input type="text"  value=""><br>
-	<label>Synthesis OK </label>
-	<input type="radio" value="yes"> YES
-	<input type="radio" value="no"> NO<br>
+	<input type="radio" value="F18-Fallypride"><label> F18-FMISO</label><br>
+	<input type="radio" value="F18-Fallypride"><label> C11-Martinostat</label><br>
+	<input type="radio" value="F18-Fallypride"><label> C11-NNc112</label><br>
+	<input type="radio" value="F18-Fallypride"><label> C11-PRB28</label><br>
+	<input type="radio" value="F18-Fallypride"><label> C11-Raclopride</label><br>
+	<input type="radio" value="F18-Fallypride"><label> F18-T807</label><br>
+	<input type="radio" value="F18-Fallypride"><label> C11-Temozolomide</label><br>
 
-	<label>Quality Control Pass </label>
-	<input type="radio" value="yes"> YES
-	<input type="radio" value="no"> NO
+	<label>Starting Activity (mCi)</label><input type="text"  value=""><br>
+	<label>Synthesis OK </label><br>
+	<input type="radio" value="yes"> YES <br>
+	<input type="radio" value="no"> NO <br>
+
+	<label>Quality Control Pass </label> <br>
+	<input type="radio" value="yes"> YES <br>
+	<input type="radio" value="no"> NO <br>
 	<input type="radio" value="na"> N/A<br>
 
-	<label>Released for Injection </label>
+	<label>Released for Injection </label> <br>
 	<input type="radio" value="yes"> YES
-	<input type="radio" value="no"><br>
+	<input type="text" name="lot_number" value="e.g. 150428PBR-01" disabled><br>
+	<input type="radio" value="no"> NO <br>
+	<input type="radio" value="na"> N/A <br>
 
 	<label>Specific Activity at TOI (mCi/nmol)</label><input type="text"  value=""><br>
+	<input type="radio" value="na"> N/A <br>
+	
 	<label>Batch released for Estimated TOI</label><input type="text"  value=""><br>
+	<input type="radio" value="na"><label> N/A</label><br>
 	<input type="submit"><br><br>
 
-	<input name="other">
-	
-	<input type="radio" value="F18-Fallypride"><label> F18-Fallypride</label><br>
+	<input type="radio"><label>Other</label><br>
+	<select name="new_iso_or_radiotracer">
+		<option value="new_iso">Add Isotope</option> 
+		<option value="radiotracer">Add Radiotracer</option>	
+	</select><br>
+	<label> New Isotope</label>     <input type="text" name="new_isotope" disabled><br>
+	<label> New Radiotracer</label> <input type="text" name="new_radiotracer" disabled><br>
 
+	<label>Comments for Billing</label><br>
+	<textarea rows="5" cols="40">
+		
+	</textarea><br>
+
+	<label>Comments for IT/Development (martinos help desk)</label><br>
+	<textarea rows="5" cols="40">
+		
+	</textarea>
 </form>
 
 </body>
