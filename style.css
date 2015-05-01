@@ -1,6 +1,51 @@
+body
+{
+	font-family: "HelveticaNeue-Light", sans-serif;
+	background: lightblue;
+}
+
+.block-radiotracer, .block-isotope, .block-comments
+{
+	margin: 20px 0px 20px 0px;
+}
+
+.block-radiotracer input.radiotracer,
+.block-isotope input.isotope
+{
+	margin-left: 40px;
+}
+
+input[type=*]
+{
+	font-family: "HelveticaNeue-Light", sans-serif;
+}
+
+input[type=submit]
+{
+	border: none;
+	background: white;
+	width: 200px;
+	height: 80px;
+	margin: 10px 0px 25px 0px;
+}
+
 input[type=text]
 {
 	margin: 5px;
+	padding: 5px;
+	height: 20px;
+
+	font-size: 100%;
+}
+
+label.disabled
+{
+	color: rgb(120,120,120);
+}
+
+label.important
+{
+	font-weight: bold;
 }
 
 .validate
@@ -10,5 +55,5 @@ input[type=text]
 	vertical-align: middle;
 	display: inline-block;
 	border-radius: 50%;
-	background: red;
+	background: rgb(240,0,0);
 }

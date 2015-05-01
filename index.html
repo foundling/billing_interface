@@ -19,71 +19,76 @@
   <br>
 
   <h1>Production</h1>
-  <input type="radio" value="isotope-only"> <label>Isotope Only</label><br><br>
-  	<input type="radio" value="F18"> <label>F18 </label><br>
-  	<input type="radio" value="C11"> <label>C11 </label><br>
-  	<input type="radio" value="N13"> <label>N13 </label><br>
-  	<input type="radio" value="O15"> <label>O15 </label><br>
-  	<input type="radio" value="Ga68"> <label>Ga68</label><br>
-  	<input type="radio" value="Cu64"> <label>Cu64</label><br>
-	<label>Activity (mCi)</label><input type="text"  value=""><br>
-	<input type="submit"><br><br>
- 
-  <input type="radio" value="isotope-only"><label> Radiotracer</label><br><br>
-  	<input type="radio" value="F18-5FU"><label> F18-5FU</label><br>
-  	<input type="radio" value="Ga68-Dota-toc"><label> Ga68-Dota-toc</label><br>
-  	<input type="radio" value="Cu64-FBP8"><label> Cu64-FBP8</label><br>
-  	<input type="radio" value="C11-Diprenorphine"><label> C11-Diprenorphine</label><br>
-  	<input type="radio" value="C11-DASB"><label> C11-DASB</label><br>
-  	<input type="radio" value="F18-Fallypride"><label> F18-Fallypride</label><br>
-	<input type="radio" value="F18-Fallypride"><label> F18-FMISO</label><br>
-	<input type="radio" value="F18-Fallypride"><label> C11-Martinostat</label><br>
-	<input type="radio" value="F18-Fallypride"><label> C11-NNc112</label><br>
-	<input type="radio" value="F18-Fallypride"><label> C11-PRB28</label><br>
-	<input type="radio" value="F18-Fallypride"><label> C11-Raclopride</label><br>
-	<input type="radio" value="F18-Fallypride"><label> F18-T807</label><br>
-	<input type="radio" value="F18-Fallypride"><label> C11-Temozolomide</label><br>
 
-	<label>Starting Activity (mCi)</label><input type="text"  value=""><br>
-	<label>Synthesis OK </label><br>
-	<input type="radio" value="yes"> YES <br>
-	<input type="radio" value="no"> NO <br>
+  <div class="block-isotope">
 
-	<label>Quality Control Pass </label> <br>
-	<input type="radio" value="yes"> YES <br>
-	<input type="radio" value="no"> NO <br>
-	<input type="radio" value="na"> N/A<br>
+  	<input type="checkbox" value="isotope-only"> <label class="important">Isotope Only</label>
+  	<br><br>
+  	<input type="checkbox" class="isotope" value="F18"> <label>F18 </label><br>
+  	<input type="checkbox" class="isotope" value="C11"> <label>C11 </label><br>
+  	<input type="checkbox" class="isotope" value="N13"> <label>N13 </label><br>
+  	<input type="checkbox" class="isotope" value="O15"> <label>O15 </label><br>
+  	<input type="checkbox" class="isotope" value="Ga68"> <label>Ga68</label><br>
+  	<input type="checkbox" class="isotope" value="Cu64"> <label>Cu64</label><br>
+	<label class="important">Activity (mCi)</label><input type="text"  value=""><br>
+  </div>
+  
+  <div class="block-radiotracer">
 
-	<label>Released for Injection </label> <br>
-	<input type="radio" value="yes"> YES
+    <input type="checkbox" value="radiotracer"><label class="important"> Radiotracer</label><br><br>
+  	<input type="checkbox" class="radiotracer" value="F18-5FU"><label> F18-5FU</label><br>
+  	<input type="checkbox" class="radiotracer" value="Ga68-Dota-toc"><label> Ga68-Dota-toc</label><br>
+  	<input type="checkbox" class="radiotracer" value="Cu64-FBP8"><label> Cu64-FBP8</label><br>
+  	<input type="checkbox" class="radiotracer" value="C11-Diprenorphine"><label> C11-Diprenorphine</label><br>
+  	<input type="checkbox" class="radiotracer" value="C11-DASB"><label> C11-DASB</label><br>
+  	<input type="checkbox" class="radiotracer" value="F18-Fallypride"><label> F18-Fallypride</label><br>
+	<input type="checkbox" class="radiotracer" value="F18-FMISO"><label> F18-FMISO</label><br>
+	<input type="checkbox" class="radiotracer" value="C11-Martinostat"><label> C11-Martinostat</label><br>
+	<input type="checkbox" class="radiotracer" value="C11-NNc112"><label> C11-NNc112</label><br>
+	<input type="checkbox" class="radiotracer" value="C11-PRB28"><label> C11-PRB28</label><br>
+	<input type="checkbox" class="radiotracer" value="C11-Raclopride"><label> C11-Raclopride</label><br>
+	<input type="checkbox" class="radiotracer" value="F18-T807"><label> F18-T807</label><br>
+	<input type="checkbox" class="radiotracer" value="C11-Temozolomide"><label> C11-Temozolomide</label><br>
+  </div>
+
+	<label class="important">Starting Activity (mCi)</label><input type="text"  value=""><br><br>
+	<label class="important">Synthesis OK </label><br><br>
+	<input type="checkbox" value="yes"> yes <br>
+	<input type="checkbox" value="no"> no <br><br>
+
+	<label class="important">Quality Control Pass </label> <br><br>
+	<input type="checkbox" value="yes"> yes <br>
+	<input type="checkbox" value="no"> no <br>
+	<input type="checkbox" value="na"> n/a<br><br>
+
+	<label class="important">Released for Injection </label> <br><br>
+	<input type="checkbox" value="yes"> yes
 	<input type="text" name="lot_number" value="e.g. 150428PBR-01" disabled><br>
-	<input type="radio" value="no"> NO <br>
-	<input type="radio" value="na"> N/A <br>
+	<input type="checkbox" value="no"> no <br>
+	<input type="checkbox" value="na"> n/a <br><br>
 
-	<label>Specific Activity at TOI (mCi/nmol)</label><input type="text"  value=""><br>
-	<input type="radio" value="na"> N/A <br>
+	<label class="important">Specific Activity at TOI (mCi/nmol)</label><input type="text"  value=""><br>
+	<input type="checkbox" value="na"> n/a <br>
 	
-	<label>Batch released for Estimated TOI</label><input type="text"  value=""><br>
-	<input type="radio" value="na"><label> N/A</label><br>
-	<input type="submit"><br><br>
+	<label class="important">Batch released for Estimated TOI</label><input type="text"  value=""><br>
+	<input type="checkbox" value="na"><label> n/a</label><br>
 
-	<input type="radio"><label>Other</label><br>
+	<input type="checkbox"><label>Other</label><br>
 	<select name="new_iso_or_radiotracer">
 		<option value="new_iso">Add Isotope</option> 
-		<option value="radiotracer">Add Radiotracer</option>	
+		<option value="radiotracer">Add radiotracer</option>	
 	</select><br>
-	<label> New Isotope</label>     <input type="text" name="new_isotope" disabled><br>
-	<label> New Radiotracer</label> <input type="text" name="new_radiotracer" disabled><br>
+	<label class="disabled"> New Isotope</label>     <input type="text" name="new_isotope" disabled><br>
+	<label class="disabled"> New radiotracer</label> <input type="text" name="new_radiotracer" disabled><br>
 
-	<label>Comments for Billing</label><br>
-	<textarea rows="5" cols="40">
-		
-	</textarea><br>
+	<div class="block-comments">
+	  <label class="important">Billing Comments</label><br><br>
+	  <textarea rows="5" cols="40"></textarea><br>
 
-	<label>Comments for IT/Development (martinos help desk)</label><br>
-	<textarea rows="5" cols="40">
-		
-	</textarea>
+	  <label class="important">Comments for IT/Development (martinos help desk)</label><br><br>
+	  <textarea rows="5" cols="40"></textarea><br>
+	</div>
+	<input type="submit">
 </form>
 
 </body>
