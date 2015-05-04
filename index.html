@@ -29,7 +29,7 @@
   	<div><input type="checkbox" class="isotope" value="O15"> <label>O15 </label></div>
   	<div><input type="checkbox" class="isotope" value="Ga68"> <label>Ga68</label></div>
   	<div><input type="checkbox" class="isotope" value="Cu64"> <label>Cu64</label></div>
-	<div><label class="important-indent">Activity (mCi)</label><input type="text"  value=""></div>
+	<div><label class="sub-header">Activity (mCi)</label><input type="text"  value=""></div>
   </div>
   <!--RADIOTRACER BLOCK -->
 
@@ -52,26 +52,25 @@
 	<div><input type="checkbox" class="radiotracer" value="C11-Temozolomide"><label> C11-Temozolomide</label></div>
 
 
-	<div><label >Starting Activity (mCi)</label><input type="text"  value=""></div>
-	<label >Synthesis OK </label>
+	<div><label class="sub-header">Starting Activity (mCi)</label><input type="text"  value=""></div>
+	<div><label class="sub-header">Synthesis OK </label></div>
 	<div><input type="checkbox" value="yes"> yes </div>
 	<div><input type="checkbox" value="no"> no </div>
 
-	<label >Quality Control Pass </label>
+	<div><label class="sub-header" >Quality Control Pass </label></div>
 	<div><input type="checkbox" value="yes"> yes</div>
 	<div><input type="checkbox" value="no"> no</div>
 	<div><input type="checkbox" value="na"> n/a</div>
 
-	<div><label >Released for Injection </label></div>
-	<div><input type="checkbox" value="yes"> yes</div>
-	<div><input type="text" name="lot_number" value="e.g. 150428PBR-01" disabled></div>
+	<div><label class="sub-header">Released for Injection </label></div>
+	<div><input type="checkbox" value="yes"> yes <input type="text" name="lot_number" value="e.g. 150428PBR-01" disabled></div>
 	<div><input type="checkbox" value="no"> no </div>
 	<div><input type="checkbox" value="na"> n/a</div> 
 
-	<div><label >Specific Activity at TOI (mCi/nmol)</label><input type="text"  value=""></div>
+	<div><label class="sub-header">Specific Activity at TOI (mCi/nmol)</label><input type="text"  value=""></div>
 	<div><input type="checkbox" value="na"> n/a </div>
 	
-	<div><label >Batch released for Estimated TOI</label><input type="text"  value=""></div>
+	<div><label class="sub-header">Batch released for Estimated TOI</label><input type="text"  value=""></div>
 	<div><input type="checkbox" value="na"><label> n/a</label></div>
   </div>
 
@@ -79,8 +78,8 @@
   <label class="other-header"> Other </label>
   <div class="other-block hidden">
 		<div>
-			<label>add new_iso</label><select name="new_iso_or_radiotracer">
-				<option value="new_iso">Isotope</option> 
+			<label>add new: </label><select name="new_iso_or_radiotracer">
+				<option value="new_iso">isotope</option> 
 				<option value="radiotracer">radiotracer</option>	
 			</select>
 		</div>
@@ -89,10 +88,10 @@
 		<div><label > New radiotracer</label> <input type="text" name="new_radiotracer" disabled></div>
 
 		<div>			
-		  <label >Billing Comments</label>
+		  <label class="sub-header">Billing Comments</label>
 		  <textarea rows="5" cols="40"></textarea>
 
-		  <label >Comments for IT/Development (martinos help desk)</label>
+		  <label class="sub-header">Comments for IT/Development (martinos help desk)</label>
 		  <textarea rows="5" cols="40"></textarea>
 		</div>
   </div>
