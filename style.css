@@ -1,29 +1,107 @@
+html, body, body *
+{
+	margin: 0;
+	padding: 0;
+	font-size: 100%;
+}
+
 body
 {
 	font-family: "HelveticaNeue-Light", sans-serif;
 	background: lightblue;
-	margin: 0;
-
+}
+.container
+{
+	padding-left: 10px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+header
+{
+	margin: 0px;
+	padding-left: 10px;
+	padding-right: 10px;
+	background: whitesmoke;
+	height: 50px;
+	line-height: 50px;
 }
 
+header h1,
+header h2
+{
+	display: inline;
+}
 
 .hidden
 {
 	display: none;
 }
 
-input, label
+input, 
+label
 {
 	display: inline-block;
+
 }
 
-.isotope-header
+form div,
+label[class="isotope-header"],
+label[class="radiotracer-header"],
+label[class="other-header"]
 {
-	font-weight: bold;
-
+	margin-top: 5px;
+	margin-bottom: 5px;
 }
 
-.isotope-block
+label[class="prod_date"],
+label[class="proj_code"]
+{
+	margin-right: 5px;
+	width: 120px;
+}
+
+input[type=submit]
+{
+	margin-top: 20px;
+	background: whitesmoke;
+	border: 1px solid black;
+	border-radius: 5px;
+	width: 15%;
+	height: 40px;
+	font-weight: bold;
+}
+
+input[type=submit]:hover
+{
+  background: lightgray;
+}
+
+.isotope-header,
+.radiotracer-header,
+.other-header
+{
+	border: 1px solid black;
+	border-radius: 5px;
+	height: 40px;
+	width: 15%;
+	line-height: 40px;
+	background: whitesmoke;
+	display: block;
+	font-weight: bold;
+	text-align: center;
+}
+
+.isotope-header:hover,
+.radiotracer-header:hover,
+.other-header:hover
+{
+	background: lightgray;
+}
+
+
+.isotope-block,
+.radiotracer-block,
+.other-block
 {
 
 }
@@ -32,3 +110,4 @@ textarea
 {
 	display: block;
 }
+
