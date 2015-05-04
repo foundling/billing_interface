@@ -10,11 +10,20 @@ body
 	font-family: "HelveticaNeue-Light", sans-serif;
 	background: lightblue;
 }
+
 .container
 {
 	padding-left: 10px;
 	padding-top: 10px;
 	padding-bottom: 10px;
+}
+
+h1 
+{
+	display: block;
+	font-size: 2em;
+	margin-top: 20px;
+	margin-bottom: 20px;
 }
 header
 {
@@ -22,14 +31,15 @@ header
 	padding-left: 10px;
 	padding-right: 10px;
 	background: whitesmoke;
-	height: 50px;
-	line-height: 50px;
+	height: 60px;
+	line-height: 60px;
 }
 
 header h1,
 header h2
 {
 	display: inline;
+	font-size: 1.5em;
 }
 
 .hidden
@@ -60,6 +70,11 @@ label[class="proj_code"]
 	width: 120px;
 }
 
+div label[class="proj_code"]
+{
+	margin-bottom: 20px;
+}
+
 input[type=submit]
 {
 	margin-top: 20px;
@@ -74,6 +89,28 @@ input[type=submit]
 input[type=submit]:hover
 {
   background: lightgray;
+}
+
+.isotope-block div,
+.radiotracer-block div,
+.other-block div
+{
+  margin-left: 25px;
+}
+
+.isotope-block label,
+.radiotracer-block label,
+.other-block label
+{
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.isotope-block div:last-child,
+.radiotracer-block div:last-child,
+.other-block div:last-child
+{
+	margin-bottom: 40px;
 }
 
 .isotope-header,
@@ -99,12 +136,8 @@ input[type=submit]:hover
 }
 
 
-.isotope-block,
-.radiotracer-block,
-.other-block
-{
 
-}
+
 
 textarea
 {
