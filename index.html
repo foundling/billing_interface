@@ -8,7 +8,7 @@
 <body>
 
 <header>
-	<h1>Radiopharmacy Production Billing Form</h1> | <h2> Welcome Judit!</h2>
+	<h1>Radiopharmacy Production Billing Form |</h1>  <h2> Welcome,  <span class="username">Judit</span> !</h2>
 </header>
 
 <div class="container">
@@ -17,7 +17,8 @@
 <form> 
 
   <!--HEADER -->
-  <div><label class="prod_date">Production Date</label><input type="text" maxlength="10" size="10" name='production-date'></div>
+  <div class="production-block">
+  <div><label class="prod_date">Production Date</label><input type="text" maxlength="10" size="15" name='production-date' value="YYYY/MM/DD"></div>
   <div><label class="proj_code">Project Code</label><input type="text" maxlength="3" size="3" name='project-code'></div>
 
   <!--ISOTOPE BLOCK -->
@@ -53,19 +54,20 @@
 
 
 	<div><label class="sub-header">Starting Activity (mCi)</label><input type="text"  value=""></div>
+	
 	<div><label class="sub-header">Synthesis OK </label></div>
-	<div><input type="checkbox" value="yes"> yes </div>
-	<div><input type="checkbox" value="no"> no </div>
+	<div><input name="synthesis" type="radio" value="yes"> yes </div>
+	<div><input name="synthesis" type="radio" value="no"> no </div>
 
-	<div><label class="sub-header" >Quality Control Pass </label></div>
-	<div><input type="checkbox" value="yes"> yes</div>
-	<div><input type="checkbox" value="no"> no</div>
-	<div><input type="checkbox" value="na"> n/a</div>
+	<div><label class="sub-header">Quality Control Pass </label></div>
+	<div><input name="qc_pass" type="radio" value="yes"> yes</div>
+	<div><input name="qc_pass" type="radio" value="no"> no</div>
+	<div><input name="qc_pass" type="radio" value="na"> n/a</div>
 
 	<div><label class="sub-header">Released for Injection </label></div>
-	<div><input type="checkbox" value="yes"> yes <input type="text" name="lot_number" value="e.g. 150428PBR-01" disabled></div>
-	<div><input type="checkbox" value="no"> no </div>
-	<div><input type="checkbox" value="na"> n/a</div> 
+	<div><input name="released_for_injection" type="radio" value="yes"> yes <input type="text" name="lot_number" value="e.g. 150428PBR-01" disabled></div>
+	<div><input name="released_for_injection" type="radio" value="no"> no </div>
+	<div><input name="released_for_injection" type="radio" value="na"> n/a</div> 
 
 	<div><label class="sub-header">Specific Activity at TOI (mCi/nmol)</label><input type="text"  value=""></div>
 	<div><input type="checkbox" value="na"> n/a </div>
