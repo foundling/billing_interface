@@ -6,20 +6,17 @@ body
 
 }
 
-.block-radiotracer, 
-.block-isotope, 
-.block-comments, 
-.block-other
+.block-radiotracer
 {
-	margin: 20px 0px 20px 0px;
+	display: block;
 }
+
 
 .block-welcome
 {
 	height: 80px;
 	background: white;
-	padding-right: 2.5%;
-	padding-left: 2.5%;
+	padding: 20px 25px;
 	margin: 0 auto;
 }
 
@@ -54,6 +51,11 @@ body
 	margin-left: 40px;
 }
 
+.block-isotope < div
+{
+	display: block;
+}
+
 .container
 {
 	text-align: left;
@@ -77,20 +79,21 @@ h2.welcome
   padding: 0;
 }
 
-input[type=*]
+input
 {
 	font-family: "HelveticaNeue-Light", sans-serif;
 }
 
 input[type=submit]
 {
-	border: 3px solid white;
+	display: block;
+	border: 2px solid black;
 	border-radius: 10px;
-	background: lightgray;
+	background: whitesmoke;
 	width: 200px;
 	height: 80px;
-	margin: 10px 0px 25px 0px;
 	font-size: 140%;
+	margin-top: 60px;
 }
 
 input[type=submit]:hover
@@ -113,14 +116,17 @@ label.disabled
 }
 
 
-.important-heading
+.production-type-heading
 {
-	display: inline-block;
+	display: 	block;
 	width: 200px;
-	background: lightgreen;
+	background: whitesmoke;
 	padding: 5px 15px;
+	margin-bottom: 20px;
+	margin-top: 20px;
 	font-weight: bold;
 	font-size: 2em;
+	border: 2px solid black;
 }
 
 .important-indent
@@ -131,13 +137,23 @@ label.disabled
 
 label
 {
-	display:inline-block;
+	display: inline-block;
 }
 
-label.section-heading
-{
-	background: lightgreen;
 
+
+.production_date,
+.production_code
+{
+	display: inline-block;
+}
+
+.production_date label,
+.production_code label,
+.production_date input,
+.production_code input
+{
+	display: block;
 }
 
 
