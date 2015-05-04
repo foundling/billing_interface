@@ -1,9 +1,9 @@
-var $isotope_checkbox = $('.isotope-heading');
-var $isotope_block =  $('.block-isotope');
-var $radiotracer_checkbox = $('.radiotracer-heading');
-var $radiotracer_block = $('.block-radiotracer');
-var $other_checkbox = $('.other-heading');
-var $other_block = $('.block-other');
+var $isotope_checkbox = $('.isotope-header');
+var $isotope_block =  $('.isotope-block');
+var $radiotracer_checkbox = $('.radiotracer-header');
+var $radiotracer_block = $('.radiotracer-block');
+var $other_checkbox = $('.other-header');
+var $other_block = $('.other-block');
 
 
 
