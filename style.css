@@ -6,173 +6,29 @@ body
 
 }
 
-.block-radiotracer
-{
-	display: block;
-}
-
-
-.block-welcome
-{
-	height: 80px;
-	background: white;
-	padding: 20px 25px;
-	margin: 0 auto;
-}
-
-.block-welcome h1.title
-{
-	float: left;
-	display: inline;
-}
-
-.block-welcome h2.user
-{
-	float: right;
-	display: inline;
-
-
-}
-
-
-
-.block-welcome:after
-{
-	clear:both;
-
-}
-
-.block-isotope input,
-.block-radiotracer input,
-.block-other input,
-.block-other textarea,
-.block-other label
-{
-	margin-left: 40px;
-}
-
-.block-isotope < div
-{
-	display: block;
-}
-
-.container
-{
-	text-align: left;
-	width: 95%;
-	margin: 0 auto;
-	padding-top: 30px;
-}
-
-div input,
-{
-	margin-left: 40px;
-}
-
-
-
-h2.welcome
-{
-  background: white;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-}
-
-input
-{
-	font-family: "HelveticaNeue-Light", sans-serif;
-}
-
-input[type=submit]
-{
-	display: block;
-	border: 2px solid black;
-	border-radius: 10px;
-	background: whitesmoke;
-	width: 200px;
-	height: 80px;
-	font-size: 140%;
-	margin-top: 60px;
-}
-
-input[type=submit]:hover
-{
-	background: lightgreen;
-}
-
-input[type=text]
-{
-	margin: 5px;
-	padding: 5px;
-	height: 20px;
-
-	font-size: 100%;
-}
-
-label.disabled
-{
-	color: rgb(120,120,120);
-}
-
-
-.production-type-heading
-{
-	display: 	block;
-	width: 200px;
-	background: whitesmoke;
-	padding: 5px 15px;
-	margin-bottom: 20px;
-	margin-top: 20px;
-	font-weight: bold;
-	font-size: 2em;
-	border: 2px solid black;
-}
-
-.important-indent
-{
-	margin-left: 40px;
-	font-weight: bold;
-}
-
-label
-{
-	display: inline-block;
-}
-
-
-
-.production_date,
-.production_code
-{
-	display: inline-block;
-}
-
-.production_date label,
-.production_code label,
-.production_date input,
-.production_code input
-{
-	display: block;
-}
-
-
-.validate
-{
-	height: 15px;
-	width: 15px;
-	vertical-align: middle;
-	display: inline-block;
-	border-radius: 50%;
-	background: rgb(240,0,0);
-}
 
 .hidden
 {
 	display: none;
 }
 
-.user-text
+input, label
 {
-	color: darkgray;
+	display: inline-block;
+}
+
+.isotope-header
+{
+	font-weight: bold;
+
+}
+
+.isotope-block
+{
+
+}
+
+textarea
+{
+	display: block;
 }

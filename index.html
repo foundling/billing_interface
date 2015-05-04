@@ -7,8 +7,8 @@
 </head>
 <body>
 
-<div class="block-welcome">
-	<h1 class="title">Radiopharmacy Production</h1><h2 class="user">Welcome <span class="user-text">Judit </span>!</h2>
+<div>
+	<h1>Radiopharmacy Production</h1><h2> Welcome Judit!</h2>
 </div>
 
 <div class="container">
@@ -16,84 +16,79 @@
 <form> 
 
   <!--HEADER -->
-  <div class="production_date">
-  	<label>Production Date</label><input type="text" name='production-date'>	
-  </div>
-
-  <div class="production_code">
-  	<label>Project Code   </label> <input type="text" name='project-code'   > 
-  </div>
+  <div><label>Production Date</label><input type="text" name='production-date'></div>
+  <div><label>Project Code</label><input type="text" name='project-code'></div>
 
   <!--ISOTOPE BLOCK -->
-  <label class="isotope-heading production-type-heading">Isotope Only</label>
-  <div class="block-isotope hidden">
-  	<input type="checkbox" class="isotope" value="F18"> <label>F18 </label>
-  	<input type="checkbox" class="isotope" value="C11"> <label>C11 </label>
-  	<input type="checkbox" class="isotope" value="N13"> <label>N13 </label>
-  	<input type="checkbox" class="isotope" value="O15"> <label>O15 </label>
-  	<input type="checkbox" class="isotope" value="Ga68"> <label>Ga68</label>
-  	<input type="checkbox" class="isotope" value="Cu64"> <label>Cu64</label>
-	<label class="important-indent">Activity (mCi)</label><input type="text"  value="">
+  <label class="isotope-header">Isotope Only</label>
+  <div class="isotope-block">
+  	<div><input type="checkbox" class="isotope" value="F18"> <label>F18 </label></div>
+  	<div><input type="checkbox" class="isotope" value="C11"> <label>C11 </label></div>
+  	<div><input type="checkbox" class="isotope" value="N13"> <label>N13 </label></div>
+  	<div><input type="checkbox" class="isotope" value="O15"> <label>O15 </label></div>
+  	<div><input type="checkbox" class="isotope" value="Ga68"> <label>Ga68</label></div>
+  	<div><input type="checkbox" class="isotope" value="Cu64"> <label>Cu64</label></div>
+	<div><label class="important-indent">Activity (mCi)</label><input type="text"  value=""></div>
   </div>
-  
   <!--RADIOTRACER BLOCK -->
 
-  <label class="radiotracer-heading production-type-heading">Radiotracer</label>
 
-  <div class="block-radiotracer hidden">
+  <label class="radiotracer-header">Radiotracer</label>
+
+  <div class"radiotracer-block">
   	<div><input type="checkbox" class="radiotracer" value="F18-5FU"><label> F18-5FU</label></div>
   	<div><input type="checkbox" class="radiotracer" value="Ga68-Dota-toc"><label> Ga68-Dota-toc</label></div>
-  	<input type="checkbox" class="radiotracer" value="Cu64-FBP8"><label> Cu64-FBP8</label>
-  	<input type="checkbox" class="radiotracer" value="C11-Diprenorphine"><label> C11-Diprenorphine</label>
-  	<input type="checkbox" class="radiotracer" value="C11-DASB"><label> C11-DASB</label>
-  	<input type="checkbox" class="radiotracer" value="F18-Fallypride"><label> F18-Fallypride</label>
-	<input type="checkbox" class="radiotracer" value="F18-FMISO"><label> F18-FMISO</label>
-	<input type="checkbox" class="radiotracer" value="C11-Martinostat"><label> C11-Martinostat</label>
-	<input type="checkbox" class="radiotracer" value="C11-NNc112"><label> C11-NNc112</label>
-	<input type="checkbox" class="radiotracer" value="C11-PRB28"><label> C11-PRB28</label>
-	<input type="checkbox" class="radiotracer" value="C11-Raclopride"><label> C11-Raclopride</label>
-	<input type="checkbox" class="radiotracer" value="F18-T807"><label> F18-T807</label>
-	<input type="checkbox" class="radiotracer" value="C11-Temozolomide"><label> C11-Temozolomide</label>
+  	<div><input type="checkbox" class="radiotracer" value="Cu64-FBP8"><label> Cu64-FBP8</label></div>
+  	<div><input type="checkbox" class="radiotracer" value="C11-Diprenorphine"><label> C11-Diprenorphine</label></div>
+  	<div><input type="checkbox" class="radiotracer" value="C11-DASB"><label> C11-DASB</label></div>
+  	<div><input type="checkbox" class="radiotracer" value="F18-Fallypride"><label> F18-Fallypride</label></div>
+	<div><input type="checkbox" class="radiotracer" value="F18-FMISO"><label> F18-FMISO</label></div>
+	<div><input type="checkbox" class="radiotracer" value="C11-Martinostat"><label> C11-Martinostat</label></div>
+	<div><input type="checkbox" class="radiotracer" value="C11-NNc112"><label> C11-NNc112</label></div>
+	<div><input type="checkbox" class="radiotracer" value="C11-PRB28"><label> C11-PRB28</label></div>
+	<div><input type="checkbox" class="radiotracer" value="C11-Raclopride"><label> C11-Raclopride</label></div>
+	<div><input type="checkbox" class="radiotracer" value="F18-T807"><label> F18-T807</label></div>
+	<div><input type="checkbox" class="radiotracer" value="C11-Temozolomide"><label> C11-Temozolomide</label></div>
 
 
-	<label class="important-indent">Starting Activity (mCi)</label><input type="text"  value="">
-	<label class="important-indent">Synthesis OK </label>
-	<input type="checkbox" value="yes"> yes 
-	<input type="checkbox" value="no"> no 
+	<div><label >Starting Activity (mCi)</label><input type="text"  value=""></div>
+	<label >Synthesis OK </label>
+	<div><input type="checkbox" value="yes"> yes </div>
+	<div><input type="checkbox" value="no"> no </div>
 
-	<label class="important-indent">Quality Control Pass </label> 
-	<input type="checkbox" value="yes"> yes 
-	<input type="checkbox" value="no"> no 
-	<input type="checkbox" value="na"> n/a
+	<label >Quality Control Pass </label>
+	<div><input type="checkbox" value="yes"> yes</div>
+	<div><input type="checkbox" value="no"> no</div>
+	<div><input type="checkbox" value="na"> n/a</div>
 
-	<label class="important-indent">Released for Injection </label> 
-	<input type="checkbox" value="yes"> yes
-	<input type="text" name="lot_number" value="e.g. 150428PBR-01" disabled>
-	<input type="checkbox" value="no"> no 
-	<input type="checkbox" value="na"> n/a 
+	<div><label >Released for Injection </label> 
+	<div><input type="checkbox" value="yes"> yes</div>
+	<div><input type="text" name="lot_number" value="e.g. 150428PBR-01" disabled></div>
+	<div><input type="checkbox" value="no"> no </div>
+	<div><input type="checkbox" value="na"> n/a</div> 
 
-	<label class="important-indent">Specific Activity at TOI (mCi/nmol)</label><input type="text"  value="">
-	<input type="checkbox" value="na"> n/a 
+	<div><label >Specific Activity at TOI (mCi/nmol)</label><input type="text"  value=""></div>
+	<div><input type="checkbox" value="na"> n/a </div>
 	
-	<label class="important-indent">Batch released for Estimated TOI</label><input type="text"  value="">
-	<input type="checkbox" value="na"><label> n/a</label>
+	<div><label >Batch released for Estimated TOI</label><input type="text"  value=""></div>
+	<div><input type="checkbox" value="na"><label> n/a</label></div>
   </div>
 
   <!--OTHER SECTION -->
-  <label class="section other-heading production-type-heading"> Other 	</label>
-  <div class="block-other hidden">
+  <label class="other-header" > Other 	</label>
+  <div class="other-block" >
 		<label>add new </label><select name="new_iso_or_radiotracer">
 			<option value="new_iso">Isotope</option> 
 			<option value="radiotracer">radiotracer</option>	
 		</select>
-		<label class="disabled"> New Isotope</label> <input type="text" name="new_isotope" disabled>
-		<label class="disabled"> New radiotracer</label> <input type="text" name="new_radiotracer" disabled>
+		<div><label > New Isotope</label> <input type="text" name="new_isotope" disabled></div>
+		<div><label > New radiotracer</label> <input type="text" name="new_radiotracer" disabled></div>
 
-		<div class="block-comments">			
-		  <label class="important">Billing Comments</label>
+		<div >			
+		  <label >Billing Comments</label>
 		  <textarea rows="5" cols="40"></textarea>
 
-		  <label class="important">Comments for IT/Development (martinos help desk)</label>
+		  <label >Comments for IT/Development (martinos help desk)</label>
 		  <textarea rows="5" cols="40"></textarea>
 		</div>
   </div>
