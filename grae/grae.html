@@ -32,7 +32,7 @@
 
 	  	<label class="subject-header">Subject Information</label>
 
-	  	<div class="subject-block">
+	  	<div class="subject-block opaque-bg">
 
 	  		<!-- Subject Type Selector-->
 	  		<div>
@@ -42,145 +42,148 @@
   	  		  		<option value="phantom">phantom</option>
 	  			</select>
 	  		</div>
-	  	</div>
-	  	<!--HUMAN TYPES TRIGGERED BY RADIO SELECTION -->
-	  	<div class="human-subject-types">
-	  		<div>
-	  			<input type="radio" name="human_type" value="Healthy/Control">
-	  			<label>Healthy/Control</label>
-	  		</div>
-	  		<div>
-	  			<input type="radio" name="human_type" value="Patient/Diseased">
-	  			<label>Patient/Diseased</label> 
-	  		</div>
-	  	</div>
 
-	  	<!-- Human Fields -->
-	  	<div class="human-details">
-	  		<div>
-	  			<label>Subject ID</label>
-	  			<input type="text" name="human_ID">
-	  		</div>
-	  		<div>
-	  			<label>Sex</label>
-	  			<input type="text" name="human_sex">
-	  		</div>
-	  		<div>
-	  			<label>Weight</label>
-	  			<input type="text" name="human_weight">
-	  		</div>
-	  		<div>
-	  			<label>Height</label>
-	  			<input type="text" name="human_height">
-	  		</div>
-	  		<div>
-	  			<label>Year of Birth</label>
-	  			<input type="text" name="human_YOB">
-	  		</div>
-	  		<div>
-	  			<label>IV Placement</label>
-	  			<input type="text" name="human_IV_placement">
-	  		</div>
-	  		<div>
-	  			<label>Gauge</label>
-	  			<input type="text" name="human_gauge">
-	  		</div>
-	  		<div>
-	  			<label>Glucose</label>
-	  			<input type="text" name="human_glucose">
-	  		</div>
-	  	</div>
-
-	  	<!--ANIMAL TYPES TRIGGERED BY RADIO BUTTON SELECTION -->
-	  	<div class="animal-subject-types hidden">
-		  	<div>
-	          	<input type="radio" name="animal_type" value="Baboon">
-	          	<label>Baboon</label>
-	        </div>
-		  	<div>
-	          	<input type="radio" name="animal_type" value="Macaque">
-	          	<label>Macaque</label>
-	        </div>
-		  	<div>
-	           	<input type="radio" name="animal_type" value="Rat">
-	           	<label>Rat</label> 
-	        </div>
-		  	<div>
-		  		<input type="radio" name="animal_type" value="Pig">
-		  		<label>Pig</label>
+		  	<!--HUMAN TYPES TRIGGERED BY RADIO SELECTION -->
+		  	<div class="human-subject-types">
+		  		<div>
+		  			<input type="radio" name="human_type" value="Healthy/Control">
+		  			<label>Healthy/Control</label>
+		  		</div>
+		  		<div>
+		  			<input type="radio" name="human_type" value="Patient/Diseased">
+		  			<label>Patient/Diseased</label> 
+		  		</div>
 		  	</div>
-		  	<div>
-		  		<input type="radio" name="animal_type" value="Baboon">
-		  		<label>Baboon</label>
-		  	</div>
-		  	<div>
-		  		<input type="radio" name="animal_type" value="Mouse">
-		  		<label>Mouse</label>
-		  	</div>
-		  	<div>
-		  		<input type="radio" name="animal_type" value="Other">
-		  		<label>Other</label>
-		  	</div>
-		  	<div>
-		  		<label>Other</label>
-		  		<input type="text" name="animal_type_other">
-		  	</div>
-		</div>
 
-		  <!--PHANTOM TYPES TRIGGERED BY RADIO BUTTON SELECTION -->
-		<div class="phantom-subject-description hidden">
-		  	<div>
-	        	<label>Description</label>
-	        	<input type="text" name="phantom_description">
-	    	</div>
-	 	</div>
+		  	<!-- Human Fields -->
+		  	<div class="human-details">
+		  		<div>
+		  			<label>Subject ID</label>
+		  			<input type="text" name="human_ID">
+		  		</div>
+		  		<div>
+		  			<label>Sex</label>
+		  			<input type="text" name="human_sex">
+		  		</div>
+		  		<div>
+		  			<label>Weight</label>
+		  			<input type="text" name="human_weight">
+		  		</div>
+		  		<div>
+		  			<label>Height</label>
+		  			<input type="text" name="human_height">
+		  		</div>
+		  		<div>
+		  			<label>Year of Birth</label>
+		  			<input type="text" name="human_YOB">
+		  		</div>
+		  		<div>
+		  			<label>IV Placement</label>
+		  			<input type="text" name="human_IV_placement">
+		  		</div>
+		  		<div>
+		  			<label>Gauge</label>
+		  			<input type="text" name="human_gauge">
+		  		</div>
+		  		<div>
+		  			<label>Glucose</label>
+		  			<input type="text" name="human_glucose">
+		  		</div>
+		  	</div>
 
-	 	<label class="injected-compound-header">Injected Compound</label>
-	 	<div>
-	 		<label>Injected Compound</label>
-	 		<input type="text" name="injected-compound">
-	 	</div>
 
-	 	<label class="radioligand-header">Radioligand</label>
-	 	<div>
-	 		<label>??????????</label>
-	 	</div>
-
-	 	<!-- Blood Analysis Block -->
-	 	<label class="blood-analysis-header">Blood Analysis</label>
-		<div class="blood-analysis-block">
-			<select name="blood-analysis-type">
-				<option value="venous">Venous</option>
-				<option value="arterial">Arterial</option>
-			</select>
-			<div class="venous-block">
-				<label class="sub-header">Arm Used</label>
-				<select name="venous-type">
-					<option value="plasma-only">Plasma Only</option>
-					<option value="plasma-wb">Plasma/WB</option>
-					<option value="metabolites">Metabolites</option>  
-				<select>	
+		  	<!--ANIMAL TYPES TRIGGERED BY RADIO BUTTON SELECTION -->
+		  	<div class="animal-subject-types hidden">
+			  	<div>
+		          	<input type="radio" name="animal_type" value="Baboon">
+		          	<label>Baboon</label>
+		        </div>
+			  	<div>
+		          	<input type="radio" name="animal_type" value="Macaque">
+		          	<label>Macaque</label>
+		        </div>
+			  	<div>
+		           	<input type="radio" name="animal_type" value="Rat">
+		           	<label>Rat</label> 
+		        </div>
+			  	<div>
+			  		<input type="radio" name="animal_type" value="Pig">
+			  		<label>Pig</label>
+			  	</div>
+			  	<div>
+			  		<input type="radio" name="animal_type" value="Baboon">
+			  		<label>Baboon</label>
+			  	</div>
+			  	<div>
+			  		<input type="radio" name="animal_type" value="Mouse">
+			  		<label>Mouse</label>
+			  	</div>
+			  	<div>
+			  		<input type="radio" name="animal_type" value="Other">
+			  		<label>Other</label>
+			  	</div>
+			  	<div>
+			  		<label>Other</label>
+			  		<input type="text" name="animal_type_other">
+			  	</div>
 			</div>
 
-			<div class="arterial-block hidden">
-				<label class="sub-header">Wrist Used</label>
-				<select name="arterial-type">
-					<option value="metabolites">Metabolites</option>
-					<option value="plasma-only">Plasma Only</option>
-					<option value="plasma-wb">Plasma/WB</option>  
+			  <!--PHANTOM TYPES TRIGGERED BY RADIO BUTTON SELECTION -->
+			<div class="phantom-subject-description hidden">
+			  	<div>
+		        	<label>Phantom Subject Description</label>
+		        	<input type="text" name="phantom_description">
+		    	</div>
+		 	</div>
+		</div>
+
+		 	<label class="injected-compound-header">Injected Compound</label>
+		 	<div class="opaque-bg">
+		 		<label>Injected Compound</label>
+		 		<input type="text" name="injected-compound">
+		 	</div>
+
+		 	<label class="radioligand-header">Radioligand</label>
+		 	<div class="opaque-bg">
+		 		<label>??????????</label>
+		 	</div>
+
+		 	<!-- Blood Analysis Block -->
+		 	<label class="blood-analysis-header">Blood Analysis</label>
+			<div class="blood-analysis-block opaque-bg">
+				<label>Type</label>
+				<select name="blood-analysis-type">
+					<option value="venous">Venous</option>
+					<option value="arterial">Arterial</option>
 				</select>
+				<div class="venous-block">
+					<label class="sub-header">Arm Used</label>
+					<select name="venous-type">
+						<option value="plasma-only">Plasma Only</option>
+						<option value="plasma-wb">Plasma/WB</option>
+						<option value="metabolites">Metabolites</option>  
+					<select>	
+				</div>
+
+				<div class="arterial-block hidden">
+					<label class="sub-header">Wrist Used</label>
+					<select name="arterial-type">
+						<option value="metabolites">Metabolites</option>
+						<option value="plasma-only">Plasma Only</option>
+						<option value="plasma-wb">Plasma/WB</option>  
+					</select>
+				</div>
 			</div>
-		</div>
 
-	 	<label class="data-processing-header">Data Processing</label>
-		<div class="data-processing-block">
-			<textarea rows="4" cols="40"></textarea>
-		</div>
+		 	<label class="data-processing-header">Data Processing</label>
+			<div class="data-processing-block">
+				<textarea rows="4" cols="40"></textarea>
+			</div>
 
-	 	<label class="comments-header">Issues / Comments</label>
-		<div class="comments-block">
-			<textarea rows="4" cols="40"></textarea>
-		</div>
+		 	<label class="comments-header">Issues / Comments</label>
+			<div class="comments-block">
+				<textarea rows="4" cols="40"></textarea>
+			</div>
 
 
 		<input type="submit">

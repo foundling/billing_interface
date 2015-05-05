@@ -126,6 +126,13 @@ div label
 	text-align: center;
 }
 
+.opaque-bg
+{
+	background: rgba(240,240,240,.4);
+	padding: 20px;
+
+}
+
 .subject-header:hover
 {
 }
