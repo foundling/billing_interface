@@ -184,6 +184,19 @@ div label
 	background: lightgray;
 }
 
+.subject-header 
+{
+	border: 1px solid black;
+	border-radius: 5px;
+	height: 40px;
+	width: 20%;
+	line-height: 40px;
+	background: whitesmoke;
+	display: block;
+	font-weight: bold;
+	text-align: center;
+}
+
 textarea
 {
 	display: block;
