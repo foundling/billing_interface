@@ -62,32 +62,12 @@ label
 	display: inline-block;
 }
 
-form div,
-label[class="isotope-header"],
-label[class="radiotracer-header"],
-label[class="other-header"]
+form div
 {
 	margin-top: 5px;
 	margin-bottom: 5px;
 }
 
-label[class="prod_date"],
-label[class="proj_code"]
-{
-	margin-right: 5px;
-	width: 120px;
-}
-
-label[class="sub-header"]
-{
-	font-weight: bold;
-	margin-bottom: 5px;
-}
-
-
-div label[class="proj_code"]
-{
-}
 
 input 
 {
@@ -99,7 +79,8 @@ input
 
 input[type=submit]
 {
-	margin-top: 20px;
+
+	margin-top: 120px;
 	background: whitesmoke;
 	border-radius: 5px;
 	width: 20%;
@@ -112,26 +93,9 @@ input[type=submit]:hover
   background: lightgreen;
 }
 
-.production-block
+label
 {
-	padding-bottom: 20px;
-}
-
-.isotope-block,
-.radiotracer-block,
-.other-block
-{
-	padding-top: 10px;
-	padding-bottom: 10px;
-	margin-top: 10px;
-	margin-bottom: 10px;
-	background: rgba(240,240,240,.4);
-}
-.isotope-block div,
-.radiotracer-block div,
-.other-block div
-{
-  margin-left: 25px;
+	width: 160px;
 }
 
 div input,
@@ -140,36 +104,21 @@ div label
 	vertical-align: middle;
 }
 
-.isotope-block label,
-.radiotracer-block label,
-.other-block label
-{
-  margin-left: 5px;
-  margin-right: 5px;
-}
 
-.isotope-block div:last-child,
-.radiotracer-block div:last-child,
-.other-block div:last-child
-{
-	margin-bottom: 20px;
-}
 
-.isotope-block div:first-child,
-.radiotracer-block div:first-child,
-.other-block div:first-child
-{
-	margin-top: 20px;
-}
-
-.isotope-header,
-.radiotracer-header,
-.other-header
+.subject-header,
+.injected-compound-header,
+.radioligand-header,
+.comments-header,
+.data-processing-header,
+.blood-analysis-header
 {
 	border: 1px solid black;
 	border-radius: 5px;
 	height: 40px;
 	width: 20%;
+	margin-top: 30px;
+	margin-bottom: 30px;
 	line-height: 40px;
 	background: whitesmoke;
 	display: block;
@@ -177,29 +126,17 @@ div label
 	text-align: center;
 }
 
-.isotope-header:hover,
-.radiotracer-header:hover,
-.other-header:hover
+.subject-header:hover
 {
-	background: lightgray;
 }
 
-.subject-header 
-{
-	border: 1px solid black;
-	border-radius: 5px;
-	height: 40px;
-	width: 20%;
-	line-height: 40px;
-	background: whitesmoke;
-	display: block;
-	font-weight: bold;
-	text-align: center;
-}
 
 textarea
 {
-	display: block;
+	border: 1px solid black;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	display: inline-block;
 }
 
 .username
