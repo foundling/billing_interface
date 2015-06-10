@@ -1,0 +1,134 @@
+body
+{
+    font-family: "Arial", sans-serif;
+    font-weight: 100;
+    background: lightblue;
+}
+
+button#success[type=submit]
+{
+    margin-left: 10px;
+}
+a:link { text-decoration: none; color:black;}
+a:visited { text-decoration: none; color:black;}
+a:hover { text-decoration: none; color:black;}
+a:active { text-decoration: none; color:black;}
+
+.container
+{
+
+}
+
+.hidden
+{
+  display: none;
+}
+
+label
+{
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+input
+{
+    padding: 5px;
+}
+
+form > div
+{
+    padding:5px;    
+}
+
+
+a.faux-btn
+{
+    display: inline-block;
+    text-decoration: none;
+    background: whitesmoke;
+    padding: 15px;
+    border-radius: 15px;
+}
+
+a.faux-btn:nth-child(2){
+    margin-left: 5px;
+}
+
+.summary
+{
+    position: absolute;
+    margin: 0 auto;
+    top: 0;
+    left:0;
+    background: lightgreen;
+    z-index:1000;
+    width:100%;
+    height:100%;
+}
+
+.content-layer
+{
+    padding-left: 2%;
+    padding-right: -2%;
+}
+
+
+.service-type
+{
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.service-type input
+{
+  margin: 5px;
+}
+
+textarea
+{
+    margin-top: 10px;
+}
+
+.errors
+{
+    color: rgb(204,0,0);
+}
+
+.FDG-aux,
+.nmt-aux,
+.blood-aux
+{
+    margin: 10px 0px 10px 20px;
+
+}
+
+
+.red-bg
+{
+    background: rgb(204,0,0);
+}
+
+.green-bg
+{
+    background: lightgreen;
+}
+
+.requirement
+{
+    display: inline-block;
+    height: 10px;
+    width: 10px;
+    margin-left: 5px;
+    border-radius: 50%;
+
+}
+
+.success-msg
+{
+    text-align: center;
+}
+
+li 
+{
+  list-style-type: none;
+}

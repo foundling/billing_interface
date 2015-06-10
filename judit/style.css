@@ -97,6 +97,12 @@ input
 	padding-left: 5px;
 }
 
+/* released for injection */
+input[name=rfi][type=text]
+{
+  color: lightgray;
+}
+
 input[type=submit]
 {
 	margin-top: 20px;
@@ -192,4 +198,9 @@ textarea
 .username
 {
 	color: rgba(204,0,0,0.8	);
+}
+
+.thin-pipe 
+{
+  font-weight: 100;
 }

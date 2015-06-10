@@ -1,3 +1,293 @@
+.rmv,
+.add
+{
+  display: inline-block;
+  border-radius: 5px;
+  border: 1px solid black;
+}
+
+label[class*=header]:hover {
+  background: lightgray;
+}
+
+.add
+{
+  margin-left: 15px;
+  background: lightgreen;
+}
+
+.rmv
+{
+  margin-left: 20px;
+  background: salmon;
+}
+.rmv,
+.add
+{
+  height: 30px;
+  width: 30px;
+  text-align: center;
+  line-height: 30px;
+}
+
+html, body, body *
+{
+	margin: 0;
+	padding: 0;
+	font-size: 100%;
+}
+
+body
+{
+	font-family: "HelveticaNeue-Light", sans-serif;
+	background: lightblue;
+}
+
+.container
+{
+	width: 90%;
+	margin: 0 auto;
+    padding: 10px 0px 40px 0px;
+}
+
+div.sub-header
+{
+	margin-top: 20px;
+
+}
+
+h1 
+{
+	display: block;
+	font-size: 2em;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+header
+{
+	margin: 0px;
+	padding-left: 5%;
+	padding-right: 5%;
+	background: whitesmoke;
+	height: 60px;
+	line-height: 60px;
+}
+
+header h1,
+header h2
+{
+	display: inline;
+	font-size: 1.5em;
+}
+
+div[class*=subject-details] h2
+{
+  padding-top: 30px;
+  padding-bottom: 10px;
+}
+
+
+.hidden
+{
+	display: none;
+}
+
+input, 
+label
+{
+	display: inline-block;
+}
+
+.lot_numbers,
+.lot_number 
+{
+  width: 100px;
+}
+
+form div,
+label[class="isotope-header"],
+label[class="radiotracer-header"],
+label[class="other-header"]
+{
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+label[class="prod_date"],
+label[class="proj_code"]
+{
+	margin-right: 5px;
+	width: 120px;
+}
+
+label[class="sub-header"]
+{
+	font-weight: bold;
+	margin-bottom: 5px;
+}
+
+
+div label[class="proj_code"]
+{
+}
+
+input 
+{
+	border: 1px solid black;
+	height: 30px;
+	font-size: 100%;
+	padding-left: 5px;
+}
+
+/* released for injection */
+input[name=rfi][type=text]
+{
+  color: lightgray;
+}
+
+input[type=submit]
+{
+	margin-top: 20px;
+	background: whitesmoke;
+	border-radius: 5px;
+	width: 20%;
+	height: 60px;
+	font-weight: bold;
+}
+
+input[type=submit]:hover
+{
+  background: lightgreen;
+}
+
+
+.isotope-block,
+.radiotracer-block,
+.other-block
+{
+	padding-top: 10px;
+	padding-bottom: 10px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	background: rgba(240,240,240,.4);
+}
+.isotope-block div,
+.radiotracer-block div,
+.other-block div
+{
+  margin-left: 25px;
+}
+
+div input,
+div label
+{
+	vertical-align: middle;
+}
+
+.disabled-text-input
+{
+  color: gray;
+}
+
+.inactive-header
+{
+  color: gray; 
+  border: 1px solid gray;
+}
+
+label 
+{
+  min-width: 190px;
+}
+.isotope-block label,
+.radiotracer-block label,
+.other-block label
+{
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.subject-information-block div:last-child,
+.injected-compound-block div:last-child,
+.radiotracer-block div:last-child,
+.other-block div:last-child
+{
+	margin-bottom: 20px;
+}
+
+.subject-information-block div:first-child,
+.injected-compound-block div:first-child,
+.radiotracer-block div:first-child,
+.other-block div:first-child
+{
+	margin-top: 20px;
+}
+
+.subject-information-header, 
+.injected-compound-header,
+.radiotracer-header,
+.other-header,
+.bolus-header,
+.infusion-header,
+.bolus-and-infusion-header
+{
+	border: 1px solid black;
+	border-radius: 5px;
+	height: 40px;
+	width: 20%;
+	line-height: 40px;
+	background: whitesmoke;
+	display: block;
+	font-weight: bold;
+	text-align: center;
+}
+
+
+.blood-analysis-header:hover,
+.contrast-agent-header:hover,
+.data-processing-header:hover,
+.subject-information-header:hover,
+.issues-comments-header:hover,
+.injected-compound-header:hover,
+.radiotracer-header:hover,
+.other-header:hover,
+{
+	background: lightgray;
+}
+
+textarea
+{
+	display: block;
+}
+
+.username
+{
+	color: rgba(204,0,0,0.8	);
+}
+
+.subject-information-header,
+.issues-comments-header,
+.bolus-header,
+.infusion-header
+{
+    border: 1px solid black;
+    border-radius: 5px;
+    height: 40px;
+    width: 20%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    line-height: 40px;
+    background: whitesmoke;
+    display: block;
+    font-weight: bold;
+    text-align: center;
+}
+
+.thin-pipe 
+{
+  font-weight: 100;
+}
 html, body, body *
 {
 	margin: 0;
@@ -43,12 +333,6 @@ header
 	line-height: 60px;
 }
 
-header h1,
-header h2
-{
-	display: inline;
-	font-size: 1.5em;
-}
 
 
 .hidden
@@ -80,10 +364,11 @@ input
 input[type=submit]
 {
 
-	margin-top: 120px;
+	margin-top: 40px;
 	background: whitesmoke;
 	border-radius: 5px;
 	width: 20%;
+    min-width: 190px;
 	height: 60px;
 	font-weight: bold;
 }
@@ -92,7 +377,11 @@ input[type=submit]:hover
 {
   background: lightgreen;
 }
-
+input[type=text]
+{
+  margin-top:2x;
+  margin-bottom:2px;
+}
 label
 {
 	width: 160px;
@@ -106,19 +395,21 @@ div label
 
 
 
-.subject-header,
+.subject-information-header,
 .injected-compound-header,
+.issues-comments-header,
 .radioligand-header,
 .comments-header,
 .data-processing-header,
-.blood-analysis-header
+.blood-analysis-header,
+.contrast-agent-header
 {
 	border: 1px solid black;
 	border-radius: 5px;
 	height: 40px;
 	width: 20%;
-	margin-top: 30px;
-	margin-bottom: 30px;
+	margin-top: 5px;
+	margin-bottom: 5px;
 	line-height: 40px;
 	background: whitesmoke;
 	display: block;
@@ -126,14 +417,41 @@ div label
 	text-align: center;
 }
 
+.bolus-header,
+.bolus-and-infusion-header
+{
+  display: inline-block;  
+}
+
 .opaque-bg
 {
-	background: rgba(240,240,240,.4);
+	background: rgba(240,240,240,.8);
 	padding: 20px;
 
 }
 
-.subject-header:hover
+.required
+{
+  background: red;
+  display: inline-block;
+  height: 10px;
+  width: 10px;
+  border-radius: 5px; 
+  border: 1px solid black;
+  line-height: 10px;
+  text-align: center;
+  vertical-align: middle;
+  margin-left: 5px;
+}
+
+.valid
+{
+  background: lightgreen;
+}
+
+
+
+.subject-information-header:hover
 {
 }
 
@@ -149,4 +467,35 @@ textarea
 .username
 {
 	color: rgba(204,0,0,0.8	);
+}
+
+.production-block,
+.infusion-block,
+.bolus-block,
+{
+	padding-bottom: 20px;
+}
+
+@media (max-width:500px) {
+  .container
+  {
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .bolus-header,
+  .bolus-and-infusion-header
+  {
+    display: block;
+    margin: 0 auto;
+  }
+
+  label.block
+  {
+    width: 100%;
+  }
+  textarea
+  {
+    width: 100%;
+  }
 }
