@@ -19,9 +19,9 @@ $project_code_input.keyup( function() {
       });
     }
  
-    else if (valid && len !== 3 )
+    else if (len !== 3 )
     {
-        $required.toggleClass('valid');
+        $required.removeClass('valid');
         valid = false;
     }
 });
