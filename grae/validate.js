@@ -5,13 +5,18 @@ var $project_code_details = $('#proj-code-details');
 
 $project_code_input.keyup( function() {
 
-    var len = $(this).val().length;
+    var value = $(this).val();
+    var len = value.length;
     
     if( !valid && len === 3 )
     {
-        $required.toggleClass('valid');
-        valid = true;
-        console.log('turn green');
+      $.get("../scripts/validateProjectCode.php",{'code':value}).done(function(data) {
+        if (data.length) {
+          $required.toggleClass('valid');
+          valid = true;
+          console.log(data);
+        }
+      });
     }
  
     else if (valid && len !== 3 )

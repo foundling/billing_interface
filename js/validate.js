@@ -2,13 +2,17 @@
 var valid = false;
 
 $('form input[name="proj_code"]').keyup( function() {
-
     var len = $(this).val().length;
     
     if( !valid && len === 3 )
     {
-        console.log('turn green');
-        $('.requirement').toggleClass('red-bg').toggleClass('green-bg');
+        var proj_code = $(this).val();
+
+        $.get("../scripts/validateProjectCode.php", function(data) {
+          $('.requirement').toggleClass('red-bg').toggleClass('green-bg');
+          console.log('get request returned');
+        });
+
         valid = true;
     }
  

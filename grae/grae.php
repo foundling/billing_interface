@@ -26,13 +26,13 @@
 
 	  <!--PRODUCTION BLOCK: BASE DETAILS -->
 	  <h1>Production</h1>
+	  <form> 
 	  	<div>
 	  		<label class="proj_code">Project Code</label>
 	  		<input id="proj-code" type="text" maxlength="3" size="3" name='project-code'>
             <div id="proj-code-status" class="required"></div>
 	  	</div>
 
-	<form> 
 	  <div class="production-block">
 	  	<div>
 	  		<label class="prod_date">Production Date</label>
