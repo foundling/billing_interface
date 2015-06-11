@@ -26,7 +26,7 @@
 
 	  <!--PRODUCTION BLOCK: BASE DETAILS -->
 	  <h1>Production</h1>
-	  <form> 
+	  <form action="../scripts/email.php" method="GET"> 
 	  	<div>
 	  		<label class="proj_code">Project Code</label>
 	  		<input id="proj-code" type="text" maxlength="3" size="3" name='project-code'>
