@@ -1,3 +1,11 @@
+<?php
+  include("../dbConfig.test.php");
+  if ( $_SERVER['REMOTE_USER']  !== 'grae' && $_SERVER['REMOTE_USER'] !== 'alexr')
+  {
+    header('Location: https://jukebox.nmr.mgh.harvard.edu/petbilling/PETbilling/error.php');
+    exit;
+  };
+?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -7,26 +15,22 @@
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
   <script type="application/javascript" src="../js/fastclick.js"></script>
-
 </head>
 <body>
 
 <header>
-    <?php
-      include("../dbConfig.test.php");
-    ?>
 	<h1>Radiopharmacy Production  </h1>
       <span class="thin-pipe"> | </span>
 	<h2>
-      <span class="username">Grae</span>
+      <span class="username"><?php print $_SERVER['REMOTE_USER']; ?></span>
     </h2>
 </header>
 
 <div class="container">
 
 	  <!--PRODUCTION BLOCK: BASE DETAILS -->
-	  <h1>Production</h1>
-	  <form action="../scripts/email.php" method="GET"> 
+	<h1>Production</h1>
+	<form action="../scripts/email.php" method="GET"> 
 	  	<div>
 	  		<label class="proj_code">Project Code</label>
 	  		<input id="proj-code" type="text" maxlength="3" size="3" name='project-code'>
