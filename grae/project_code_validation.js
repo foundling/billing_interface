@@ -1,3 +1,4 @@
+(function() {
 var $required = $('.required');
 var $project_code_input = $('form input[name="project-code"]'); 
 var $project_code_details = $('#proj-code-details');
@@ -34,3 +35,4 @@ $project_code_input.keyup( function() {
         $required.removeClass('valid');
     }
 });
+}());

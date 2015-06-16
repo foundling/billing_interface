@@ -1,3 +1,4 @@
+(function() {
 /*
  * *
  * * jquery ui datepicker
@@ -16,3 +17,5 @@ var dd = today[2].split('T')[0];
 var today_fmt = mm + '/' + dd + '/' + yy;
 
 $('#datepicker').attr('value',today_fmt);
+
+}());

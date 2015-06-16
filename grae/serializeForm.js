@@ -1,4 +1,4 @@
-(function(){
+/*
 $.fn.serializeObject = function() {
   var o = {};
   var a = this.serializeArray();
@@ -16,7 +16,11 @@ $.fn.serializeObject = function() {
 };
 
 $('form').submit( function(e) {
-  e.preventDefault; 
-    
+  e.preventDefault(); 
+  var f = $(this).serializeObject();    
+  console.log(f);
 });
-}());
+
+*/
+
+

@@ -1,6 +1,8 @@
 <?php
   include("../dbConfig.test.php");
-  if ( $_SERVER['REMOTE_USER']  !== 'grae' && $_SERVER['REMOTE_USER'] !== 'alexr')
+  if ( $_SERVER['REMOTE_USER']  !== 'grae' 
+    && $_SERVER['REMOTE_USER']  !== 'alexr'
+    && $_SERVER['REMOTE_USER']  !== 'judit')
   {
     header('Location: https://jukebox.nmr.mgh.harvard.edu/petbilling/PETbilling/error.php');
     exit;
@@ -49,6 +51,7 @@
 
 	  	<!--SUBJECT BLOCK -->
 
+      <div class="section">
 	  	<label class="block subject-information-header">Subject Information</label>
 
 	  	<div class="header subject-information-block hidden opaque-bg">
@@ -57,6 +60,7 @@
 	  		<div>
                 <label><strong>subject type</strong></label><br><br>
 	  			<select id="subject-type-selector" name="subject_type">
+	  		  		<option value="">n/a</option>
 	  		  		<option value="human">human</option>
   	  		  		<option value="animal">animal</option>
   	  		  		<option value="phantom">phantom</option>
@@ -136,19 +140,23 @@
               <input type="text" name="phantom_description"></input>
             </div>
  
-        <!-- END SUBJECT INFORMATION -->
 		</div>
+		</div>
+        <!-- END SUBJECT INFORMATION -->
 
- 			<!-- INJECTED COMPOUND BLOCK -->
-            <label class="block injected-compound-header">Injected Compound</label>
-            <div class="injected-compound-block hidden opaque-bg">
-			  <div>
-                <label>Injected Compound</label>
-                <input type="text" name="injected-compound">
-			  </div>
-            </div>
+	<!-- INJECTED COMPOUND BLOCK -->
+      <div class="section">
+        <label class="block injected-compound-header">Injected Compound</label>
+        <div class="injected-compound-block hidden opaque-bg">
+     	  <div>
+             <label>Injected Compound</label>
+             <input type="text" name="injected-compound">
+	      </div>
+        </div>
+      </div>
 
 	  <!--RADIOTRACER BLOCK -->
+    <div class="section">
 	  <label class="header block radiotracer-header">Radiotracer</label>
 	  <div class="block radiotracer-block hidden">
 	  	<div>
@@ -268,11 +276,14 @@
             <label>Residual Activity (mCi)</label><input name="infusion-residual-activity" type="text">
             <br>
             <label>Time (00:00:00)</label><input name="infusion-residual-time" type="text">
-          </div>
-        </div>
+           </div>
+         </div>
+       </div>
+	 </div>
+     <!-- End Radiotracer Block -->
 
-	  </div>
-            <!-- Contrast Agent Block -->
+     <!-- Contrast Agent Block -->
+          <div class="section">
             <label class="block header contrast-agent-header">Contrast Agent</label>
             <div class="block contrast-agent-block hidden opaque-bg">
               <div>
@@ -304,24 +315,30 @@
                 </div>
               </div>
             </div>
+          </div>
+     <!-- End Contrast Agent Block -->
 
 	<!-- Blood Analysis Block -->
+    <div class="section">
 	<label class="block header blood-analysis-header">Blood Analysis</label>
 	<div class="block blood-analysis-block hidden opaque-bg">
 		<label>Type</label>
 		<select name="blood-analysis-type">
+			<option value="">n/a</option>
 			<option value="venous">Venous</option>
 			<option value="arterial">Arterial</option>
 		</select>
 		<div class="venous-block">
 			<label>Arm Used</label>
             <select name="venous-arm-used">
+                <option value="">n/a</option>
                 <option value="left">left</option>
                 <option value="right">right</option>
             </select>
             <br>
 			<label>Venous Type</label>
 			<select name="venous-type">
+			    <option value="">n/a</option>
 				<option value="plasma-only">Plasma Only</option>
 				<option value="plasma-wb">Plasma/WB</option>
 				<option value="metabolites">Metabolites</option>
@@ -331,29 +348,41 @@
 		<div class="arterial-block hidden">
 			<label>Wrist Used</label>
             <select name="arterial-wrist-used">
+                <option value="">n/a</option>
                 <option value="left">left</option>
                 <option value="right">right</option>
             </select>
             <br>
 			<label>Arterial Type</label>
 			<select name="arterial-type">
+				<option value="">n/a</option>
 				<option value="metabolites">Metabolites</option>
 				<option value="plasma-only">Plasma Only</option>
 				<option value="plasma-wb">Plasma/WB</option>
 			</select>
 		</div>
 	</div>
+    </div>
+    <!-- End Blood Analysis Block -->
 
-    <!-- DATA PROCESSING HEADER -->
+    <!-- DATA PROCESSING BLOCK -->
+    <div class="section">
 	<label class="block header data-processing-header">Data Processing</label>
 	<div class="block data-processing-block hidden">
 		<textarea rows="4" cols="40"></textarea>
 	</div>
+	</div>
+    <!-- END DATA PROCESSING BLOCK -->
+
     <!-- ISSUES / COMMENTS BLOCK -->
+    <div class="section">
 	<label class="block header issues-comments-header">Issues / Comments</label>
 	<div class="block issues-comments-block hidden">
 		<textarea rows="4" cols="40"></textarea>
 	</div>
+    </div>
+    <!-- END ISSUES / COMMENTS BLOCK -->
+
 	<!-- Submit Form -->
 	<input type="submit">
 	</form>
@@ -371,6 +400,7 @@
   <script src="hide.js"></script>
   <script src="add.js"></script>
   <script src="disabled.js"></script>
-  <script src="validate.js"></script>
+  <script src="project_code_validation.js"></script>
+  <script src="logic.js"></script>
 </body>
 </html>

@@ -1,3 +1,4 @@
+( function(){
 /* Logic wrapped in a IIFE to prevent global scope issues with other js files
  
  APPROACH: when anything inside the radiotracer-block is clicked, check event.target
@@ -47,3 +48,4 @@ $rfi_radio_group.change( function() {
     $rfi_text_input.prop('disabled','false');  
   }
 });
+}());

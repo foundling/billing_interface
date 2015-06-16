@@ -2,8 +2,11 @@
 
   $result = '';
   foreach($_GET as $key => $value) {
-    $result .= "$key:  $value\n";
+    if ($value) {
+      $result .= "$key:  $value\n";
+    }
   }
+ 
 
   $result = rtrim($result,', ');
 
