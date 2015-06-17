@@ -15,8 +15,5 @@ $.fn.serializeObject = function() {
   return o;
 };
 
-$('form').submit( function(e) {
-  e.preventDefault; 
-    
-});
+
 }());

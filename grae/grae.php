@@ -1,13 +1,7 @@
 <?php
   include("../dbConfig.test.php");
-  if ( $_SERVER['REMOTE_USER']  !== 'grae' 
-    && $_SERVER['REMOTE_USER']  !== 'alexr'
-    && $_SERVER['REMOTE_USER']  !== 'judit')
-  {
-    header('Location: https://jukebox.nmr.mgh.harvard.edu/petbilling/PETbilling/error.php');
-    exit;
-  };
 ?>
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -33,9 +27,9 @@
 	  <!--PRODUCTION BLOCK: BASE DETAILS -->
 	<h1>Production</h1>
 	<form action="../scripts/email.php" method="GET"> 
-	  	<div>
+	  	<div class="section">
 	  		<label class="proj_code">Project Code</label>
-	  		<input id="proj-code" type="text" maxlength="3" size="3" name='project-code'>
+	  		<input id="proj-code" class="required_element" type="text" maxlength="3" size="3" name='project-code'>
             <div id="proj-code-status" class="required"></div>
 	  	</div>
 
@@ -81,35 +75,35 @@
                 <h2>Human Subject Details</h2>
 		  		<div>
 		  			<label>Subject ID</label>
-		  			<input type="text" name="human_ID">
+		  			<input type="text" name="human_ID" value="">
 		  		</div>
 		  		<div>
 		  			<label>Sex</label>
-		  			<input type="text" name="human_sex">
+		  			<input type="text" name="human_sex" value="">
 		  		</div>
 		  		<div>
 		  			<label>Weight</label>
-		  			<input type="text" name="human_weight">
+		  			<input type="text" name="human_weight" value="">
 		  		</div>
 		  		<div>
 		  			<label>Height</label>
-		  			<input type="text" name="human_height">
+		  			<input type="text" name="human_height" value="">
 		  		</div>
 		  		<div>
 		  			<label>Year of Birth</label>
-		  			<input type="text" name="human_YOB">
+		  			<input type="text" name="human_YOB" value="">
 		  		</div>
 		  		<div>
 		  			<label>IV Placement</label>
-		  			<input type="text" name="human_IV_placement">
+		  			<input type="text" name="human_IV_placement" value="">
 		  		</div>
 		  		<div>
 		  			<label>Gauge</label>
-		  			<input type="text" name="human_gauge">
+		  			<input type="text" name="human_gauge" value="">
 		  		</div>
 		  		<div>
 		  			<label>Glucose (optional)</label>
-		  			<input type="text" name="human_glucose">
+		  			<input type="text" name="human_glucose" value="">
 		  		</div>
 		  	</div>
  
@@ -118,26 +112,26 @@
                 <h2>Animal Subject Details</h2>
 		  		<div>
 		  			<label>Subject ID</label>
-		  			<input type="text" name="animal_ID">
+		  			<input type="text" name="animal_ID" value="">
 		  		</div>
 		  		<div>
 		  			<label>Weight</label>
-		  			<input type="text" name="animal_weight">
+		  			<input type="text" name="animal_weight" value="">
 		  		</div>
 		  		<div>
 		  			<label>IV Placement</label>
-		  			<input type="text" name="animal_IV_placement">
+		  			<input type="text" name="animal_IV_placement" value="">
 		  		</div>
 		  		<div>
 		  			<label>NucMed Charge </label>
-		  			<input type="text" name="animal_nucmed_charge">
+		  			<input type="text" name="animal_nucmed_charge" value="">
 		  		</div>
 		  	</div>
 
             <!--PHANTOM TYPES TRIGGERED BY RADIO SELECTION -->
 		  	<div class="phantom-subject-details hidden">
               <h2>Phantom Subject Details</h2>
-              <input type="text" name="phantom_description"></input>
+              <input type="text" name="phantom_description" value="">
             </div>
  
 		</div>
@@ -150,7 +144,7 @@
         <div class="injected-compound-block hidden opaque-bg">
      	  <div>
              <label>Injected Compound</label>
-             <input type="text" name="injected-compound">
+             <input type="text" name="injected-compound" value="">
 	      </div>
         </div>
       </div>
@@ -401,6 +395,7 @@
   <script src="add.js"></script>
   <script src="disabled.js"></script>
   <script src="project_code_validation.js"></script>
-  <script src="logic.js"></script>
+  <script src="serializeForm.js"></script>
+  <script src="validate_form.js"></script>
 </body>
 </html>
