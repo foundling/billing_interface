@@ -6,6 +6,10 @@
   border: 1px solid black;
 }
 
+.block
+{
+}
+
 label[class*=header]:hover {
   background: lightgray;
 }
@@ -114,8 +118,8 @@ label[class="other-header"]
 	margin-bottom: 5px;
 }
 
-label[class="prod_date"],
-label[class="proj_code"]
+label[class="prod-date"],
+label[class="proj-code-label"]
 {
 	margin-right: 5px;
 	width: 120px;
@@ -125,11 +129,6 @@ label[class="sub-header"]
 {
 	font-weight: bold;
 	margin-bottom: 5px;
-}
-
-
-div label[class="proj_code"]
-{
 }
 
 input 
@@ -170,7 +169,7 @@ input[type=submit]:hover
 	padding-bottom: 10px;
 	margin-top: 10px;
 	margin-bottom: 10px;
-	background: rgba(240,240,240,.4);
+	background: rgba(240,240,240,.8);
 }
 .isotope-block div,
 .radiotracer-block div,
@@ -196,10 +195,6 @@ div label
   border: 1px solid gray;
 }
 
-label 
-{
-  min-width: 190px;
-}
 .isotope-block label,
 .radiotracer-block label,
 .other-block label
@@ -379,7 +374,7 @@ input[type=submit]:hover
 }
 input[type=text]
 {
-  margin-top:2x;
+  margin-top:2px;
   margin-bottom:2px;
 }
 label
@@ -423,14 +418,18 @@ div label
   display: inline-block;  
 }
 
+label.bolus-header:hover,
+label.infusion-header:hover
+{
+  background: whitesmoke; 
+}
 .opaque-bg
 {
 	background: rgba(240,240,240,.8);
-	padding: 20px;
-
+    padding: 20px;
 }
 
-.required
+.validity
 {
   background: red;
   display: inline-block;
@@ -444,7 +443,7 @@ div label
   margin-left: 5px;
 }
 
-.valid
+.status-ok
 {
   background: lightgreen;
 }
@@ -464,16 +463,25 @@ textarea
 	display: inline-block;
 }
 
-.username
-{
-	color: rgba(204,0,0,0.8	);
-}
 
 .production-block,
 .infusion-block,
 .bolus-block,
 {
 	padding-bottom: 20px;
+}
+
+.bolus-block input[type=text],
+.infusion-block input[type=text]
+{
+  width: 130px;
+}
+
+.bolus-block label,
+.radiotracer-block label,
+.infusion-block label
+{
+  text-align: left;
 }
 
 @media (max-width:500px) {
@@ -483,6 +491,11 @@ textarea
     text-align: center;
   }
 
+  div.bolus-block,
+  div.infusion-block
+   {
+     margin-left: 0px;
+   }
   .bolus-header,
   .bolus-and-infusion-header
   {
@@ -490,6 +503,7 @@ textarea
     margin: 0 auto;
   }
 
+  #datepicker { width: 110px;}
   label.block
   {
     width: 100%;
@@ -497,5 +511,46 @@ textarea
   textarea
   {
     width: 100%;
+  }
+
+  .thin-pipe
+  { 
+    display: none;
+  }
+  header 
+  {
+	height: 120px;
+    
+  }
+  header h1,
+  header h2
+  {
+    width: 100%;
+    display: inline-block;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  header h2
+  {
+    
+  }
+  input[type=text] {
+    margin-top: 5px;
+  } 
+
+  .radiotracer-block > div
+  {
+    margin-left: 0px;
+  }
+  div.radiotracer-block > div > label[class!=bolus-header]
+  { min-width: 160px; text-align: left;}
+
+  label.bolus-header,
+  label.infusion-header
+  {
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 30px;
   }
 }

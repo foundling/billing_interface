@@ -6,7 +6,7 @@
 var form = {};
 
 form.$el = $('form');
-form.required_elements = form.$el.find('.required_element');
+form.required_elements = form.$el.find('.required-element');
 
 form.$el.submit(function(e){
   var isValid;

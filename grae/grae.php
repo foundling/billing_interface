@@ -1,7 +1,3 @@
-<?php
-  include("../dbConfig.test.php");
-?>
-
 <!doctype html>
 <html lang="en">
 <head>
@@ -10,16 +6,13 @@
   <title>MGH Martinos Center - PET Billing</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
-  <script type="application/javascript" src="../js/fastclick.js"></script>
 </head>
 <body>
 
 <header>
 	<h1>Radiopharmacy Production  </h1>
-      <span class="thin-pipe"> | </span>
-	<h2>
-      <span class="username"><?php print $_SERVER['REMOTE_USER']; ?></span>
-    </h2>
+    <span class="thin-pipe"> | </span>
+	<h2 class="username"><span ><?php print $_SERVER['REMOTE_USER']; ?></span></h2>
 </header>
 
 <div class="container">
@@ -28,14 +21,14 @@
 	<h1>Production</h1>
 	<form action="../scripts/email.php" method="GET"> 
 	  	<div class="section">
-	  		<label class="proj_code">Project Code</label>
-	  		<input id="proj-code" class="required_element" type="text" maxlength="3" size="3" name='project-code'>
-            <div id="proj-code-status" class="required"></div>
+	  		<label class="proj-code-label">Project Code</label>
+	  		<input id="proj-code" class="required-element" name='proj-code' type="text" maxlength="3" size="3" >
+            <div id="proj-code-status" class="validity"></div>
 	  	</div>
 
 	  <div class="production-block">
 	  	<div>
-	  		<label class="prod_date">Production Date</label>
+	  		<label class="prod-date">Production Date</label>
             <input name="date_of_service" id="datepicker" type="text">
 	  	</div>
         <div>
@@ -227,7 +220,7 @@
 			<input type="checkbox" class="radiotracer" name="other" value="Other">
 			<label>Other</label>
             <input type="text" class="lot_number"  name="other" value="lot #" disabled>
-            <input type="text" name="radiotracer-other" disabled>
+            <input type="text" name="radiotracer-other" placeholder="enter rt name here" disabled>
 		</div>
 
         <div class="block bolus-infusion-block">
@@ -382,20 +375,14 @@
 	</form>
 <!--END CONTAINER-->
 </div>
-  <script>
-    window.addEventListener('load', function() {
-      FastClick.attach(document.body);
-    }, false);
-  </script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.js"></script>
-  <script src="../js/jquery-2.1.3.js"></script>
-  <script src="../js/jquery-ui-1.11.2.js"></script>
-  <script src="date.js"></script>
-  <script src="hide.js"></script>
-  <script src="add.js"></script>
-  <script src="disabled.js"></script>
-  <script src="project_code_validation.js"></script>
-  <script src="serializeForm.js"></script>
-  <script src="validate_form.js"></script>
+<script src="jquery.js"></script>
+<script src="jquery-ui.js"></script>
+<script src="date.js"></script>
+<script src="hide.js"></script>
+<script src="add.js"></script>
+<script src="disabled.js"></script>
+<script src="project_code_validation.js"></script>
+<script src="serializeForm.js"></script>
+<script src="validate_form.js"></script>
 </body>
 </html>

@@ -7,8 +7,8 @@
  */
 
 (function() {
-var $required = $('.required');
-var $project_code_input = $('form input[name="project-code"]'); 
+var $required = $('.validity');
+var $project_code_input = $('form input[name="proj-code"]'); 
 var $project_code_details = $('#proj-code-details');
 var cache = {};
 
@@ -20,7 +20,7 @@ $project_code_input.keyup( function() {
     {
       if (cache[value]) {
         console.log('no get request. using cached value for', value);
-        $required.addClass('valid');
+        $required.addClass('status-ok');
         $project_code_input.addClass('isValid');
         return;
       }
@@ -28,13 +28,13 @@ $project_code_input.keyup( function() {
         console.log('get request for',value);
         $.get("../scripts/validateProjectCode.php",{'code':value}).done(function(data) {
           if (data.length) {
-            $required.addClass('valid');
+            $required.addClass('status-ok');
             $project_code_input.addClass('isValid');
             cache[value] = data;
             console.log('code ' + value + ' was cached!');
           }
           else {
-            $required.removeClass('valid');
+            $required.removeClass('status-ok');
             $project_code_input.removeClass('isValid');
           }
         });
@@ -43,7 +43,7 @@ $project_code_input.keyup( function() {
  
     else if (len !== 3 )
     {
-        $required.removeClass('valid');
+        $required.removeClass('status-ok');
         $project_code_input.removeClass('isValid');
     }
 });
