@@ -375,11 +375,11 @@
 <script src="../lib/jquery.js"></script>
 <script src="../lib/jquery-ui.js"></script>
 <script src="../lib/project_code_validation.js"></script>
+<script src="../lib/validate_form.js"></script>
+<script src="../lib/disabled.js"></script>
 <script src="date.js"></script>
 <script src="hide.js"></script>
 <script src="add.js"></script>
-<script src="disabled.js"></script>
 <script src="serializeForm.js"></script>
-<script src="../lib/validate_form.js"></script>
 </body>
 </html>

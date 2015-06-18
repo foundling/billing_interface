@@ -1,5 +1,5 @@
 <?php
-include("../dbConfig.test.php");
+include("../db/dbConfig.test.php");
 
 $conn = mysql_connect($dbHost,$dbUser,$dbPass) or die("Connect Error: " . mysql_error());
 mysql_select_db("acct",$conn);
