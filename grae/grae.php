@@ -31,9 +31,6 @@
 	  		<label class="prod-date">Production Date</label>
             <input name="date_of_service" id="datepicker" type="text">
 	  	</div>
-        <div>
-            <p id="proj-code-details"></p>
-        </div>
 	  </div>
 
 	  	<!--SUBJECT BLOCK -->
@@ -375,14 +372,14 @@
 	</form>
 <!--END CONTAINER-->
 </div>
-<script src="jquery.js"></script>
-<script src="jquery-ui.js"></script>
+<script src="../lib/jquery.js"></script>
+<script src="../lib/jquery-ui.js"></script>
+<script src="../lib/project_code_validation.js"></script>
 <script src="date.js"></script>
 <script src="hide.js"></script>
 <script src="add.js"></script>
 <script src="disabled.js"></script>
-<script src="project_code_validation.js"></script>
 <script src="serializeForm.js"></script>
-<script src="validate_form.js"></script>
+<script src="../lib/validate_form.js"></script>
 </body>
 </html>

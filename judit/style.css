@@ -71,11 +71,18 @@ label[class="other-header"]
 	margin-bottom: 5px;
 }
 
-label[class="prod_date"],
-label[class="proj_code"]
+label[class="prod-date"],
+label[class="proj-code"]
 {
 	margin-right: 5px;
 	width: 120px;
+}
+
+label[class="prod-date"],
+label[class="proj-code-label"]
+{
+    margin-right: 5px;
+    width: 120px;
 }
 
 label[class="sub-header"]
@@ -85,7 +92,7 @@ label[class="sub-header"]
 }
 
 
-div label[class="proj_code"]
+div label[class="proj-code"]
 {
 }
 
@@ -116,6 +123,11 @@ input[type=submit]
 input[type=submit]:hover
 {
   background: lightgreen;
+}
+
+label
+{
+  width: 160px;
 }
 
 .production-block
@@ -203,4 +215,94 @@ textarea
 .thin-pipe 
 {
   font-weight: 100;
+}
+
+.validity
+{
+  background: red;
+  display: inline-block;
+  height: 10px;
+  width: 10px;
+  border-radius: 5px;
+  border: 1px solid black;
+  line-height: 10px;
+  text-align: center;
+  vertical-align: middle;
+  margin-left: 5px;
+}
+
+.status-ok
+{
+  background: lightgreen;
+}
+
+@media (max-width:500px) {
+  .container
+  {
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  div.bolus-block,
+  div.infusion-block
+   {
+     margin-left: 0px;
+   }
+  .bolus-header,
+  .bolus-and-infusion-header
+  {
+    display: block;
+    margin: 0 auto;
+  }
+
+  #datepicker { width: 110px;}
+  label.block
+  {
+    width: 100%;
+  }
+  textarea
+  {
+    width: 100%;
+  }
+
+  .thin-pipe
+  { 
+    display: none;
+  }
+  header 
+  {
+	height: 120px;
+    
+  }
+  header h1,
+  header h2
+  {
+    width: 100%;
+    display: inline-block;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  header h2
+  {
+    
+  }
+  input[type=text] {
+    margin-top: 5px;
+  } 
+
+  .radiotracer-block > div
+  {
+    margin-left: 0px;
+  }
+  div.radiotracer-block > div > label[class!=bolus-header]
+  { min-width: 160px; text-align: left;}
+
+  label.bolus-header,
+  label.infusion-header
+  {
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 30px;
+  }
 }
