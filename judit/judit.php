@@ -17,7 +17,7 @@
 <div class="container">
 
 	<h1>Production</h1>
-    <form action="../scripts/email.php" method="GET">
+    <form action="../confirm.php" method="POST">
         <div class="section">
             <label class="proj-code-label">Project Code</label>
             <input id="proj-code" class="required-element" name='proj-code' type="text" maxlength="3" size="3" >
@@ -234,7 +234,7 @@
 <script src="../lib/project_code_validation.js"></script>
 <script src="../lib/validate_form.js"></script>
 <script src="../lib/disabled.js"></script>
-<script src="date.js"></script>
+<script src="../lib/date.js"></script>
 <script src="hide.js"></script>
 </body>
 </html>

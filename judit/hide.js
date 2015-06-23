@@ -5,9 +5,6 @@ var $radiotracer_block = $('.radiotracer-block');
 var $other_checkbox = $('.other-header');
 var $other_block = $('.other-block');
 
-
-
-
 $isotope_checkbox.on('click', function() {
 	$isotope_block.toggleClass('hidden');
 });

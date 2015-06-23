@@ -1,4 +1,5 @@
 (function() {
+
 /* toggle logic for top-level widgets */
 var $issues_comments_header = $('.issues-comments-header');
 var $issues_comments_block = $('.issues-comments-block');
@@ -87,4 +88,5 @@ $subject_type_selector.change( function() {
     $human_subject_details.css('display','none');
   }
 });
+
 }());
