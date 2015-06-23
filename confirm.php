@@ -17,10 +17,9 @@
     padding: 15px;
     background: whitesmoke;
    }
-   input[type=submit]:hover
-   {
-     background: lightgreen;
-   }
+
+   .container h1 {}
+
    input[type=submit]
    {
     margin-top: 20px;
@@ -31,7 +30,10 @@
     height: 60px;
     font-weight: bold;
    }
-
+   input[type=submit]:hover
+   {
+    background: lightgreen;
+   }
    .heading-label 
    {
      padding-bottom: 10px;
@@ -45,6 +47,10 @@
      min-width: 175px;
    }
 
+   .invalid 
+   {
+     border: 2px solid red;
+   }
    .key
    {
      display: inline-block;
