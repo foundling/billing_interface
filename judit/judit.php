@@ -152,7 +152,7 @@
 
 		<div>
 			<label class="sub-header">Starting Activity (mCi)</label>
-			<input type="text"  value="">
+			<input type="text"  name="starting-activity" value="">
 		</div>
 		<div>
 			<label class="sub-header">Synthesis OK</label>
@@ -179,7 +179,7 @@
 
 		<div>
 			<label class="sub-header">Specific Activity at estimated TOI (mCi/nmol)(00:00:00)</label>
-			<input type="text"  value="">
+			<input type="text"  name="specific-activity" value="">
 		</div>
 		<div>
 			<input type="checkbox" value="na"> n/a 
@@ -187,7 +187,7 @@
 		
 		<div>
 			<label class="sub-header">Batch released for Estimated TOI</label>
-			<input type="text"  value="">
+			<input type="text"  name="batch-released-for-estimated-toi" value="">
 		</div>
 		<div>
 			<input type="checkbox" value="na">
@@ -199,8 +199,9 @@
 	  <label class="other-header"> Other </label>
 	  <div class="other-block hidden">
 			<div>
-				<label class="">add new: </label>
-				<select name="new-iso-or-radiotracer">
+                <h2>New Radiotracer</h2><br>
+				<label class="">Type: </label>
+				<select name="new-iso-or-radiotracer-type">
 					<option value="">n/a</option> 
 					<option value="new-iso">isotope</option> 
 					<option value="radiotracer">radiotracer</option>	
@@ -208,8 +209,8 @@
 			</div>
 
 			<div>
-				<label>New Isotope</label>
-				<input type="text" name="new-isotope" disabled>
+				<label>Name:</label>
+				<input type="text" name="new-iso-or-radiotracer-name">
 			</div>
 
 
