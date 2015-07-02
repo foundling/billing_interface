@@ -8,6 +8,7 @@ var $other_block = $('.other-block');
 
 
 
+
 $isotope_checkbox.on('click', function() {
 	$isotope_block.toggleClass('hidden');
 });
