@@ -11,6 +11,19 @@ body
 	background: lightblue;
 }
 
+.or
+{
+  text-align: center;
+  margin: 0 auto;
+  font-weight: bold;
+}
+
+.production-details
+{
+  display: inline-block;
+  border: 1px solid red;
+  padding: 20px;
+}
 .container
 {
 	width: 90%;

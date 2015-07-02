@@ -18,10 +18,26 @@
 
 	<h1>Production</h1>
     <form action="../confirm.php" method="POST">
-        <div class="section">
+        <div class="production-details">
             <label class="proj-code-label">Project Code</label>
             <input id="proj-code" class="required-element" name='proj-code' type="text" maxlength="3" size="3" >
             <div id="proj-code-status" class="validity"></div>
+
+          <div class="vertical">
+            <label class="or">OR</label>
+            <div>
+              <label>Maintenance</label>
+              <input type="radio" name="dummy_code" value="MAINTENANCE">
+            </div>
+            <div>
+              <label>Validation</label>
+              <input type="radio" name="dummy_code" value="VALIDATION">
+            </div>
+            <div>
+              <label>Raw Isotope Run</label>
+              <input type="radio" name="dummy_code" value="RAW_ISO_RUN">
+            </div>
+          </div>
         </div>
 	  <!--PRODUCTION BLOCK: BASE DETAILS -->
 	  <div class="production-block">
@@ -161,21 +177,6 @@
 			<input name="qc-pass" type="radio" value="na"> n/a
 		</div>
 
-
-		<div>
-			<label class="sub-header">Released for Injection </label>
-		</div>
-		<div>
-			<input name="rfi" type="radio" value="yes"> yes 
-			<input name="rfi" type="text" name="lot-number" value="e.g. 150428PBR-01" disabled>
-		</div>
-		<div>	
-			<input name="rfi" type="radio" value="no"> no 
-		</div>
-		<div>
-			<input name="rfi" type="radio" value="na"> n/a
-		</div> 
-
 		<div>
 			<label class="sub-header">Specific Activity at estimated TOI (mCi/nmol)(00:00:00)</label>
 			<input type="text"  value="">
@@ -235,6 +236,7 @@
 <script src="../lib/validate_form.js"></script>
 <script src="../lib/disabled.js"></script>
 <script src="../lib/date.js"></script>
+<script src="../lib/uncheck.js"></script>
 <script src="hide.js"></script>
 </body>
 </html>
