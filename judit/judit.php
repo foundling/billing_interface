@@ -51,32 +51,32 @@
 	  <label class="isotope-header">Isotope Only</label>
 	  <div class="isotope-block hidden">
 	  	<div>
-	  		<input type="checkbox" class="isotope-grp" value="F18">
+	  		<input type="checkbox" class="isotope-grp" name="iso-only-F18" value="F18">
 	  		<label>F18</label>
 	  	</div>
 	  	<div>
-	  		<input type="checkbox" class="isotope-grp" value="C11">
+	  		<input type="checkbox" class="isotope-grp" name="iso-only-C11" value="C11">
 	  		<label>C11</label>
 	  	</div>
 	  	<div>
-	  		<input type="checkbox" class="isotope-grp" value="N13">
+	  		<input type="checkbox" class="isotope-grp"  name="iso-only-N13" value="N13">
 	  		<label>N13</label>
 	  	</div>
 	  	<div>
-	  		<input type="checkbox" class="isotope-grp" value="O15">
+	  		<input type="checkbox" class="isotope-grp"  name="iso-only-015" value="O15">
 	  		<label>O15</label>
 	  	</div>
 	  	<div>
-	  		<input type="checkbox" class="isotope-grp" value="Ga68">
+	  		<input type="checkbox" class="isotope-grp"  name="iso-only-Ga68" value="Ga68">
 	  		<label>Ga68</label>
 	  	</div>
 	  	<div>
-	  		<input type="checkbox" class="isotope-grp" value="Cu64">
+	  		<input type="checkbox" class="isotope-grp"  name="iso-only-Cu64" value="Cu64">
 	  		<label>Cu64</label>
 	  	</div>
 		<div>
 			<label class="sub-header">Activity (mCi)</label>
-			<input type="text"  value="">
+			<input type="text"  name="iso-only-type">
 		</div>
 	  </div>
 
@@ -179,7 +179,7 @@
 
 		<div>
 			<label class="sub-header">Specific Activity at estimated TOI (mCi/nmol)(00:00:00)</label>
-			<input type="text"  name="specific-activity" value="">
+			<input type="text"  name="specific-activity-at-estimated-toi" value="">
 		</div>
 		<div>
 			<input type="checkbox" value="na"> n/a 
