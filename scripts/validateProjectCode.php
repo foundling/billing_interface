@@ -5,10 +5,10 @@ $conn = mysql_connect($dbHost,$dbUser,$dbPass) or die("Connect Error: " . mysql_
 mysql_select_db("acct",$conn);
 $proj_code = mysql_real_escape_string($_GET['code']);
 $active_statement = <<<EOD
-  SELECT CODE FROM PROJECTS WHERE CODE = '{$proj_code}'
+  SELECT CODE FROM PROJECTS WHERE CODE = '{$proj_code}' AND ACTIVE='Y'
 EOD;
 $closed_statement = <<<EOD
-  SELECT CODE FROM PROJECTS WHERE CODE = '{$proj_code}'
+  SELECT CODE FROM PROJECTS WHERE CODE = '{$proj_code}' AND ACTIVE='N'
 EOD;
 
 $active_query = mysql_query($active_statement,$conn) or die("Query Error: " . mysql_error());
