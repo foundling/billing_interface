@@ -1,5 +1,4 @@
 <?php
- 
   $num = '';
 
   $fh = fopen("form_count.txt","r");
@@ -10,7 +9,7 @@
   fclose($fh);
 
   $fh = fopen("form_count.txt","w") or die('unable to write to file');
-  fwrite($fh,$num+1);
+  fwrite($fh,$num + 1);
   fclose($fh);
 
   $result = '';
@@ -22,6 +21,7 @@
 
   $result .= "SUBMISSION ID:\t$num"; 
   $result = rtrim($result,', ');
-  print $result;
-  mail("alexr@nmr.mgh.harvard.edu","test php email",$result);
+  echo $result;
+  $headers = "From: alexr@nmr.mgh.harvard.edu";
+  mail("alexr@nmr.mgh.harvard.edu,judit@nmr.mgh.harvard.edu,grae@nmr.mgh.harvard.edu","Pet Billing Form ID #$num Submission Results",$result,$headers);
 ?>
