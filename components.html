@@ -45,6 +45,14 @@
             <input></input>
         </div>
     </section>
+    
+    <h1 class="sg-header"> Label & Date Picker Input </h1>
+    <section>
+        <div class="label-input">
+            <label>Lot #</label>
+            <input id="datepicker"></input>
+        </div>
+    </section>
 
     <h1 class="sg-header"> Label and Validated Input  </h1>
     <section>
@@ -109,5 +117,12 @@
         <input disabled></input>
     </div> 
     </section>
+<script src="lib/jquery.js"></script>
+<script src="lib/jquery-ui.js"></script>
+<script>
+    $(function() {
+            $("#datepicker" ).datepicker();
+        }); 
+</script>
 </body>
 </html>
