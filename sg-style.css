@@ -88,6 +88,11 @@ div:not(secondary)
     margin-bottom: 20px;
 }
 
+.section-alt
+{
+    
+}
+
 section 
 {
     background: whitesmoke;
@@ -107,6 +112,8 @@ input
 
 input[type="checkbox"]
 {
+    vertical-align: bottom;
+
 }
 
 label 
@@ -144,7 +151,6 @@ label
 {
     position: relative;
     width: 33%;
-    min-width: 350px;
     background: whitesmoke;
     border: 1px solid black;
     border-radius: 5px;
@@ -168,7 +174,6 @@ label
 {
     position: relative;
     width: 33%;
-    min-width: 350px;
     background: lightyellow;
     border: 1px solid black;
     border-radius: 5px;
@@ -176,10 +181,6 @@ label
     padding: 20px;
 }
 
-.second-level-label-toggle > h2:hover
-{
-    background: lightgray;
-}
 
 
 /* HEADER */
@@ -323,9 +324,21 @@ i.fa-plus
 /* Media Queries */
 @media (max-width: 600px) {
 
-    body { background: white;}
-    h1.top-level-label { display: block; width: 90%;margin: 0 auto;}
-    .top-level-label-toggle { margin: 20px 0px; min-width: none; }
+    /* general elements */
+    body { background: white; max-width: 100%;}
+    section { width: 100%;}
+    input[type="checkbox"] { vertical-align: middle; }
+    label { padding-left: 0; margin-left: 0; margin-bottom: 10px;}
+
+    /* Top Level Label */
+    h1.top-level-label { display: block; width: 90%;margin: 0 auto; min-width: 0;}
+    .top-level-label-toggle { margin: 20px 0px; min-width: 0; }
+
+    /* Second Level Label */
+    h2.second-level-label { width: 90%; margin: 0 auto; min-width: 0px;}
+
+    /* Input Validation */
+    h4.validation-status, h4.validation-msg { display: block; margin-left: 0px; margin-top: 5px;}
 }
 
 

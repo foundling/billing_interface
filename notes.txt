@@ -12,6 +12,6 @@ x label-input-datepicker
 x select-content-toggle
 x checkbox-label-list
 x checkbox-label-input-list
-label-input-clone
-label-input-remove
-textarea
+x label-input-clone
+x label-input-remove
+x textarea
