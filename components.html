@@ -9,15 +9,22 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 </head>
 <body>
-    <h1 class="sg-header"> PetBilling Style Guide </h1>
+    <div class="sg-top">
+        <h1 class="sg-header"> PetBilling Style Guide </h1>
+        <p class="sg-notes">
+            This is a CSS styleguide that contains as many modular components as I could come up with for the PETbilling pages.  
+        </p>
+    </div>
 
-    <h1 class="sg-header">Header</h1>
-    <h1 class="header">Radiopharmacy Production | 
+    <h1 class="sg-header">Outer Header</h1>
+    <h1 class="page-header">Radiopharmacy Production | 
         <span id="username">Bob</span>
     </h1>
 
-    <h1 class="sg-header"> Subheader </h1>
-    <h1 class="subheader">Production</h1>
+    <h1 class="sg-header"> Inner Header </h1>
+    <section>
+        <h1 class="inner-header">Production</h1>
+    </section>
 
 
     <h1 class="sg-header"> Top-Level-Label-Toggle </h1>
@@ -127,6 +134,37 @@
         <input disabled></input>
     </div> 
     </section>
+
+    <h1 class="sg-header">Select Content Toggle</h1>
+    <section>
+        <div class="select-content-toggle">
+            <h1 class="inner-header">Select Content Toggle</h1>
+            <select name="select">
+                <option value="o1">option 1</option>
+                <option value="o2">option 2</option>
+                <option value="o3">option 3</option>
+            </select>
+            <div class="secondary demo-content demo-1">
+
+            </div> 
+        </div>
+    </section>
+
+
+    <h1 class="sg-header">Label Input Clone</h1>
+    <section>
+        <div class="label-input-clone">
+            <label>Lot #</label>
+            <input></input>
+            <i class="fa fa-plus clone"></i>
+        </div>
+        <div class="label-input-clone">
+            <label>Lot #</label>
+            <input></input>
+            <i class="fa fa-plus remove"></i>
+        </div>
+    </section>
+
 <script src="lib/jquery.js"></script>
 <script src="lib/jquery-ui.js"></script>
 <script>

@@ -10,6 +10,8 @@ body * { box-sizing: border-box;}
 
 html,
 body,
+p,
+input,
 h1,
 h2,
 h3,
@@ -30,6 +32,25 @@ h5
     margin: 20px 0px 20px 40px;
 }
 
+.sg-top
+{
+    background: whitesmoke;
+    width: 100%;
+    margin: 0;
+    padding: 100px 0px 100px 40px;
+    margin-bottom: 40px;
+    text-decoration: none;
+}
+
+.sg-notes
+{
+    background: whitesmoke;
+    font-size: 33px;
+    margin: 0;
+    padding: 0px 40px;
+    text-decoration: none;
+    width: 100%;
+}
 /* Pet Billing Components */
 
 
@@ -41,7 +62,27 @@ i.fa
 
 }
 
-div
+.demo-content
+{
+    display: block;
+    width: 100%;
+    height: 400px;
+}
+
+.demo-1
+{
+    background: lightsalmon;
+}
+.demo-2
+{
+    background: aquamarine;
+}
+.demo-3
+{
+    background: slateblue;
+}
+
+div:not(secondary)
 {
     margin-top: 20px;
     margin-bottom: 20px;
@@ -77,6 +118,8 @@ label
 }
 
 
+
+/* SELECT CONTENT TOGGLE */
 
 /* TOP-LEVEL-LABEL-TOGGLE */
 
@@ -140,16 +183,15 @@ label
 
 
 /* HEADER */
-.header
+.page-header
 {
     background: whitesmoke;
-    padding: 20px;
+    padding: 40px;
 }
 
-.subheader
+.inner-header
 {
-    padding: 20px;
-    margin: 20px;
+    margin: 20px 0px;
 }
 
 #username
@@ -245,8 +287,39 @@ label
     display: inline-block;
 }
 
-/* Radio  */
 
+/* LABEL INPUT CLONE  */
+.label-input-clone
+{
+
+}
+
+i.fa-plus
+{
+    font-size: 25px;
+    vertical-align: bottom;
+    margin-left: 20px;
+}
+
+.clone
+{
+    color: lightgreen;
+}
+
+.clone:hover
+{
+    color: green;
+}
+
+.remove
+{
+    color: red;
+}
+
+.remove:hover
+{
+    color: lightcoral;
+}
 /* Media Queries */
 @media (max-width: 600px) {
 

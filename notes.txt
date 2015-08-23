@@ -9,8 +9,9 @@ x label-input-validate
 x radiox-group
 x radiox-single
 x label-input-datepicker
-checkbox-label-list
-checkbox-label-input-list
-checkbox-label-input-generate
-checkbox-label-input-remove
+x select-content-toggle
+x checkbox-label-list
+x checkbox-label-input-list
+label-input-clone
+label-input-remove
 textarea
