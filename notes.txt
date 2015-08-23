@@ -1,14 +1,14 @@
 Base:
 
 Components:
-header
-label-solo
-label-select
-label-input
-label-input-validate
-radiox-group
-radiox-single
-label-input-datepicker
+x header
+x label-solo
+x label-select
+x label-input
+x label-input-validate
+x radiox-group
+x radiox-single
+x label-input-datepicker
 checkbox-label-list
 checkbox-label-input-list
 checkbox-label-input-generate
