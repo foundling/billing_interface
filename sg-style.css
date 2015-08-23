@@ -1,0 +1,219 @@
+body
+{
+    font-family: "Helvetica Neue", sans-serif;
+    background: lightblue;
+    font-size: 100%;
+}
+
+/*  resets */
+
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5
+{
+    margin: 0;
+    padding: 0;
+}
+
+
+body 
+{
+    box-sizing: border-box; 
+}
+
+/* Style Guide Styles */
+*[class*="sg-"] 
+{
+    text-decoration: underline;
+    font-weight: 100;
+    margin: 20px 0px 20px 20px;
+}
+
+/* Pet Billing Components */
+
+
+/* GENERAL COMPONTENTS */
+
+i.fa
+{
+    display: inline-block;
+
+}
+
+div
+{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+section 
+{
+    background: whitesmoke;
+    width: 90%;
+    margin: 40px auto;
+    padding: 40px;
+    height: auto;
+}
+
+input 
+{
+    padding-left: 4px;
+    height: 25px;
+    font-size: 100%;
+    border: 1px solid black;
+}
+
+input[type="checkbox"]
+{
+}
+label 
+{
+    display: inline-block;
+    margin: 0px 20px 0px 20px;
+    width: 150px;
+    font-weight: 200;
+}
+
+
+
+/* TOP-LEVEL-LABEL-TOGGLE */
+
+.top-level-label-toggle
+{
+    margin-left: 20px;
+}
+
+.top-level-label-toggle .fa
+{
+    position: absolute;
+    right: 10px;
+    color: red;
+}
+
+.top-level-label-toggle > h1:hover
+{
+    background: lightgray;
+}
+
+.top-level-label-toggle > h1
+{
+    position: relative;
+    width: 33%;
+    min-width: 350px;
+    background: whitesmoke;
+    border: 1px solid black;
+    border-radius: 5px;
+    text-align: center;
+}
+.top-level-label-toggle * 
+{
+    padding: 5px;
+    display: inline-block;
+}
+
+/* HEADER */
+.header
+{
+    background: whitesmoke;
+    padding: 20px;
+}
+
+#username
+{
+    color: red;
+}
+
+.label-solo
+{
+    font-weight: bold;
+    display: block;
+}
+
+/* LABEL-INPUT */
+
+.label-input
+{
+    font-weight: 200;
+    display: block;
+}
+
+.label-input > input,
+.label-input > h3
+{
+    display: inline-block;
+}
+
+/* LABEL-INPUT-VALIDATED */
+
+.valid-input
+{
+    border: 2px solid lightgreen;
+}
+
+.invalid-input
+{
+    border: 2px solid red;
+}
+
+
+.label-input-validated
+{
+    font-weight: 200;
+    display: block;
+}
+
+.label-input-validated > input,
+.label-input-validated > h3,
+.label-input-validated > h4
+{
+    display: inline-block;
+}
+
+.label-input-validated > h4
+{
+    margin-left: 40px;
+}
+
+.validation-status 
+{
+
+    color: whitesmoke;
+    border-radius: 5px;
+}
+
+.valid-msg
+{
+
+    background: lightgreen;
+    padding: 5px 8px;
+}
+
+.invalid-msg
+{
+
+    color: whitesmoke;
+    background: red;
+    padding: 5px 8px;
+    border-radius: 5px;
+}
+
+
+/* LABEL-SELECT */
+
+.label-select 
+{
+    display: block;
+}
+
+.label-select > input,
+.label-select > select 
+{
+    display: inline-block;
+}
+
+/* SELECT SECTION TOGGLE */
+

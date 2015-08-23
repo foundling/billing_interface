@@ -20,12 +20,28 @@
 	  <!--PRODUCTION BLOCK: BASE DETAILS -->
 	<h1>Production</h1>
 	<form action="../confirm.php" method="POST"> 
-	  	<div class="section">
-	  		<label class="proj-code-label">Project Code</label>
-	  		<input id="proj-code" class="required-element" name='proj-code' type="text" maxlength="3" size="3" >
+     <div class="production-details">
+            <label class="proj-code-label">Project Code</label>
+            <input id="proj-code" class="required-element" name='proj-code' type="text" maxlength="3" size="3" >
             <div id="proj-code-status" class="validity"></div>
-	  	</div>
+			<p id="proj-code-status-message"></p>
 
+          <div class="vertical">
+            <label class="or">OR</label>
+            <div>
+              <label>Maintenance</label>
+              <input type="radio" name="dummy_code" value="MAINTENANCE">
+            </div>
+            <div>
+              <label>Validation</label>
+              <input type="radio" name="dummy_code" value="VALIDATION">
+            </div>
+            <div>
+              <label>Raw Isotope Run</label>
+              <input type="radio" name="dummy_code" value="RAW_ISO_RUN">
+            </div>
+          </div>
+        </div>
 	  <div class="production-block">
 	  	<div>
 	  		<label class="prod-date">Production Date</label>
@@ -368,6 +384,7 @@
     <!-- END ISSUES / COMMENTS BLOCK -->
 
 	<!-- Submit Form -->
+    <p id="validation_errors"></p>
 	<input type="submit">
 	</form>
 <!--END CONTAINER-->
@@ -378,6 +395,7 @@
 <script src="../lib/validate_form.js"></script>
 <script src="../lib/disabled.js"></script>
 <script src="../lib/date.js"></script>
+<script src="../lib/uncheck.js"></script>
 <script src="hide.js"></script>
 <script src="add.js"></script>
 </body>

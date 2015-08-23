@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1">
+  <title>MGH Martinos Center - PET Billing</title>
+  <link rel="stylesheet" href="sg-style.css">
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+</head>
+<body>
+    <h1 class="sg-header"> PetBilling Style Guide </h1>
+
+    <h1 class="sg-header">Header</h1>
+    <h1 class="header">Radiopharmacy Production | 
+        <span id="username">Bob</span>
+    </h1>
+
+    <h1 class="sg-header"> Top-Level Toggle </h1>
+    <div class="top-level-label-toggle">
+        <h1 class="top-level-label">Radiotracer
+            <i class="fa fa-arrow-circle-down"></i>
+        </h1>
+    </div>
+    <div class="top-level-label-toggle">
+        <h1 class="top-level-label">Subject Info
+            <i class="fa fa-arrow-circle-down"></i>
+        </h1>
+    </div>
+    <div class="top-level-label-toggle">
+        <h1 class="top-level-label">Isotype Only
+            <i class="fa fa-arrow-circle-down"></i>
+        </h1>
+    </div>
+
+    <h1 class="sg-header"> Solo Label </h1>
+    <section>
+        <label class="label-solo">Subject Type</label>
+    </section>
+
+    <h1 class="sg-header"> Label & Input </h1>
+    <section>
+        <div class="label-input">
+            <label>Lot #</label>
+            <input></input>
+        </div>
+    </section>
+
+    <h1 class="sg-header"> Label and Validated Input  </h1>
+    <section>
+        <div class="label-input-validated">
+            <label>Project Code</label>
+            <input class="invalid-input"></input>
+            <h4 class="validation-status invalid-msg">This project does not exist. </h4>
+        </div>
+    </section>
+    <section>
+        <div class="label-input-validated">
+            <label>Project Code</label>
+            <input class="invalid-input"></input>
+            <h4 class="validation-status invalid-msg">This project is closed. </h4>
+        </div>
+    </section>
+    <section>
+        <div class="label-input-validated">
+            <label>Project Code</label>
+            <input class="valid-input"></input>
+            <h4 class="validation-status valid-msg">This project is valid. </h4>
+        </div>
+    </section>
+
+
+
+    <h1 class="sg-header">Label & Select</h1>
+    <section>
+    <div class="label-select">
+        <label>Subject Type</label>
+        <select name="subject-type">
+            <option value="animal">animal</option>
+            <option value="human">human</option>
+            <option value="n/a">n/a</option>
+        </select>
+    </div> 
+    <div class="label-select">
+        <label>Subject Type</label>
+        <select name="subject-type">
+            <option value="animal">animal</option>
+            <option value="human">human</option>
+            <option value="n/a">n/a</option>
+        </select>
+    </div> 
+    </section>
+
+    <h1 class="sg-header">Checkbox, Label & Input </h1>
+    <section>
+    <div class="checkbox-label-input">
+        <input type="checkbox"></input>
+        <label>Subject Type</label>
+        <input disabled></input>
+    </div> 
+    <div class="checkbox-label-input">
+        <input type="checkbox"></input>
+        <label>Subject Type</label>
+        <input disabled></input>
+    </div> 
+    <div class="checkbox-label-input">
+        <input type="checkbox"></input>
+        <label>Subject Type</label>
+        <input disabled></input>
+    </div> 
+    </section>
+</body>
+</html>

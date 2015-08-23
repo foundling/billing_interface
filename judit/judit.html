@@ -26,16 +26,16 @@
           <div class="vertical">
             <label class="or">OR</label>
             <div>
+              <label>Conditioning</label>
+              <input type="radio" name="dummy_code" value="CONDITIONING">
+            </div>
+            <div>
               <label>Maintenance</label>
               <input type="radio" name="dummy_code" value="MAINTENANCE">
             </div>
             <div>
               <label>Validation</label>
               <input type="radio" name="dummy_code" value="VALIDATION">
-            </div>
-            <div>
-              <label>Raw Isotope Run</label>
-              <input type="radio" name="dummy_code" value="RAW_ISO_RUN">
             </div>
           </div>
         </div>
@@ -226,6 +226,8 @@
 
 	  </div>
 	<!-- Submit Form -->
+    <p id="validation_errors"></p>
+
 	<input type="submit">
 	</form>
 <!--END CONTAINER-->
