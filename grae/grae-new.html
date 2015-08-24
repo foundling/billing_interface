@@ -9,159 +9,247 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 </head>
 <body>
+
     <h1 class="page-header">Radiopharmacy Production | 
         <span id="username">Bob</span>
     </h1>
 
+    <h1 class="outer-header">Production</h1>
     <section>
-        <h1 class="inner-header">Production</h1>
-    </section>
-
-
-    <h1 class="sg-header"> Top-Level-Label-Toggle </h1>
-    <div class="top-level-label-toggle">
-        <h1 class="top-level-label">Radiotracer
-            <i class="fa fa-arrow-circle-down"></i>
-        </h1>
-    </div>
-
-    <h1 class="sg-header">Second-Level Label</h1>
-    <section>
-        <div class="second-level-label-toggle">
-            <h2 class="second-level-label">Animal Subject</h2>
+        <div class="label-input-validated">
+            <label>Project Code</label>
+            <input class="invalid-input" maxlength="3" size="3"></input>
+            <h4 class="validation-status invalid-msg">
+                This project does not exist. 
+            </h4>
         </div>
-        <div class="second-level-label-toggle">
-            <h2 class="second-level-label">Human Subject</h2>
+        <label class="label-solo-bold">OR</label>
+        <div class="label-radiox-single">
+            <label class="label-solo">Maintenance</label>
+            <input type="radio"></input>
         </div>
-    </section>
-
-    <div class="top-level-label-toggle">
-        <h1 class="top-level-label">Subject Info
-            <i class="fa fa-arrow-circle-down"></i>
-        </h1>
-    </div>
-    <div class="top-level-label-toggle">
-        <h1 class="top-level-label">Isotype Only
-            <i class="fa fa-arrow-circle-down"></i>
-        </h1>
-    </div>
-
-    <h1 class="sg-header"> Solo Label </h1>
-    <section>
-        <label class="label-solo">Subject Type</label>
-    </section>
-
-    <h1 class="sg-header"> Label & Input </h1>
-    <section>
+        <div class="label-radiox-single">
+            <label class="label-solo">Validation</label>
+            <input type="radio"></input>
+        </div>
+        <div class="label-radiox-single">
+            <label class="label-solo">Raw Isotope Run</label>
+            <input type="radio"></input>
+        </div>
         <div class="label-input">
-            <label>Lot #</label>
-            <input></input>
-        </div>
-    </section>
-    
-    <h1 class="sg-header"> Label & Date Picker Input </h1>
-    <section>
-        <div class="label-input">
-            <label>Lot #</label>
+            <label>Production Date</label>
             <input id="datepicker"></input>
         </div>
     </section>
 
-    <h1 class="sg-header"> Label and Validated Input  </h1>
-    <section>
-        <div class="label-input-validated">
-            <label>Project Code</label>
-            <input class="invalid-input"></input>
-            <h4 class="validation-status invalid-msg">This project does not exist. </h4>
-        </div>
-        <div class="label-input-validated">
-            <label>Project Code</label>
-            <input class="invalid-input"></input>
-            <h4 class="validation-status invalid-msg">This project is closed. </h4>
-        </div>
-        <div class="label-input-validated">
-            <label>Project Code</label>
-            <input class="valid-input"></input>
-            <h4 class="validation-status valid-msg">This project is valid. </h4>
-        </div>
-    </section>
+    <!-- TOP LEVEL LABEL TOGGLE -->
 
+    <div id="subject-information-label" class="top-level-label-toggle">
+        <h1 class="top-level-label">Subject Information
+            <i class="fa fa-arrow-circle-down"></i>
+        </h1>
+    </div>
 
-    <h1 class="sg-header">Label & Select</h1>
-    <section>
-    <div class="label-select">
-        <label>Subject Type</label>
-        <select name="subject-type">
-            <option value="animal">animal</option>
-            <option value="human">human</option>
-            <option value="n/a">n/a</option>
-        </select>
-    </div> 
-    <div class="label-select">
-        <label>Subject Type</label>
-        <select name="subject-type">
-            <option value="animal">animal</option>
-            <option value="human">human</option>
-            <option value="n/a">n/a</option>
-        </select>
-    </div> 
-    </section>
+    <section id="subject-information-block">
 
-    <h1 class="sg-header">Checkbox, Label & Input </h1>
-    <section>
-    <div class="checkbox-label-input">
-        <input type="checkbox"></input>
-        <label>Subject Type</label>
-        <input disabled></input>
-    </div> 
-    <div class="checkbox-label-input">
-        <input type="checkbox"></input>
-        <label>Subject Type</label>
-        <input disabled></input>
-    </div> 
-    <div class="checkbox-label-input">
-        <input type="checkbox"></input>
-        <label>Subject Type</label>
-        <input disabled></input>
-    </div> 
-    </section>
-
-    <h1 class="sg-header">Select Content Toggle</h1>
-    <section>
         <div class="select-content-toggle">
-            <h1 class="inner-header">Select Content Toggle</h1>
+
+            <h1 class="inner-header">Subject Type</h1>
             <select name="select">
-                <option value="o1">option 1</option>
-                <option value="o2">option 2</option>
-                <option value="o3">option 3</option>
+                <option value="n/a">n/a</option>
+                <option value="human">human</option>
+                <option value="animal">animal</option>
+                <option value="phantom">phantom</option>
             </select>
-            <div class="secondary demo-content demo-1">
 
-            </div> 
+            <!-- 4 options: n/a, human subjects, animal subjects, phantom -->
+            <div id="subject-information-na" class="logical-wrapper">
+            </div>
+
+            <div id="subject-information-human" class="logical-wrapper">
+                <label class="label-solo-bold">Human Subject Details</label>
+                <div class="label-input">
+                    <label>Subject ID</label>
+                    <input></input>
+                </div>
+                <div class="label-input">
+                    <label>Sex</label>
+                    <input></input>
+                </div>
+                <div class="label-input">
+                    <label>Weight</label>
+                    <input></input>
+                </div>
+                <div class="label-input">
+                    <label>Height</label>
+                    <input></input>
+                </div>
+                <div class="label-input">
+                    <label>Year of Birth</label>
+                    <input></input>
+                </div>
+                <div class="label-input">
+                    <label>IV Placement</label>
+                    <input></input>
+                </div>
+                <div class="label-input">
+                    <label>Gauge</label>
+                    <input></input>
+                </div>
+                <div class="label-input">
+                    <label>Glucose (optional)</label>
+                    <input></input>
+                </div>
+            </div>
+
+            <div id="subject-information-animal" class="logical-wrapper">
+                <label class="label-solo-bold">Animal Subject Details</label>
+                <div class="label-input">
+                    <label>Subject ID</label>
+                    <input></input>
+                </div>
+                <div class="label-input">
+                    <label>Weight</label>
+                    <input></input>
+                </div>
+                <div class="label-input">
+                    <label>Weight</label>
+                    <input></input>
+                </div>
+                <div class="label-input">
+                    <label>IV Placement</label>
+                    <input></input>
+                </div>
+                <div class="label-input">
+                    <label>NucMed Charge</label>
+                    <input></input>
+                </div>
+            </div>
+
+            <div id="subject-information-phantom" class="logical-wrapper">
+                <label class="label-solo-bold">Phantom Subject</label>
+                <div class="label-input">
+                    <label>Phantom Subject Details</label>
+                    <input></input>
+                </div>          
+            </div>
+     </section>
+
+     <!-- INJECTED COMPOUND -->
+    <div id="injected-compound-label" class="top-level-label-toggle">
+        <h1 class="top-level-label">Injected Compound
+            <i class="fa fa-arrow-circle-down"></i>
+        </h1>
+    </div>
+
+    <section id="injected-compound-block">
+        <div class="label-input">
+            <label>Injected Compound</label>
+            <input></input>
+        </div>
+    </section>
+
+     <!-- RADIOTRACER -->
+    <div id="radiotracer-label" class="top-level-label-toggle">
+        <h1 class="top-level-label">Injected Compound
+            <i class="fa fa-arrow-circle-down"></i>
+        </h1>
+    </div>
+
+    <section id="radiotracer-block">
+        <div class="checkbox-label-input">
+            <input type="checkbox">
+            <label>F18-5FU</label>
+            <input disabled></input>
+        </div>
+        <div class="checkbox-label-input">
+            <input type="checkbox">
+            <label>Ga68-Dota-toc</label>
+            <input disabled></input>
+        </div>
+        <div class="checkbox-label-input">
+            <input type="checkbox">
+            <label>Cu64-FBP8</label>
+            <input disabled></input>
+        </div>
+        <div class="checkbox-label-input">
+            <input type="checkbox">
+            <label>C11-Diprenorphine</label>
+            <input disabled></input>
+        </div>
+        <div class="checkbox-label-input">
+            <input type="checkbox">
+            <label>C11-DASB</label>
+            <input disabled></input>
+        </div>
+        <div class="checkbox-label-input">
+            <input type="checkbox">
+            <label>F18-Fallypride</label>
+            <input disabled></input>
+        </div>
+        <div class="checkbox-label-input">
+            <input type="checkbox">
+            <label>F18-FMISO</label>
+            <input disabled></input>
+        </div>
+        <div class="checkbox-label-input">
+            <input type="checkbox">
+            <label>C11-Martinostat</label>
+            <input disabled></input>
+        </div>
+        <div class="checkbox-label-input">
+            <input type="checkbox">
+            <label>C11-NNc112</label>
+            <input disabled></input>
+        </div>
+        <div class="checkbox-label-input">
+            <input type="checkbox">
+            <label>C11-PRB28</label>
+            <input disabled></input>
+        </div>
+        <div class="checkbox-label-input">
+            <input type="checkbox">
+            <label>C11-Raclopride</label>
+            <input disabled></input>
+        </div>
+        <div class="checkbox-label-input">
+            <input type="checkbox">
+            <label>F18-T807</label>
+            <input disabled></input>
+        </div>
+        <div class="checkbox-label-input">
+            <input type="checkbox">
+            <label>C11-Temozolomide</label>
+            <input disabled></input>
+        </div>
+        <div class="checkbox-label-input">
+            <input type="checkbox">
+            <label>F18-FDG</label>
+            <input disabled></input>
+        </div>
+        <div class="checkbox-label-input">
+            <input type="checkbox">
+            <label>Other</label>
+            <input disabled></input>
         </div>
     </section>
 
 
-    <h1 class="sg-header">Label Input Clone</h1>
-    <section>
-        <div class="label-input-clone">
-            <label>Lot #</label>
-            <input></input>
-            <i class="fa fa-plus clone"></i>
-        </div>
-        <div class="label-input-clone">
-            <label>Lot #</label>
-            <input></input>
-            <i class="fa fa-plus remove"></i>
-        </div>
-    </section>
+
+
+
+
+
+
 
 <script src="../lib/jquery.js"></script>
 <script src="../lib/jquery-ui.js"></script>
-<script>
-    $(function() {
-            $("#datepicker" ).datepicker();
-        }); 
-</script>
+<script src="../lib/project_code_validation.js"></script>
+<script src="../lib/validate_form.js"></script>
+<script src="../lib/disabled.js"></script>
+<script src="../lib/date.js"></script>
+<script src="../lib/uncheck.js"></script>
+<script src="hide.js"></script>
+<script src="add.js"></script>
 </body>
 </html>

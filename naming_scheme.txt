@@ -1,0 +1,6 @@
+js uses ids wherever possible.
+
+label is "<name of block>-label"
+block is "<name of block>-block"
+
+

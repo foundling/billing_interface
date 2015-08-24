@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="initial-scale=1; user-scalable=no">
+  <meta name="viewport" content="initial-scale=1">
   <title>MGH Martinos Center - PET Billing</title>
   <link rel="stylesheet" href="sg-style.css">
   <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
@@ -26,9 +26,15 @@
         <h1 class="inner-header">Production</h1>
     </section>
 
-    <h1 class="base-details"> Base Details </h1>
     <section class="section-alt">
-        
+        <div class="label-input-validated">
+            <label>Project Code</label>
+            <input class="invalid-input"></input>
+            <h4 class="validation-status invalid-msg">
+                This project does not exist. 
+            </h4>
+        </div>
+        <label class="label-solo">or</label>
     </section>
 
 
@@ -85,7 +91,7 @@
     <section>
         <div class="label-input-validated">
             <label>Project Code</label>
-            <input class="invalid-input"></input>
+            <input class="invalid-input" type="text" maxlength="3" size="3" > 
             <h4 class="validation-status invalid-msg">This project does not exist. </h4>
         </div>
         <div class="label-input-validated">
@@ -100,6 +106,30 @@
         </div>
     </section>
 
+
+    <h1 class="sg-header">Label & Radio-x Single</h1>
+    <section>
+    <div class="label-radiox-single">
+        <label class="label-solo">Maintenance</label>
+        <input type="radio"></input>
+    </div>
+    </section>
+
+    <h1 class="sg-header">Label & Radio-x Group</h1>
+    <section>
+    <div class="label-radiox-single">
+        <label class="label-solo">Maintenance</label>
+        <input type="radio"></input>
+    </div>
+    <div class="label-radiox-single">
+        <label class="label-solo">Validation</label>
+        <input type="radio"></input>
+    </div>
+    <div class="label-radiox-single">
+        <label class="label-solo">Raw Isotope Run</label>
+        <input type="radio"></input>
+    </div>
+    </section>
 
     <h1 class="sg-header">Label & Select</h1>
     <section>

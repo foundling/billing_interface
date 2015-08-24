@@ -88,6 +88,12 @@ div:not(secondary)
     margin-bottom: 20px;
 }
 
+.logical-wrapper
+{
+    margin: 0;
+    padding: 0;
+}
+
 .section-alt
 {
     
@@ -119,12 +125,19 @@ input[type="checkbox"]
 label 
 {
     display: inline-block;
-    margin: 0px 20px 0px 20px;
-    width: 150px;
+    margin: 0px 20px 0px 0px;
     font-weight: 200;
+    width: 200px;
 }
 
 
+
+/* BASE DETAILS SECTION */
+
+.section-alt 
+{
+    border: 1px solid red;
+}
 
 /* SELECT CONTENT TOGGLE */
 
@@ -137,8 +150,6 @@ label
 
 .top-level-label-toggle .fa
 {
-    position: absolute;
-    right: 30px;
     color: red;
 }
 
@@ -150,12 +161,11 @@ label
 .top-level-label-toggle > h1
 {
     position: relative;
-    width: 33%;
     background: whitesmoke;
     border: 1px solid black;
     border-radius: 5px;
     text-align: center;
-    padding: 20px;
+    padding: 20px 40px 20px 40px;
 }
 .top-level-label-toggle * 
 {
@@ -195,16 +205,29 @@ label
     margin: 20px 0px;
 }
 
+.outer-header
+{
+    margin: 40px;
+}
+
 #username
 {
     color: red;
 }
 
-.label-solo
+.label-solo,
+.label-solo-bold
+{
+    display: block;
+    padding-top: 20px;
+    padding-bottom: 5px;
+}
+
+.label-solo-bold
 {
     font-weight: bold;
-    display: block;
 }
+
 
 /* LABEL-INPUT */
 
@@ -275,6 +298,15 @@ label
 }
 
 
+/* LABEL-RADIOX-SINGLE */
+.label-radiox-single *
+{
+    display: inline-block;
+}
+
+.label-radiox-single input[type="radio"] {
+   vertical-align: middle; 
+}
 /* LABEL-SELECT */
 
 .label-select 
