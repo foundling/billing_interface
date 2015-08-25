@@ -107,6 +107,7 @@ div:not(secondary)
 section 
 {
     background: whitesmoke;
+    border: 1px solid black;
     width: calc(100% - 80px);
     margin: 40px auto;
     padding: 40px;
@@ -145,7 +146,13 @@ label
     border: 1px solid red;
 }
 
-/* SELECT CONTENT TOGGLE */
+/* Label Textbox */
+
+.label-textbox label
+{
+    margin: 20px 0px 20px 0px;
+
+}
 
 /* TOP-LEVEL-LABEL-TOGGLE */
 
@@ -200,6 +207,7 @@ label
 {
     background: whitesmoke;
     padding: 40px;
+    border-bottom: 1px solid black;
 }
 
 .second-level-label

@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1; user-scalable=no">
+  <title>MGH Martinos Center - PET Billing</title>
+  <link rel="stylesheet" href="../sg-style.css">
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+</head>
+<body>
+
+    <h1 class="page-header">Radiopharmacy Production | 
+        <span id="username"><span ><?php print $_SERVER['REMOTE_USER']; ?>Judit</span>
+    </h1>
+
+    <form action="../confirm.php" method="post">
+
+        <h1 class="outer-header">Production</h1>
+        <section>
+            <div class="label-input-validated">
+                <label>Project Code</label>
+                <input class="invalid-input" maxlength="3" size="3">
+                <h4 class="validation-status invalid-msg">
+                    This project does not exist. 
+                </h4>
+            </div>
+            <label class="label-solo-bold">OR</label>
+            <div class="label-radiox-single">
+                <label class="label-solo">Conditioning</label>
+                <input name="conditioning" type="radio">
+            </div>
+            <div class="label-radiox-single">
+                <label class="label-solo">Maintenance</label>
+                <input name="maintenance" type="radio">
+            </div>
+            <div class="label-radiox-single">
+                <label class="label-solo">Validation</label>
+                <input name="validation" type="radio">
+            </div>
+            <div class="label-input">
+                <label>Production Date</label>
+                <input id="datepicker">
+            </div>
+        </section>
+
+
+         <!-- ISOTOPE-ONLY -->
+        <div id="isotope-only-label" class="top-level-label-toggle">
+            <h1 class="top-level-label">Isotope Only
+                <i class="fa fa-arrow-circle-down"></i>
+            </h1>
+        </div>
+
+        <section id="isotope-only-block">
+            <div class="checkbox-label">
+                <input name="f18" type="checkbox">
+                <label>F18</label>
+            </div>
+            <div class="checkbox-label">
+                <input name="C11" type="checkbox">
+                <label>C11</label>
+            </div>
+            <div class="checkbox-label">
+                <input name="N13" type="checkbox">
+                <label>N13</label>
+            </div>
+            <div class="checkbox-label">
+                <input name="O15" type="checkbox">
+                <label>O15</label>
+            </div>
+            <div class="checkbox-label">
+                <input name="Ga68" type="checkbox">
+                <label>Ga68</label>
+            </div>
+            <div class="checkbox-label">
+                <input name="Cu64" type="checkbox">
+                <label>Cu64</label>
+            </div>
+            <div class="label-input">
+                <label>Activity (mCi)</label>
+                <input></input>
+            </div>
+        </section>
+
+        <!-- RADIOTRACER -->
+        <div id="radiotracer-label" class="top-level-label-toggle">
+            <h1 class="top-level-label">Radiotracer
+                <i class="fa fa-arrow-circle-down"></i>
+            </h1>
+        </div>
+
+        <section id="radiotracer-block">
+            <div class="checkbox-label-input">
+                <input type="checkbox">
+                <label>F18-5FU</label>
+                <input name="f18-5fu-lot-number" disabled>
+            </div>
+            <div class="checkbox-label-input">
+                <input type="checkbox">
+                <label>Ga68-Dota-toc</label>
+                <input name="Ga68-Dota-toc-lot-number" disabled>
+            </div>
+            <div class="checkbox-label-input">
+                <input type="checkbox">
+                <label>Cu64-FBP8</label>
+                <input name="cU64-fbp8-lot-number" disabled>
+            </div>
+            <div class="checkbox-label-input">
+                <input type="checkbox">
+                <label>C11-Diprenorphine</label>
+                <input name="c11-diprenorphine-lot-number" disabled>
+            </div>
+            <div class="checkbox-label-input">
+                <input type="checkbox">
+                <label>C11-DASB</label>
+                <input name="c11-dasb-lot-number" disabled>
+            </div>
+            <div class="checkbox-label-input">
+                <input type="checkbox">
+                <label>F18-Fallypride</label>
+                <input name="f18-fallypride-lot-number" disabled>
+            </div>
+            <div class="checkbox-label-input">
+                <input type="checkbox">
+                <label>F18-FMISO</label>
+                <input name="f18-fmiso-lot-number" disabled>
+            </div>
+            <div class="checkbox-label-input">
+                <input type="checkbox">
+                <label>C11-Martinostat</label>
+                <input name="c11-martinostat-lot-number" disabled>
+            </div>
+            <div class="checkbox-label-input">
+                <input type="checkbox">
+                <label>C11-NNc112</label>
+                <input name="c11-nnc112-lot-number" disabled>
+            </div>
+            <div class="checkbox-label-input">
+                <input type="checkbox">
+                <label>C11-PRB28</label>
+                <input name="c11-prb28-lot-number" disabled>
+            </div>
+            <div class="checkbox-label-input">
+                <input type="checkbox">
+                <label>C11-Raclopride</label>
+                <input name="c11-raclopride-lot-number" disabled>
+            </div>
+            <div class="checkbox-label-input">
+                <input type="checkbox">
+                <label>f18-t807</label>
+                <input name="f18-t807-lot-number" disabled>
+            </div>
+            <div class="checkbox-label-input">
+                <input type="checkbox">
+                <label>C11-Temozolomide</label>
+                <input name="c11-temozolomide-lot-number" disabled>
+            </div>
+            <div class="label-input">
+                <label>Starting Activity (mCi)</label>
+                <input name="starting-activity">
+            </div>
+
+            <label class="label-solo-bold">Synthesis OK</label>
+            <div class="label-radiox-single">
+                <label class="label-solo">YES</label>
+                <input name="synthesis-ok-yes" type="radio">
+            </div>
+            <div class="label-radiox-single">
+                <label class="label-solo">NO</label>
+                <input name="synthesis-ok-no" type="radio">
+            </div>
+
+            <label class="label-solo-bold">Quality Control Pass</label>
+            <div class="label-radiox-single">
+                <label class="label-solo">YES</label>
+                <input name="qc-pass-yes" type="radio">
+            </div>
+            <div class="label-radiox-single">
+                <label class="label-solo">NO</label>
+                <input name="qc-pass-no" type="radio">
+            </div>
+            <div class="label-radiox-single">
+                <label class="label-solo">N/A</label>
+                <input name="qc-pass-na" type="radio">
+            </div>
+
+            <div class="label-input">
+                <label>Specific Activity at estimated TOI (mCi/nmol)</label>
+                <input name="specific-activity-at-estimated-toi" placeholder="00:00:00">
+            </div>
+            <div class="label-input">
+                <label>Batch released for Estimated TOI</label>
+                <input name="batch-released-for-estimated-toi" >
+            </div>
+        </section>
+
+        <!-- OTHER -->
+        <div id="other-label" class="top-level-label-toggle">
+            <h1 class="top-level-label">Other
+                <i class="fa fa-arrow-circle-down"></i>
+            </h1>
+        </div>
+        <section id="other-block">
+            <label class="label-solo-bold">New Radiotracer</label>
+            <div class="label-select">
+                <label>Type</label>
+                <select name="subject-type">
+                    <option value="na">n/a</option>
+                    <option value="isotope">isotope</option>
+                    <option value="radiotracer">human</option>
+                </select>
+            </div>
+
+            <div class="label-input">
+                <label>Name:</label>
+                <input name="other-name">
+            </div>
+
+
+            <div class="label-textbox">
+                <label class="label-solo-bold">Billing Comments</label>
+                <textarea name="billing-comments" rows="4" cols="40"></textarea>
+            </div>
+
+            <div class="label-textbox">
+                <label class="label-solo-bold">Comments for IT/Development (Martinos Help Desk)</label>
+                <textarea name="it-dev-comments" rows="4" cols="40"></textarea>
+            </div>
+
+        </section>
+
+        <input type="submit">
+    </form>
+
+
+<script src="../lib/jquery.js"></script>
+<script src="../lib/jquery-ui.js"></script>
+<script src="../lib/project_code_validation.js"></script>
+<script src="../lib/validate_form.js"></script>
+<script src="../lib/disabled.js"></script>
+<script src="../lib/date.js"></script>
+<script src="../lib/uncheck.js"></script>
+<script src="hide.js"></script>
+<script src="add.js"></script>
+</body>
+</html>
