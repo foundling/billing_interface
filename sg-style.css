@@ -181,12 +181,8 @@ label
 
 /* TOP-LEVEL-LABEL-TOGGLE */
 
-.second-level-label-toggle
-{
-    margin-left: 20px;
-}
 
-.second-level-label-toggle > h2
+.second-level-label > h2
 {
     position: relative;
     width: 33%;
@@ -206,7 +202,7 @@ label
     padding: 40px;
 }
 
-.inner-header
+.second-level-label
 {
     display:inline-block;
     background: lightyellow;
@@ -221,6 +217,11 @@ label
     margin: 40px;
 }
 
+.inner-header
+{
+    margin: 40px 0px 40px 0px;
+}
+
 #username
 {
     color: red;
@@ -230,7 +231,7 @@ label
 .label-solo-bold
 {
     display: block;
-    padding-top: 20px;
+    padding-top: 5px;
     padding-bottom: 5px;
 }
 
@@ -330,7 +331,6 @@ label
 {
     display: inline-block;
 }
-
 
 /* LABEL INPUT CLONE  */
 .label-input-clone
