@@ -114,6 +114,7 @@ input
     height: 25px;
     font-size: 100%;
     border: 1px solid black;
+    margin-right: 20px;
 }
 
 input[type="checkbox"]
@@ -202,7 +203,12 @@ label
 
 .inner-header
 {
+    display:inline-block;
+    background: lightyellow;
     margin: 20px 0px;
+    padding: 20px;
+    border: 1px solid black;
+    border-radius: 5px;
 }
 
 .outer-header

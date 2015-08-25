@@ -151,7 +151,7 @@
 
      <!-- RADIOTRACER -->
     <div id="radiotracer-label" class="top-level-label-toggle">
-        <h1 class="top-level-label">Injected Compound
+        <h1 class="top-level-label">Radiotracer
             <i class="fa fa-arrow-circle-down"></i>
         </h1>
     </div>
@@ -227,20 +227,173 @@
             <label>F18-FDG</label>
             <input disabled></input>
         </div>
-        <div class="checkbox-label-input">
+        <div class="checkbox-label-double-input">
             <input type="checkbox">
-            <label>Other</label>
-            <input disabled></input>
+            <label>Subject Type</label>
+            <input value="Lot Number" disabled>
+            <input value="Radiotracer Name" disabled>
+        </div>
+        <h1 class="inner-header">Bolus</h1>
+        <div class="label-input">
+            <label>Initial Activity</label>
+            <input></input>
+        </div>
+        <div class="label-input">
+            <label>Time (00:00:00)</label>
+            <input></input>
+        </div>
+        <div class="label-input">
+            <label>Time of Injection</label>
+            <input></input>
+        </div>
+        <div class="label-input">
+            <label>Residual Activity</label>
+            <input></input>
+        </div>
+        <div class="label-input">
+            <label>Time (00:00:00)</label>
+            <input></input>
+        </div>
+        <div class="label-input">
+            <label>Total Dose Administered (Auto)</label>
+            <input></input>
+        </div>
+
+        <h1 class="inner-header">Infusion</h1>
+
+        <div class="label-input">
+            <label>Initial Activity</label>
+            <input></input>
+        </div>
+        <div class="label-input">
+            <label>Time (00:00:00)</label>
+            <input></input>
+        </div>
+        <div class="label-input">
+            <label>Volume</label>
+            <input></input>
+        </div>
+        <div class="label-input">
+            <label>Rate (cc/s)</label>
+            <input></input>
+        </div>
+        <div class="label-input">
+            <label>Time of Injection</label>
+            <input></input>
+        </div>
+        <div class="label-input">
+            <label>Total Dose Administered</label>
+            <input></input>
+        </div>
+        <div class="label-input">
+            <label>Residual Activity (mCi)</label>
+            <input></input>
+        </div>
+        <div class="label-input">
+            <label>Time (00:00:00)</label>
+            <input></input>
+        </div>
+   </section>
+
+
+    <!-- Contrast Agent -->
+    <div id="contrast-agent-label" class="top-level-label-toggle">
+        <h1 class="top-level-label">Contrast Agent
+            <i class="fa fa-arrow-circle-down"></i>
+        </h1>
+    </div>
+
+    <section id="contrast-agent-block">
+        <div class="label-input">
+            <label>Name</label>
+            <input></input>
+        </div>
+
+        <div class="label-input-clone">
+            <label>Lot Number</label>
+            <input>
+            <i class="fa fa-plus clone"></i>
+        </div>
+
+        <div class="label-input">
+            <label>Expiration Date</label>
+            <input></input>
+        </div>
+        <div class="label-input">
+            <label>Volume of Vial</label>
+            <input></input>
+        </div>
+        <div class="label-input">
+            <label>Time of Injection</label>
+            <input></input>
+        </div>
+        <div class="label-input">
+            <label>Rate (ml/s)</label>
+            <input></input>
+        </div>
+        <div class="label-input">
+            <label>Volume</label>
+            <input></input>
         </div>
     </section>
 
+ 
+    <!-- Blood Analysis -->
+    <div id="blood-analysis-label" class="top-level-label-toggle">
+        <h1 class="top-level-label">Blood Analysis
+            <i class="fa fa-arrow-circle-down"></i>
+        </h1>
+    </div>
 
+    <section id="blood-analysis-block">
+        <div class="label-select">
+            <label>Type</label>
+            <select name="type">
+                <option value="na">n/a</option>
+                <option value="venous">venous</option>
+                <option value="arterial">arterial</option>
+            </select>
+        </div> 
+        <div class="label-select">
+            <label>Arm Used</label>
+            <select name="arm-used">
+                <option value="na">n/a</option>
+                <option value="left">Left</option>
+                <option value="right">Right</option>
+            </select>
+        </div> 
+        <div class="label-select">
+            <label>Venous Type</label>
+            <select name="venous-type">
+                <option value="na">n/a</option>
+                <option value="plasma-only">Plasma Only</option>
+                <option value="arterial">Plasma/WB</option>
+                <option value="metabolites">Metabolites</option>
+            </select>
+        </div> 
+      </section>
 
+    <!-- Data Processing -->
+    <div id="data-processing-label" class="top-level-label-toggle">
+        <h1 class="top-level-label">Data Processing
+            <i class="fa fa-arrow-circle-down"></i>
+        </h1>
+    </div>
 
+    <section id="data-processing-block">
+        <textarea rows="4" cols="40"></textarea>
+    </section>
 
+    <!-- Issues / Comments -->
+    <div id="issues-comments-label" class="top-level-label-toggle">
+        <h1 class="top-level-label"> Issues / Comments
+            <i class="fa fa-arrow-circle-down"></i>
+        </h1>
+    </div>
 
-
-
+    <section id="issues-comments-block">
+        <textarea rows="4" cols="40"></textarea>
+    </section>
 
 <script src="../lib/jquery.js"></script>
 <script src="../lib/jquery-ui.js"></script>
