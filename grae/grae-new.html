@@ -19,7 +19,7 @@
         <section>
             <div class="label-input-validated">
                 <label>Project Code</label>
-                <input class="invalid-input" maxlength="3" size="3"></input>
+                <input id="project-code" class="invalid-input" maxlength="3" size="3">
                 <h4 class="validation-status invalid-msg">
                     This project does not exist. 
                 </h4>
@@ -27,19 +27,19 @@
             <label class="label-solo-bold">OR</label>
             <div class="label-radiox-single">
                 <label class="label-solo">Maintenance</label>
-                <input type="radio"></input>
+                <input name="maintenance" type="radio">
             </div>
             <div class="label-radiox-single">
                 <label class="label-solo">Validation</label>
-                <input type="radio"></input>
+                <input name="validation" type="radio">
             </div>
             <div class="label-radiox-single">
                 <label class="label-solo">Raw Isotope Run</label>
-                <input type="radio"></input>
+                <input name="raw-isotope-run" type="radio">
             </div>
             <div class="label-input">
                 <label>Production Date</label>
-                <input id="datepicker"></input>
+                <input name="production-date" id="datepicker">
             </div>
         </section>
 
@@ -73,35 +73,35 @@
                     <label class="label-solo-bold">Human Subject Details</label>
                     <div class="label-input">
                         <label>Subject ID</label>
-                        <input></input>
+                        <input name="subject-id">
                     </div>
                     <div class="label-input">
                         <label>Sex</label>
-                        <input></input>
+                        <input name="subject-sex">
                     </div>
                     <div class="label-input">
                         <label>Weight</label>
-                        <input></input>
+                        <input name="subject-weight">
                     </div>
                     <div class="label-input">
                         <label>Height</label>
-                        <input></input>
+                        <input name="subject-height">
                     </div>
                     <div class="label-input">
                         <label>Year of Birth</label>
-                        <input></input>
+                        <input name="subject-yob">
                     </div>
                     <div class="label-input">
                         <label>IV Placement</label>
-                        <input></input>
+                        <input name="subject-iv-placement">
                     </div>
                     <div class="label-input">
                         <label>Gauge</label>
-                        <input></input>
+                        <input name="subject-gauge">
                     </div>
                     <div class="label-input">
                         <label>Glucose (optional)</label>
-                        <input></input>
+                        <input name="subject-glucose">
                     </div>
                 </div>
 
@@ -109,23 +109,23 @@
                     <label class="label-solo-bold">Animal Subject Details</label>
                     <div class="label-input">
                         <label>Subject ID</label>
-                        <input></input>
+                        <input name="subject-id">
                     </div>
                     <div class="label-input">
                         <label>Weight</label>
-                        <input></input>
+                        <input name="subject-weight">
                     </div>
                     <div class="label-input">
-                        <label>Weight</label>
-                        <input></input>
+                        <label>Height</label>
+                        <input name="subject-height">
                     </div>
                     <div class="label-input">
                         <label>IV Placement</label>
-                        <input></input>
+                        <input name="subject-iv-placement">
                     </div>
                     <div class="label-input">
                         <label>NucMed Charge</label>
-                        <input></input>
+                        <input name="subject-nucmed-charge">
                     </div>
                 </div>
 
@@ -133,7 +133,7 @@
                     <label class="label-solo-bold">Phantom Subject</label>
                     <div class="label-input">
                         <label>Phantom Subject Details</label>
-                        <input></input>
+                        <input name="phantom-subject-details">
                     </div>          
                 </div>
          </section>
@@ -148,7 +148,7 @@
         <section id="injected-compound-block">
             <div class="label-input">
                 <label>Injected Compound</label>
-                <input></input>
+                <input name="injected-compound">
             </div>
         </section>
 
@@ -161,74 +161,74 @@
 
         <section id="radiotracer-block">
             <div class="checkbox-label-input">
-                <input type="checkbox">
+                <input name="f18-5fu" type="checkbox">
                 <label>F18-5FU</label>
-                <input disabled></input>
+                <input name="f18-5fu-lot-number" placeholder="Lot Number" disabled>
             </div>
             <div class="checkbox-label-input">
-                <input type="checkbox">
+                <input name="f18-5fu-lot" type="checkbox">
                 <label>Ga68-Dota-toc</label>
-                <input disabled></input>
+                <input name="f18-5fu-lot-number" placeholder="Lot Number" disabled>
             </div>
             <div class="checkbox-label-input">
-                <input type="checkbox">
+                <input name="cU64-fbp8" type="checkbox">
                 <label>Cu64-FBP8</label>
-                <input disabled></input>
+                <input name="cU64-fbp8-lot-number" placeholder="Lot Number" disabled>
             </div>
             <div class="checkbox-label-input">
-                <input type="checkbox">
+                <input name="c11-diprenorphine" type="checkbox">
                 <label>C11-Diprenorphine</label>
-                <input disabled></input>
+                <input name="c11-diprenorphine-lot-number" placeholder="Lot Number" disabled>
             </div>
             <div class="checkbox-label-input">
-                <input type="checkbox">
+                <input name="c11-dasb" type="checkbox">
                 <label>C11-DASB</label>
-                <input disabled></input>
+                <input name="c11-dasb-lot-number" placeholder="Lot Number" disabled>
             </div>
             <div class="checkbox-label-input">
-                <input type="checkbox">
+                <input name="f18-fallypride" type="checkbox">
                 <label>F18-Fallypride</label>
-                <input disabled></input>
+                <input name="f18-fallypride-lot-number" placeholder="Lot Number" disabled>
             </div>
             <div class="checkbox-label-input">
-                <input type="checkbox">
+                <input name="f18-fmiso" type="checkbox">
                 <label>F18-FMISO</label>
-                <input disabled></input>
+                <input name="f18-fmiso-lot-number" placeholder="Lot Number" disabled>
             </div>
             <div class="checkbox-label-input">
-                <input type="checkbox">
+                <input name="c11-martinostat" type="checkbox">
                 <label>C11-Martinostat</label>
-                <input disabled></input>
+                <input name="c11-martinostat-lot-number" placeholder="Lot Number" disabled>
             </div>
             <div class="checkbox-label-input">
-                <input type="checkbox">
+                <input name="c11-nnC112" type="checkbox">
                 <label>C11-NNc112</label>
-                <input disabled></input>
+                <input name="c11-nnC112-lot-number" placeholder="Lot Number" disabled>
             </div>
             <div class="checkbox-label-input">
-                <input type="checkbox">
+                <input name="c11-prb28" type="checkbox">
                 <label>C11-PRB28</label>
-                <input disabled></input>
+                <input name="c11-prb2-lot-number" placeholder="Lot Number" disabled>
             </div>
             <div class="checkbox-label-input">
-                <input type="checkbox">
+                <input name="c11-raclopride" type="checkbox">
                 <label>C11-Raclopride</label>
-                <input disabled></input>
+                <input name="c11-raclopride-lot-number" placeholder="Lot Number" disabled>
             </div>
             <div class="checkbox-label-input">
-                <input type="checkbox">
+                <input name="f18-t807" type="checkbox">
                 <label>F18-T807</label>
-                <input disabled></input>
+                <input name="f18-t807-lot-number" placeholder="Lot Number" disabled>
             </div>
             <div class="checkbox-label-input">
-                <input type="checkbox">
+                <input name="c11-temozolomide" type="checkbox">
                 <label>C11-Temozolomide</label>
-                <input disabled></input>
+                <input name="c11-temozolomide-lot-number" placeholder="Lot Number" disabled>
             </div>
             <div class="checkbox-label-input">
-                <input type="checkbox">
+                <input name="f18-fdg" type="checkbox">
                 <label>F18-FDG</label>
-                <input disabled></input>
+                <input name="cf18-fdg-lot-number" placeholder="Lot Number" disabled>
             </div>
             <div class="checkbox-label-double-input">
                 <input type="checkbox">
@@ -239,62 +239,62 @@
             <h1 class="second-level-label">Bolus</h1>
             <div class="label-input">
                 <label>Initial Activity</label>
-                <input>
+                <input name="bolus-initial-activity">
             </div>
             <div class="label-input">
                 <label>Time</label>
-                <input placeholder="00:00:00">
+                <input name="bolus-time" placeholder="00:00:00">
             </div>
             <div class="label-input">
                 <label>Time of Injection</label>
-                <input>
+                <input name="bolus-toi">
             </div>
             <div class="label-input">
                 <label>Residual Activity</label>
-                <input>
+                <input name="bolus-residual-activity">
             </div>
             <div class="label-input">
                 <label>Time (00:00:00)</label>
-                <input>
+                <input name="bolus-time-long">
             </div>
             <div class="label-input">
                 <label>Total Dose Administered (Auto)</label>
-                <input>
+                <input name="bolus-total-dose-administered">
             </div>
 
             <h1 class="inner-header">Infusion</h1>
 
             <div class="label-input">
                 <label>Initial Activity</label>
-                <input></input>
+                <input name="infusion-initial-activity">
             </div>
             <div class="label-input">
                 <label>Time (00:00:00)</label>
-                <input></input>
+                <input name="infusion-initial-activity-time-long">
             </div>
             <div class="label-input">
                 <label>Volume</label>
-                <input></input>
+                <input name="infusion-volume">
             </div>
             <div class="label-input">
                 <label>Rate (cc/s)</label>
-                <input></input>
+                <input name="infusion-rate">
             </div>
             <div class="label-input">
                 <label>Time of Injection</label>
-                <input></input>
+                <input name="infusion-toi">
             </div>
             <div class="label-input">
                 <label>Total Dose Administered</label>
-                <input></input>
+                <input name="infusion-total-dose-administered">
             </div>
             <div class="label-input">
                 <label>Residual Activity (mCi)</label>
-                <input></input>
+                <input name="infusion-residual-activity">
             </div>
             <div class="label-input">
                 <label>Time (00:00:00)</label>
-                <input></input>
+                <input name="infusion-residual-activity-time-long">
             </div>
        </section>
 
@@ -309,34 +309,34 @@
         <section id="contrast-agent-block">
             <div class="label-input">
                 <label>Name</label>
-                <input></input>
+                <input name="contrast-agent-name">
             </div>
 
             <div class="label-input-clone">
                 <label>Lot Number</label>
-                <input>
+                <input name="contrast-agent-lot-number">
                 <i class="fa fa-plus clone"></i>
             </div>
 
             <div class="label-input">
                 <label>Expiration Date</label>
-                <input></input>
+                <input name="contrast-agent-expiration-date">
             </div>
             <div class="label-input">
                 <label>Volume of Vial</label>
-                <input></input>
+                <input name="contrast-agent-volume">
             </div>
             <div class="label-input">
                 <label>Time of Injection</label>
-                <input></input>
+                <input name="contrast-agent-toi">
             </div>
             <div class="label-input">
                 <label>Rate (ml/s)</label>
-                <input></input>
+                <input name="contrast-agent-rate">
             </div>
             <div class="label-input">
                 <label>Volume</label>
-                <input></input>
+                <input name="contrast-agent-volume">
             </div>
         </section>
 
@@ -384,7 +384,7 @@
         </div>
 
         <section id="data-processing-block">
-            <textarea rows="4" cols="40"></textarea>
+            <textarea name="data-processing" rows="4" cols="40"></textarea>
         </section>
 
         <!-- Issues / Comments -->
@@ -395,7 +395,7 @@
         </div>
 
         <section id="issues-comments-block">
-            <textarea rows="4" cols="40"></textarea>
+            <textarea name="issues-comments" rows="4" cols="40"></textarea>
         </section>
 
         <input type="submit">
