@@ -11,389 +11,394 @@
 <body>
 
     <h1 class="page-header">Radiopharmacy Production | 
-        <span id="username">Bob</span>
+        <span id="username"><span ><?php print $_SERVER['REMOTE_USER']; ?>Bob</span>
     </h1>
 
-    <h1 class="outer-header">Production</h1>
-    <section>
-        <div class="label-input-validated">
-            <label>Project Code</label>
-            <input class="invalid-input" maxlength="3" size="3"></input>
-            <h4 class="validation-status invalid-msg">
-                This project does not exist. 
-            </h4>
+    <form action="../confirm.php" method="post">
+        <h1 class="outer-header">Production</h1>
+        <section>
+            <div class="label-input-validated">
+                <label>Project Code</label>
+                <input class="invalid-input" maxlength="3" size="3"></input>
+                <h4 class="validation-status invalid-msg">
+                    This project does not exist. 
+                </h4>
+            </div>
+            <label class="label-solo-bold">OR</label>
+            <div class="label-radiox-single">
+                <label class="label-solo">Maintenance</label>
+                <input type="radio"></input>
+            </div>
+            <div class="label-radiox-single">
+                <label class="label-solo">Validation</label>
+                <input type="radio"></input>
+            </div>
+            <div class="label-radiox-single">
+                <label class="label-solo">Raw Isotope Run</label>
+                <input type="radio"></input>
+            </div>
+            <div class="label-input">
+                <label>Production Date</label>
+                <input id="datepicker"></input>
+            </div>
+        </section>
+
+        <!-- TOP LEVEL LABEL TOGGLE -->
+
+        <div id="subject-information-label" class="top-level-label-toggle">
+            <h1 class="top-level-label">Subject Information
+                <i class="fa fa-arrow-circle-down"></i>
+            </h1>
         </div>
-        <label class="label-solo-bold">OR</label>
-        <div class="label-radiox-single">
-            <label class="label-solo">Maintenance</label>
-            <input type="radio"></input>
+
+        <section id="subject-information-block">
+
+            <div class="select-content-toggle">
+
+                <h1 class="inner-header">Subject Type</h1>
+                <select name="select">
+                    <option value="n/a">n/a</option>
+                    <option value="human">human</option>
+                    <option value="animal">animal</option>
+                    <option value="phantom">phantom</option>
+                </select>
+
+                <!-- 4 options: n/a, human subjects, animal subjects, phantom -->
+                <div id="subject-information-na" class="logical-wrapper">
+                </div>
+
+                <div id="subject-information-human" class="logical-wrapper">
+                    <label class="label-solo-bold">Human Subject Details</label>
+                    <div class="label-input">
+                        <label>Subject ID</label>
+                        <input></input>
+                    </div>
+                    <div class="label-input">
+                        <label>Sex</label>
+                        <input></input>
+                    </div>
+                    <div class="label-input">
+                        <label>Weight</label>
+                        <input></input>
+                    </div>
+                    <div class="label-input">
+                        <label>Height</label>
+                        <input></input>
+                    </div>
+                    <div class="label-input">
+                        <label>Year of Birth</label>
+                        <input></input>
+                    </div>
+                    <div class="label-input">
+                        <label>IV Placement</label>
+                        <input></input>
+                    </div>
+                    <div class="label-input">
+                        <label>Gauge</label>
+                        <input></input>
+                    </div>
+                    <div class="label-input">
+                        <label>Glucose (optional)</label>
+                        <input></input>
+                    </div>
+                </div>
+
+                <div id="subject-information-animal" class="logical-wrapper">
+                    <label class="label-solo-bold">Animal Subject Details</label>
+                    <div class="label-input">
+                        <label>Subject ID</label>
+                        <input></input>
+                    </div>
+                    <div class="label-input">
+                        <label>Weight</label>
+                        <input></input>
+                    </div>
+                    <div class="label-input">
+                        <label>Weight</label>
+                        <input></input>
+                    </div>
+                    <div class="label-input">
+                        <label>IV Placement</label>
+                        <input></input>
+                    </div>
+                    <div class="label-input">
+                        <label>NucMed Charge</label>
+                        <input></input>
+                    </div>
+                </div>
+
+                <div id="subject-information-phantom" class="logical-wrapper">
+                    <label class="label-solo-bold">Phantom Subject</label>
+                    <div class="label-input">
+                        <label>Phantom Subject Details</label>
+                        <input></input>
+                    </div>          
+                </div>
+         </section>
+
+         <!-- INJECTED COMPOUND -->
+        <div id="injected-compound-label" class="top-level-label-toggle">
+            <h1 class="top-level-label">Injected Compound
+                <i class="fa fa-arrow-circle-down"></i>
+            </h1>
         </div>
-        <div class="label-radiox-single">
-            <label class="label-solo">Validation</label>
-            <input type="radio"></input>
+
+        <section id="injected-compound-block">
+            <div class="label-input">
+                <label>Injected Compound</label>
+                <input></input>
+            </div>
+        </section>
+
+         <!-- RADIOTRACER -->
+        <div id="radiotracer-label" class="top-level-label-toggle">
+            <h1 class="top-level-label">Radiotracer
+                <i class="fa fa-arrow-circle-down"></i>
+            </h1>
         </div>
-        <div class="label-radiox-single">
-            <label class="label-solo">Raw Isotope Run</label>
-            <input type="radio"></input>
-        </div>
-        <div class="label-input">
-            <label>Production Date</label>
-            <input id="datepicker"></input>
-        </div>
-    </section>
 
-    <!-- TOP LEVEL LABEL TOGGLE -->
-
-    <div id="subject-information-label" class="top-level-label-toggle">
-        <h1 class="top-level-label">Subject Information
-            <i class="fa fa-arrow-circle-down"></i>
-        </h1>
-    </div>
-
-    <section id="subject-information-block">
-
-        <div class="select-content-toggle">
-
-            <h1 class="inner-header">Subject Type</h1>
-            <select name="select">
-                <option value="n/a">n/a</option>
-                <option value="human">human</option>
-                <option value="animal">animal</option>
-                <option value="phantom">phantom</option>
-            </select>
-
-            <!-- 4 options: n/a, human subjects, animal subjects, phantom -->
-            <div id="subject-information-na" class="logical-wrapper">
+        <section id="radiotracer-block">
+            <div class="checkbox-label-input">
+                <input type="checkbox">
+                <label>F18-5FU</label>
+                <input disabled></input>
+            </div>
+            <div class="checkbox-label-input">
+                <input type="checkbox">
+                <label>Ga68-Dota-toc</label>
+                <input disabled></input>
+            </div>
+            <div class="checkbox-label-input">
+                <input type="checkbox">
+                <label>Cu64-FBP8</label>
+                <input disabled></input>
+            </div>
+            <div class="checkbox-label-input">
+                <input type="checkbox">
+                <label>C11-Diprenorphine</label>
+                <input disabled></input>
+            </div>
+            <div class="checkbox-label-input">
+                <input type="checkbox">
+                <label>C11-DASB</label>
+                <input disabled></input>
+            </div>
+            <div class="checkbox-label-input">
+                <input type="checkbox">
+                <label>F18-Fallypride</label>
+                <input disabled></input>
+            </div>
+            <div class="checkbox-label-input">
+                <input type="checkbox">
+                <label>F18-FMISO</label>
+                <input disabled></input>
+            </div>
+            <div class="checkbox-label-input">
+                <input type="checkbox">
+                <label>C11-Martinostat</label>
+                <input disabled></input>
+            </div>
+            <div class="checkbox-label-input">
+                <input type="checkbox">
+                <label>C11-NNc112</label>
+                <input disabled></input>
+            </div>
+            <div class="checkbox-label-input">
+                <input type="checkbox">
+                <label>C11-PRB28</label>
+                <input disabled></input>
+            </div>
+            <div class="checkbox-label-input">
+                <input type="checkbox">
+                <label>C11-Raclopride</label>
+                <input disabled></input>
+            </div>
+            <div class="checkbox-label-input">
+                <input type="checkbox">
+                <label>F18-T807</label>
+                <input disabled></input>
+            </div>
+            <div class="checkbox-label-input">
+                <input type="checkbox">
+                <label>C11-Temozolomide</label>
+                <input disabled></input>
+            </div>
+            <div class="checkbox-label-input">
+                <input type="checkbox">
+                <label>F18-FDG</label>
+                <input disabled></input>
+            </div>
+            <div class="checkbox-label-double-input">
+                <input type="checkbox">
+                <label>Subject Type</label>
+                <input value="Lot Number" disabled>
+                <input value="Radiotracer Name" disabled>
+            </div>
+            <h1 class="inner-header">Bolus</h1>
+            <div class="label-input">
+                <label>Initial Activity</label>
+                <input></input>
+            </div>
+            <div class="label-input">
+                <label>Time (00:00:00)</label>
+                <input></input>
+            </div>
+            <div class="label-input">
+                <label>Time of Injection</label>
+                <input></input>
+            </div>
+            <div class="label-input">
+                <label>Residual Activity</label>
+                <input></input>
+            </div>
+            <div class="label-input">
+                <label>Time (00:00:00)</label>
+                <input></input>
+            </div>
+            <div class="label-input">
+                <label>Total Dose Administered (Auto)</label>
+                <input></input>
             </div>
 
-            <div id="subject-information-human" class="logical-wrapper">
-                <label class="label-solo-bold">Human Subject Details</label>
-                <div class="label-input">
-                    <label>Subject ID</label>
-                    <input></input>
-                </div>
-                <div class="label-input">
-                    <label>Sex</label>
-                    <input></input>
-                </div>
-                <div class="label-input">
-                    <label>Weight</label>
-                    <input></input>
-                </div>
-                <div class="label-input">
-                    <label>Height</label>
-                    <input></input>
-                </div>
-                <div class="label-input">
-                    <label>Year of Birth</label>
-                    <input></input>
-                </div>
-                <div class="label-input">
-                    <label>IV Placement</label>
-                    <input></input>
-                </div>
-                <div class="label-input">
-                    <label>Gauge</label>
-                    <input></input>
-                </div>
-                <div class="label-input">
-                    <label>Glucose (optional)</label>
-                    <input></input>
-                </div>
+            <h1 class="inner-header">Infusion</h1>
+
+            <div class="label-input">
+                <label>Initial Activity</label>
+                <input></input>
+            </div>
+            <div class="label-input">
+                <label>Time (00:00:00)</label>
+                <input></input>
+            </div>
+            <div class="label-input">
+                <label>Volume</label>
+                <input></input>
+            </div>
+            <div class="label-input">
+                <label>Rate (cc/s)</label>
+                <input></input>
+            </div>
+            <div class="label-input">
+                <label>Time of Injection</label>
+                <input></input>
+            </div>
+            <div class="label-input">
+                <label>Total Dose Administered</label>
+                <input></input>
+            </div>
+            <div class="label-input">
+                <label>Residual Activity (mCi)</label>
+                <input></input>
+            </div>
+            <div class="label-input">
+                <label>Time (00:00:00)</label>
+                <input></input>
+            </div>
+       </section>
+
+
+        <!-- Contrast Agent -->
+        <div id="contrast-agent-label" class="top-level-label-toggle">
+            <h1 class="top-level-label">Contrast Agent
+                <i class="fa fa-arrow-circle-down"></i>
+            </h1>
+        </div>
+
+        <section id="contrast-agent-block">
+            <div class="label-input">
+                <label>Name</label>
+                <input></input>
             </div>
 
-            <div id="subject-information-animal" class="logical-wrapper">
-                <label class="label-solo-bold">Animal Subject Details</label>
-                <div class="label-input">
-                    <label>Subject ID</label>
-                    <input></input>
-                </div>
-                <div class="label-input">
-                    <label>Weight</label>
-                    <input></input>
-                </div>
-                <div class="label-input">
-                    <label>Weight</label>
-                    <input></input>
-                </div>
-                <div class="label-input">
-                    <label>IV Placement</label>
-                    <input></input>
-                </div>
-                <div class="label-input">
-                    <label>NucMed Charge</label>
-                    <input></input>
-                </div>
+            <div class="label-input-clone">
+                <label>Lot Number</label>
+                <input>
+                <i class="fa fa-plus clone"></i>
             </div>
 
-            <div id="subject-information-phantom" class="logical-wrapper">
-                <label class="label-solo-bold">Phantom Subject</label>
-                <div class="label-input">
-                    <label>Phantom Subject Details</label>
-                    <input></input>
-                </div>          
+            <div class="label-input">
+                <label>Expiration Date</label>
+                <input></input>
             </div>
-     </section>
+            <div class="label-input">
+                <label>Volume of Vial</label>
+                <input></input>
+            </div>
+            <div class="label-input">
+                <label>Time of Injection</label>
+                <input></input>
+            </div>
+            <div class="label-input">
+                <label>Rate (ml/s)</label>
+                <input></input>
+            </div>
+            <div class="label-input">
+                <label>Volume</label>
+                <input></input>
+            </div>
+        </section>
 
-     <!-- INJECTED COMPOUND -->
-    <div id="injected-compound-label" class="top-level-label-toggle">
-        <h1 class="top-level-label">Injected Compound
-            <i class="fa fa-arrow-circle-down"></i>
-        </h1>
-    </div>
-
-    <section id="injected-compound-block">
-        <div class="label-input">
-            <label>Injected Compound</label>
-            <input></input>
-        </div>
-    </section>
-
-     <!-- RADIOTRACER -->
-    <div id="radiotracer-label" class="top-level-label-toggle">
-        <h1 class="top-level-label">Radiotracer
-            <i class="fa fa-arrow-circle-down"></i>
-        </h1>
-    </div>
-
-    <section id="radiotracer-block">
-        <div class="checkbox-label-input">
-            <input type="checkbox">
-            <label>F18-5FU</label>
-            <input disabled></input>
-        </div>
-        <div class="checkbox-label-input">
-            <input type="checkbox">
-            <label>Ga68-Dota-toc</label>
-            <input disabled></input>
-        </div>
-        <div class="checkbox-label-input">
-            <input type="checkbox">
-            <label>Cu64-FBP8</label>
-            <input disabled></input>
-        </div>
-        <div class="checkbox-label-input">
-            <input type="checkbox">
-            <label>C11-Diprenorphine</label>
-            <input disabled></input>
-        </div>
-        <div class="checkbox-label-input">
-            <input type="checkbox">
-            <label>C11-DASB</label>
-            <input disabled></input>
-        </div>
-        <div class="checkbox-label-input">
-            <input type="checkbox">
-            <label>F18-Fallypride</label>
-            <input disabled></input>
-        </div>
-        <div class="checkbox-label-input">
-            <input type="checkbox">
-            <label>F18-FMISO</label>
-            <input disabled></input>
-        </div>
-        <div class="checkbox-label-input">
-            <input type="checkbox">
-            <label>C11-Martinostat</label>
-            <input disabled></input>
-        </div>
-        <div class="checkbox-label-input">
-            <input type="checkbox">
-            <label>C11-NNc112</label>
-            <input disabled></input>
-        </div>
-        <div class="checkbox-label-input">
-            <input type="checkbox">
-            <label>C11-PRB28</label>
-            <input disabled></input>
-        </div>
-        <div class="checkbox-label-input">
-            <input type="checkbox">
-            <label>C11-Raclopride</label>
-            <input disabled></input>
-        </div>
-        <div class="checkbox-label-input">
-            <input type="checkbox">
-            <label>F18-T807</label>
-            <input disabled></input>
-        </div>
-        <div class="checkbox-label-input">
-            <input type="checkbox">
-            <label>C11-Temozolomide</label>
-            <input disabled></input>
-        </div>
-        <div class="checkbox-label-input">
-            <input type="checkbox">
-            <label>F18-FDG</label>
-            <input disabled></input>
-        </div>
-        <div class="checkbox-label-double-input">
-            <input type="checkbox">
-            <label>Subject Type</label>
-            <input value="Lot Number" disabled>
-            <input value="Radiotracer Name" disabled>
-        </div>
-        <h1 class="inner-header">Bolus</h1>
-        <div class="label-input">
-            <label>Initial Activity</label>
-            <input></input>
-        </div>
-        <div class="label-input">
-            <label>Time (00:00:00)</label>
-            <input></input>
-        </div>
-        <div class="label-input">
-            <label>Time of Injection</label>
-            <input></input>
-        </div>
-        <div class="label-input">
-            <label>Residual Activity</label>
-            <input></input>
-        </div>
-        <div class="label-input">
-            <label>Time (00:00:00)</label>
-            <input></input>
-        </div>
-        <div class="label-input">
-            <label>Total Dose Administered (Auto)</label>
-            <input></input>
+     
+        <!-- Blood Analysis -->
+        <div id="blood-analysis-label" class="top-level-label-toggle">
+            <h1 class="top-level-label">Blood Analysis
+                <i class="fa fa-arrow-circle-down"></i>
+            </h1>
         </div>
 
-        <h1 class="inner-header">Infusion</h1>
+        <section id="blood-analysis-block">
+            <div class="label-select">
+                <label>Type</label>
+                <select name="type">
+                    <option value="na">n/a</option>
+                    <option value="venous">venous</option>
+                    <option value="arterial">arterial</option>
+                </select>
+            </div> 
+            <div class="label-select">
+                <label>Arm Used</label>
+                <select name="arm-used">
+                    <option value="na">n/a</option>
+                    <option value="left">Left</option>
+                    <option value="right">Right</option>
+                </select>
+            </div> 
+            <div class="label-select">
+                <label>Venous Type</label>
+                <select name="venous-type">
+                    <option value="na">n/a</option>
+                    <option value="plasma-only">Plasma Only</option>
+                    <option value="arterial">Plasma/WB</option>
+                    <option value="metabolites">Metabolites</option>
+                </select>
+            </div> 
+          </section>
 
-        <div class="label-input">
-            <label>Initial Activity</label>
-            <input></input>
-        </div>
-        <div class="label-input">
-            <label>Time (00:00:00)</label>
-            <input></input>
-        </div>
-        <div class="label-input">
-            <label>Volume</label>
-            <input></input>
-        </div>
-        <div class="label-input">
-            <label>Rate (cc/s)</label>
-            <input></input>
-        </div>
-        <div class="label-input">
-            <label>Time of Injection</label>
-            <input></input>
-        </div>
-        <div class="label-input">
-            <label>Total Dose Administered</label>
-            <input></input>
-        </div>
-        <div class="label-input">
-            <label>Residual Activity (mCi)</label>
-            <input></input>
-        </div>
-        <div class="label-input">
-            <label>Time (00:00:00)</label>
-            <input></input>
-        </div>
-   </section>
-
-
-    <!-- Contrast Agent -->
-    <div id="contrast-agent-label" class="top-level-label-toggle">
-        <h1 class="top-level-label">Contrast Agent
-            <i class="fa fa-arrow-circle-down"></i>
-        </h1>
-    </div>
-
-    <section id="contrast-agent-block">
-        <div class="label-input">
-            <label>Name</label>
-            <input></input>
+        <!-- Data Processing -->
+        <div id="data-processing-label" class="top-level-label-toggle">
+            <h1 class="top-level-label">Data Processing
+                <i class="fa fa-arrow-circle-down"></i>
+            </h1>
         </div>
 
-        <div class="label-input-clone">
-            <label>Lot Number</label>
-            <input>
-            <i class="fa fa-plus clone"></i>
+        <section id="data-processing-block">
+            <textarea rows="4" cols="40"></textarea>
+        </section>
+
+        <!-- Issues / Comments -->
+        <div id="issues-comments-label" class="top-level-label-toggle">
+            <h1 class="top-level-label"> Issues / Comments
+                <i class="fa fa-arrow-circle-down"></i>
+            </h1>
         </div>
 
-        <div class="label-input">
-            <label>Expiration Date</label>
-            <input></input>
-        </div>
-        <div class="label-input">
-            <label>Volume of Vial</label>
-            <input></input>
-        </div>
-        <div class="label-input">
-            <label>Time of Injection</label>
-            <input></input>
-        </div>
-        <div class="label-input">
-            <label>Rate (ml/s)</label>
-            <input></input>
-        </div>
-        <div class="label-input">
-            <label>Volume</label>
-            <input></input>
-        </div>
-    </section>
+        <section id="issues-comments-block">
+            <textarea rows="4" cols="40"></textarea>
+        </section>
 
- 
-    <!-- Blood Analysis -->
-    <div id="blood-analysis-label" class="top-level-label-toggle">
-        <h1 class="top-level-label">Blood Analysis
-            <i class="fa fa-arrow-circle-down"></i>
-        </h1>
-    </div>
+        <input type="submit">
+    </form>
 
-    <section id="blood-analysis-block">
-        <div class="label-select">
-            <label>Type</label>
-            <select name="type">
-                <option value="na">n/a</option>
-                <option value="venous">venous</option>
-                <option value="arterial">arterial</option>
-            </select>
-        </div> 
-        <div class="label-select">
-            <label>Arm Used</label>
-            <select name="arm-used">
-                <option value="na">n/a</option>
-                <option value="left">Left</option>
-                <option value="right">Right</option>
-            </select>
-        </div> 
-        <div class="label-select">
-            <label>Venous Type</label>
-            <select name="venous-type">
-                <option value="na">n/a</option>
-                <option value="plasma-only">Plasma Only</option>
-                <option value="arterial">Plasma/WB</option>
-                <option value="metabolites">Metabolites</option>
-            </select>
-        </div> 
-      </section>
-
-    <!-- Data Processing -->
-    <div id="data-processing-label" class="top-level-label-toggle">
-        <h1 class="top-level-label">Data Processing
-            <i class="fa fa-arrow-circle-down"></i>
-        </h1>
-    </div>
-
-    <section id="data-processing-block">
-        <textarea rows="4" cols="40"></textarea>
-    </section>
-
-    <!-- Issues / Comments -->
-    <div id="issues-comments-label" class="top-level-label-toggle">
-        <h1 class="top-level-label"> Issues / Comments
-            <i class="fa fa-arrow-circle-down"></i>
-        </h1>
-    </div>
-
-    <section id="issues-comments-block">
-        <textarea rows="4" cols="40"></textarea>
-    </section>
 
 <script src="../lib/jquery.js"></script>
 <script src="../lib/jquery-ui.js"></script>

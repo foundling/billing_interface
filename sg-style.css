@@ -11,7 +11,8 @@ body * { box-sizing: border-box;}
 html,
 body,
 p,
-input,
+form,
+textarea,
 h1,
 h2,
 h3,
@@ -22,7 +23,11 @@ h5
     padding: 0;
 }
 
-
+input[type="submit"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
 
 /* Style Guide Styles */
 *[class*="sg-"] 
@@ -359,6 +364,20 @@ i.fa-plus
 {
     color: lightcoral;
 }
+
+
+/* SUBMIT */
+input[type="submit"]
+{
+    display: block;
+    margin: 40px;
+    padding: 30px 40px 40px 40px;
+    background: lightgreen;
+    border: 1px solid black;
+    border-radius: 5px;
+    font-family: Helvetica;
+}
+
 /* Media Queries */
 @media (max-width: 600px) {
 
@@ -377,6 +396,12 @@ i.fa-plus
 
     /* Input Validation */
     h4.validation-status, h4.validation-msg { display: block; margin-left: 0px; margin-top: 5px;}
+    textarea
+    {
+        width: 100%;
+    }
+
+
 }
 
 
