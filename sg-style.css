@@ -251,6 +251,19 @@ label
 
 /* LABEL-INPUT */
 
+.label-input-v
+{
+    font-weight: 200;
+    display: block;
+}
+
+.label-input-v > input,
+.label-input-v  > h3
+{
+    margin: 20px 0px 20px 0px;
+    display: block;
+}
+
 .label-input
 {
     font-weight: 200;
