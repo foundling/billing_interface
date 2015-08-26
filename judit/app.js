@@ -1,5 +1,0 @@
-var form = (function() {
-
-	
-
-}());

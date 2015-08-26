@@ -4,12 +4,32 @@ var Base_Details = function() {
     var $project_code_input = $('#project-code'); 
     var $project_type = $('input[name="project-type"]');
     var $project_code_msg = $('#project-code-validation-msg');
+    var $project_type_buttons = $(':radio');
     var code_table = {
         'EXISTS' : 'The project exists and is valid',
         'NOEXIST' : 'There is no project code by that name',
         'CLOSED' : 'This project is closed',
     };
     var validation_url = '../scripts/validateProjectCode.php'; 
+
+    function uncheck(e) {
+        var $self = $(this);
+        if( $self.is(':checked') ){
+            var uncheck = function(){
+              setTimeout(function(){$self.removeAttr('checked');},0);
+            };
+            var unbind = function(){
+              $self.unbind('mouseup',up);
+            };
+            var up = function(){
+              uncheck();
+              unbind();
+            };
+
+            $self.bind('mouseup',up);
+            $self.one('mouseout', unbind);
+        }
+    }
 
     // PROJECT CODE VALIDATION
     function validateProjectCode() {
