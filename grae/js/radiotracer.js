@@ -4,10 +4,14 @@ var Radiotracer =  function() {
     // cache the DOM elements
     var $section_label = $('#radiotracer-label');
     var $section_block = $('#radiotracer-block');
+    var $validation_required = $section_block.find('.validation-required'); 
 
     // bind events
     $section_label.on('click',toggleBlock);
     $section_block.on('click',enableInputOnCheck);
+    $validation_required.each( function(index,value) {
+            $(value).on('keyup', validateOnTheFly);
+    });
 
     function toggleBlock() {
         $section_block.toggleClass('hidden');
@@ -28,6 +32,37 @@ var Radiotracer =  function() {
 
     }
 
+    function validate() {
+        validateTimeInputs();
+    }
+
+    function validateOnTheFly() {
+        var re = /^[0-2][0-3]:[0-5][0-9]:[0-5][0-9]$/; 
+        var timeval = $(this).val();
+        re.test(timeval) ? markValid($(this)) : markInvalid ($(this));
+        /*
+        if (re.test(timeval)) {
+            markValid( $(this) );
+        }
+        else {
+            markInvalid( $(this) );
+        }
+        */
+    }
+
+    function markValid($element) {
+        $element.addClass('valid-input');
+        $element.removeClass('invalid-input');
+    }
+
+    function markInvalid($element) {
+        $element.addClass('invalid-input');
+        $element.removeClass('valid-input');
+    }
+    
+    return {
+        validate: validate
+    }
 };
 
 var radiotracer = new Radiotracer();
