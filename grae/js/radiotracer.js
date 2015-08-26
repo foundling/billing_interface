@@ -33,21 +33,14 @@ var Radiotracer =  function() {
     }
 
     function validate() {
-        validateTimeInputs();
+        // this func will be called by the form on submissin
+        // it should return false if any elements have an invalid class
     }
 
     function validateOnTheFly() {
         var re = /^[0-2][0-3]:[0-5][0-9]:[0-5][0-9]$/; 
         var timeval = $(this).val();
         re.test(timeval) ? markValid($(this)) : markInvalid ($(this));
-        /*
-        if (re.test(timeval)) {
-            markValid( $(this) );
-        }
-        else {
-            markInvalid( $(this) );
-        }
-        */
     }
 
     function markValid($element) {
@@ -61,7 +54,7 @@ var Radiotracer =  function() {
     }
     
     return {
-        validate: validate
+        validate: validate // the form submission process will call this and fail if this fails
     }
 };
 
