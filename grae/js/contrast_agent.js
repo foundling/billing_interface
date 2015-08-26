@@ -30,8 +30,14 @@ var ContrastAgent =  function() {
     }
 
     function cloneInput($el) {
-            // note, here i'm removing the 'original' id, so that these can be deleted.
-            $el.after( $el.clone().removeAttr('id')); 
+            // note: .after returns $el.
+            $el.after( 
+                        $el.clone().
+                        removeAttr('id')
+                     ).
+                     next().
+                     find('input').
+                     val(''); 
     }
 
     function deleteClone($el) {
