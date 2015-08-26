@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="initial-scale=1; user-scalable=no">
+  <meta name="viewport" content="initial-scale=1">
   <title>MGH Martinos Center - PET Billing</title>
   <link rel="stylesheet" href="../sg-style.css">
   <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
@@ -21,22 +21,20 @@
             <div class="label-input-validated">
                 <label>Project Code</label>
                 <input id="project-code" class="invalid-input" maxlength="3" size="3">
-                <h4 class="validation-status invalid-msg">
-                    This project does not exist. 
-                </h4>
+                <h4 id="project-code-validation-msg" class="validation-status"></h4>
             </div>
             <label class="label-solo-bold">OR</label>
             <div class="label-radiox-single">
-                <label class="label-solo">Conditioning</label>
-                <input name="conditioning" type="radio">
-            </div>
-            <div class="label-radiox-single">
                 <label class="label-solo">Maintenance</label>
-                <input name="maintenance" type="radio">
+                <input name="project-type" type="radio">
             </div>
             <div class="label-radiox-single">
                 <label class="label-solo">Validation</label>
-                <input name="validation" type="radio">
+                <input name="project-type" type="radio">
+            </div>
+            <div class="label-radiox-single">
+                <label class="label-solo">Raw Isotope Run</label>
+                <input name="project-type" type="radio">
             </div>
             <div class="label-input">
                 <label>Production Date</label>
@@ -44,8 +42,8 @@
             </div>
         </section>
 
-
          <!-- ISOTOPE-ONLY -->
+
         <div id="isotope-only-label" class="top-level-label-toggle">
             <h1 class="top-level-label">Isotope Only
                 <i class="fa fa-arrow-circle-down"></i>
@@ -187,7 +185,7 @@
 
             <div class="label-input-v">
                 <label>Specific Activity at estimated TOI (mCi/nmol)</label>
-                <input name="specific-activity-at-estimated-toi" placeholder="00:00:00">
+                <input name="specific-activity-at-estimated-toi" placeholder="00:00:00" class="validation-required">
             </div>
             <div class="label-input-v">
                 <label>Batch released for Estimated TOI</label>
@@ -201,7 +199,7 @@
                 <i class="fa fa-arrow-circle-down"></i>
             </h1>
         </div>
-        <section id="other-block">
+        <section id="other-block" class="hidden">
             <label class="label-solo-bold">New Radiotracer</label>
             <div class="label-select">
                 <label>Type</label>
@@ -237,8 +235,10 @@
 <script src="../lib/jquery.js"></script>
 <script src="../lib/jquery-ui.js"></script>
 <script src="../lib/date.js"></script>
+<script src="js/base_details.js"></script>
 <script src="js/isotope_only.js"></script>
 <script src="js/radiotracer.js"></script>
+<script src="js/other.js"></script>
 <script src="hide.js"></script>
 </body>
 </html>
