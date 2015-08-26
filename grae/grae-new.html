@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="initial-scale=1; user-scalable=no">
+  <meta name="viewport" content="initial-scale=1">
   <title>MGH Martinos Center - PET Billing</title>
   <link rel="stylesheet" href="../sg-style.css">
   <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
@@ -20,22 +20,20 @@
             <div class="label-input-validated">
                 <label>Project Code</label>
                 <input id="project-code" class="invalid-input" maxlength="3" size="3">
-                <h4 class="validation-status invalid-msg">
-                    This project does not exist. 
-                </h4>
+                <h4 id="project-code-validation-msg" class="validation-status"></h4>
             </div>
             <label class="label-solo-bold">OR</label>
             <div class="label-radiox-single">
                 <label class="label-solo">Maintenance</label>
-                <input name="maintenance" type="radio">
+                <input name="project-type" type="radio">
             </div>
             <div class="label-radiox-single">
                 <label class="label-solo">Validation</label>
-                <input name="validation" type="radio">
+                <input name="project-type" type="radio">
             </div>
             <div class="label-radiox-single">
                 <label class="label-solo">Raw Isotope Run</label>
-                <input name="raw-isotope-run" type="radio">
+                <input name="project-type" type="radio">
             </div>
             <div class="label-input">
                 <label>Production Date</label>
@@ -51,13 +49,13 @@
             </h1>
         </div>
 
-        <section id="subject-information-block">
+        <section id="subject-information-block" class="hidden">
 
             <div class="select-content-toggle">
 
                 <h1 class="inner-header">Subject Type</h1>
                 <div class="label-select">
-                    <select name="select">
+                    <select name="subject-type">
                         <option value="n/a">n/a</option>
                         <option value="human">human</option>
                         <option value="animal">animal</option>
@@ -66,10 +64,8 @@
                 </div>
 
                 <!-- 4 options: n/a, human subjects, animal subjects, phantom -->
-                <div id="subject-information-na" class="logical-wrapper">
-                </div>
 
-                <div id="subject-information-human" class="logical-wrapper">
+                <div id="subject-information-human" class="logical-wrapper hidden">  
                     <label class="label-solo-bold">Human Subject Details</label>
                     <div class="label-input">
                         <label>Subject ID</label>
@@ -105,7 +101,7 @@
                     </div>
                 </div>
 
-                <div id="subject-information-animal" class="logical-wrapper">
+                <div id="subject-information-animal" class="logical-wrapper hidden">
                     <label class="label-solo-bold">Animal Subject Details</label>
                     <div class="label-input">
                         <label>Subject ID</label>
@@ -129,7 +125,7 @@
                     </div>
                 </div>
 
-                <div id="subject-information-phantom" class="logical-wrapper">
+                <div id="subject-information-phantom" class="logical-wrapper hidden">
                     <label class="label-solo-bold">Phantom Subject</label>
                     <div class="label-input">
                         <label>Phantom Subject Details</label>
@@ -145,7 +141,7 @@
             </h1>
         </div>
 
-        <section id="injected-compound-block">
+        <section id="injected-compound-block" class="hidden">
             <div class="label-input">
                 <label>Injected Compound</label>
                 <input name="injected-compound">
@@ -159,16 +155,16 @@
             </h1>
         </div>
 
-        <section id="radiotracer-block">
+        <section id="radiotracer-block" class="hidden">
             <div class="checkbox-label-input">
                 <input name="f18-5fu" type="checkbox">
                 <label>F18-5FU</label>
                 <input name="f18-5fu-lot-number" placeholder="Lot Number" disabled>
             </div>
             <div class="checkbox-label-input">
-                <input name="f18-5fu-lot" type="checkbox">
+                <input name="Ga68-Dota-toc" type="checkbox">
                 <label>Ga68-Dota-toc</label>
-                <input name="f18-5fu-lot-number" placeholder="Lot Number" disabled>
+                <input name="Ga68-Dota-toc-lot-number" placeholder="Lot Number" disabled>
             </div>
             <div class="checkbox-label-input">
                 <input name="cU64-fbp8" type="checkbox">
@@ -228,13 +224,13 @@
             <div class="checkbox-label-input">
                 <input name="f18-fdg" type="checkbox">
                 <label>F18-FDG</label>
-                <input name="cf18-fdg-lot-number" placeholder="Lot Number" disabled>
+                <input name="f18-fdg-lot-number" placeholder="Lot Number" disabled>
             </div>
             <div class="checkbox-label-double-input">
-                <input type="checkbox">
-                <label>Subject Type</label>
-                <input placeholder="Lot Number" disabled>
-                <input placeholder="Radiotracer Name" disabled>
+                <input name="other" type="checkbox">
+                <label>Other</label>
+                <input name="other-lot-number" placeholder="Lot Number" disabled>
+                <input name="other-rt-name" placeholder="Radiotracer Name" disabled>
             </div>
             <h1 class="second-level-label">Bolus</h1>
             <div class="label-input">
@@ -243,34 +239,34 @@
             </div>
             <div class="label-input">
                 <label>Time</label>
-                <input name="bolus-time" placeholder="00:00:00">
+                <input name="bolus-initial-activity-time" placeholder="00:00:00">
             </div>
             <div class="label-input">
                 <label>Time of Injection</label>
-                <input name="bolus-toi">
+                <input name="bolus-initial-activity-toi">
             </div>
             <div class="label-input">
                 <label>Residual Activity</label>
                 <input name="bolus-residual-activity">
             </div>
             <div class="label-input">
-                <label>Time (00:00:00)</label>
-                <input name="bolus-time-long">
+                <label>Time</label>
+                <input name="bolus-residual-activity-time" placeholder="00:00:00" name="bolus-time-long">
             </div>
             <div class="label-input">
                 <label>Total Dose Administered (Auto)</label>
                 <input name="bolus-total-dose-administered">
             </div>
 
-            <h1 class="inner-header">Infusion</h1>
+            <h1 class="second-level-label">Infusion</h1>
 
             <div class="label-input">
                 <label>Initial Activity</label>
                 <input name="infusion-initial-activity">
             </div>
             <div class="label-input">
-                <label>Time (00:00:00)</label>
-                <input name="infusion-initial-activity-time-long">
+                <label>Time</label>
+                <input name="infusion-initial-activity-time-long" placeholder="00:00:00">
             </div>
             <div class="label-input">
                 <label>Volume</label>
@@ -293,8 +289,8 @@
                 <input name="infusion-residual-activity">
             </div>
             <div class="label-input">
-                <label>Time (00:00:00)</label>
-                <input name="infusion-residual-activity-time-long">
+                <label>Time</label>
+                <input name="infusion-residual-activity-time-long" placeholder="00:00:00">
             </div>
        </section>
 
@@ -306,7 +302,7 @@
             </h1>
         </div>
 
-        <section id="contrast-agent-block">
+        <section id="contrast-agent-block" class="hidden">
             <div class="label-input">
                 <label>Name</label>
                 <input name="contrast-agent-name">
@@ -348,7 +344,7 @@
             </h1>
         </div>
 
-        <section id="blood-analysis-block">
+        <section id="blood-analysis-block" class="hidden">
             <div class="label-select">
                 <label>Type</label>
                 <select name="type">
@@ -383,7 +379,7 @@
             </h1>
         </div>
 
-        <section id="data-processing-block">
+        <section id="data-processing-block" class="hidden">
             <textarea name="data-processing" rows="4" cols="40"></textarea>
         </section>
 
@@ -394,7 +390,7 @@
             </h1>
         </div>
 
-        <section id="issues-comments-block">
+        <section id="issues-comments-block" class="hidden">
             <textarea name="issues-comments" rows="4" cols="40"></textarea>
         </section>
 
@@ -404,12 +400,10 @@
 
 <script src="../lib/jquery.js"></script>
 <script src="../lib/jquery-ui.js"></script>
-<script src="../lib/project_code_validation.js"></script>
-<script src="../lib/validate_form.js"></script>
-<script src="../lib/disabled.js"></script>
 <script src="../lib/date.js"></script>
-<script src="../lib/uncheck.js"></script>
-<script src="hide.js"></script>
-<script src="add.js"></script>
+<script src="js/base_details.js"></script>
+<script src="js/subject_information.js"></script>
+<script src="js/injected_compound.js"></script>
+<script src="js/radiotracer.js"></script>
 </body>
 </html>
