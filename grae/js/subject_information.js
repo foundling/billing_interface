@@ -13,7 +13,7 @@ var SubjectInformation = function() {
     $subject_type_select.on('change',showOnlySelected);
 
     function toggleBlock() {
-//        $section_block.toggleClass('hidden');
+        $section_block.toggleClass('hidden');
     }
 
     function showOnlySelected() {
