@@ -32,34 +32,24 @@ var Radiotracer =  function() {
 
     }
 
-    function validate() {
-        validateTimeInputs();
+    // validate time inputs on the fly, just a ui indication though 
+    // validation is still done for these on submision
+    function validateOnTheFly(event) { 
+        var re = /^[0-2][0-3]:[0-5][0-9]:[0-5][0-9]$/; 
+        var timeval = $(this).val(); 
+        re.test(timeval) ? markTimeValid($(this)) : markTimeInvalid ($(this)); 
     }
 
-    function validateOnTheFly() {
-        var re = /^[0-2][0-3]:[0-5][0-9]:[0-5][0-9]$/; 
-        var timeval = $(this).val();
-        re.test(timeval) ? markValid($(this)) : markInvalid ($(this));
-        /*
-        if (re.test(timeval)) {
-            markValid( $(this) );
+    function validate() {
+        var invalid = $section_block.find('.invalid-input');
+        if (invalid.length === 0) {
+            return true;
         }
         else {
-            markInvalid( $(this) );
+            return false;
         }
-        */
     }
 
-    function markValid($element) {
-        $element.addClass('valid-input');
-        $element.removeClass('invalid-input');
-    }
-
-    function markInvalid($element) {
-        $element.addClass('invalid-input');
-        $element.removeClass('valid-input');
-    }
-    
     return {
         validate: validate
     }

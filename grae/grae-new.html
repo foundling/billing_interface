@@ -326,7 +326,7 @@
             </div>
             <div class="label-input">
                 <label>Time of Injection</label>
-                <input name="contrast-agent-toi">
+                <input name="contrast-agent-toi" class="requires-validation">
             </div>
             <div class="label-input">
                 <label>Rate (ml/s)</label>
@@ -400,6 +400,8 @@
     </form>
 
 
+<!-- Unfortunately, order here matters, so see README.txt before modifying -->
+
 <script src="../common/js/lib/jquery.js"></script>
 <script src="../common/js/lib/jquery-ui.js"></script>
 <script src="../common/js/modules/date.js"></script>
@@ -413,5 +415,6 @@
 <script src="js/data_processing.js"></script>
 <script src="js/issues_comments.js"></script>
 <script src="../common/js/modules/form.js"></script>
+<script src="js/app.js"></script>
 </body>
 </html>

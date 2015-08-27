@@ -4,11 +4,14 @@ var ContrastAgent =  function() {
     // cache the DOM elements
     var $section_label = $('#contrast-agent-label');
     var $section_block = $('#contrast-agent-block');
+    var $validation_required = $section_block.find('.validation-required');
 
     // bind events
     $section_label.on('click',toggleBlock);
     $section_block.on('click',delegateAction);
-
+    $validation_required.each( function(index,value) {
+            $(value).on('keyup', validateProjectCode.validateOnTheFly);
+    });
 
     function toggleBlock() {
         $section_block.toggleClass('hidden');
@@ -42,6 +45,20 @@ var ContrastAgent =  function() {
 
     function deleteClone($el) {
         $el.remove();
+    }
+
+    function validate() {
+        var invalid = $section_block.find('.invalid-input');
+        if (invalid.length === 0) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+
+    return {
+        validate: validate,
     }
 
 };

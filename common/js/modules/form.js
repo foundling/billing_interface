@@ -1,14 +1,33 @@
-var Form = function() {
+var Form = function(form_modules) {
     
-    // cache dom
-    var $submit_btn = $('input[type="submit"]');
+    var module,
+        irv, // intermediate return value, for clarity
+        rv = true,
+        // cache dom
+        $submit_btn = $('input[type="submit"]');
 
     // bind events
     $submit_btn.on('click', validate);
 
     function validate(e) {
-        e.preventDefault();
-    }
-}
+        
+        // IF RV is TRUE: FORM IS VALID
+        
+        for (module in form_modules) {
+            if (form_modules[module].validate) {
+                console.log('validating ' + module + '!');
+                irv = form_modules[module].validate();
+                console.log('status for ' + module + ': ' + irv);
+                rv = rv && irv; 
+            }
+        }
+        console.log('validation result: ' + rv);
 
-var form = new Form();
+        if (!rv) {
+            e.preventDefault();
+        } 
+
+       
+    }
+
+}
