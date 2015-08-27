@@ -21,9 +21,10 @@ var Form = function(form_modules) {
                 rv = rv && irv; 
             }
         }
-        console.log('validation result: ' + rv);
+        console.log('validation result: ' + rv + "\n" + "\n");
 
         if (!rv) {
+            rv = true;
             e.preventDefault();
         } 
 

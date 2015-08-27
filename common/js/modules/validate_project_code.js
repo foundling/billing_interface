@@ -20,8 +20,8 @@ function validateProjectCode($input_el, $msg_el, code_table) {
             });
         */
         var data = 'CLOSED';
-        var data = 'EXISTS';
         var data = 'NOEXIST';
+        var data = 'EXISTS';
 
         if (data === 'EXISTS') {
             markValid($input_el, $msg_el);

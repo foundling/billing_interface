@@ -33,6 +33,31 @@ var Base_Details = function() {
         }
     }
 
+    function validate() {
+        var rv = false, 
+            $checked = $project_type.filter( function(index, item) {
+                return $(item).is(':checked');
+           })
+
+           if ( ($project_code_input.attr('class') === 'valid-input') && ($checked.length > 0) ) {
+               // cant be both proj and checked radio
+                rv = false;
+           }
+           else if ( ($project_code_input.attr('class') === 'valid-input') || ($checked.length > 0) ) {
+               // if one is true
+                rv = true;
+           }
+
+           else {
+               rv = false;
+           }
+        
+           return rv;
+    }
+    
+    return {
+        validate: validate,
+    }
 }
 
 var base_details = new Base_Details();

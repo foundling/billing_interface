@@ -1,6 +1,7 @@
 var app = app || {};
 
 app.modules = {
+    base_details : base_details,
     subject_information : subject_information, 
     injected_compound : injected_compound,
     radiotracer : radiotracer,

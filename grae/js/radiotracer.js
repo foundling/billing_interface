@@ -32,9 +32,9 @@ var Radiotracer =  function() {
 
     }
 
-    // validate time inputs on the fly, just a ui indication though 
-    // validation is still done for these on submision
     function validateOnTheFly(event) { 
+        // validate time inputs on the fly, just a ui indication though 
+        // validation is still done for these on submision
         var re = /^[0-2][0-3]:[0-5][0-9]:[0-5][0-9]$/; 
         var timeval = $(this).val(); 
         re.test(timeval) ? markTimeValid($(this)) : markTimeInvalid ($(this)); 
