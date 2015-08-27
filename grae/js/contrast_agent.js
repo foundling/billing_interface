@@ -10,7 +10,7 @@ var ContrastAgent =  function() {
     $section_label.on('click',toggleBlock);
     $section_block.on('click',delegateAction);
     $validation_required.each( function(index,value) {
-            $(value).on('keyup', validateProjectCode.validateOnTheFly);
+            $(value).on('keyup', validateOnTheFly);
     });
 
     function toggleBlock() {
