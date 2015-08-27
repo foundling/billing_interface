@@ -5,16 +5,14 @@ var Base_Details = function() {
     var $project_type = $('input[name="project-type"]');
     var $project_code_msg = $('#project-code-validation-msg');
     var $project_type_buttons = $(':radio');
-    var code_table = {
-        'EXISTS' : 'The project exists and is valid',
-        'NOEXIST' : 'There is no project code by that name',
-        'CLOSED' : 'This project is closed',
-    };
     var validation_url = '../scripts/validateProjectCode.php'; 
 
 
     // bind events
     $project_type_buttons.on('mousedown', uncheck);
+    $project_code_input.on('keyup', function() {
+        validateProjectCode($project_code_input,$project_code_msg, code_table);
+    });
 
     function uncheck(e) {
         var $self = $(this);
@@ -35,36 +33,6 @@ var Base_Details = function() {
         }
     }
 
-    // PROJECT CODE VALIDATION
-    function markAsValid() {
-        $project_code_input.addClass('valid-input');
-        $project_code_input.removeClass('invalid-input');
-
-        $project_code_msg.addClass('valid-msg');
-        $project_code_msg.removeClass('invalid-msg');
-
-    }
-
-    function markAsInvalid() {
-        $project_code_input.addClass('invalid-input');
-        $project_code_input.removeClass('valid-input');
-
-        $project_code_msg.addClass('invalid-msg');
-        $project_code_msg.removeClass('valid-msg');
-    }
-
-    function updateMsg(data)
-    {
-        $project_code_msg.text(code_table[data]);
-    }
-
-    function clearValidationMsg() {
-        $project_code_msg.text('');
-    }
-
-    function removeValidationMsgStyle() {
-        $project_code_msg.attr('class','');
-    }
-
-
 };
+
+var base_details = new Base_Details();

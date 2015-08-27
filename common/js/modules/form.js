@@ -4,10 +4,10 @@ var Form = function() {
     var $submit_btn = $('input[type="submit"]');
 
     // bind events
-    $submit_btn.on('submit', validate);
+    $submit_btn.on('click', validate);
 
-    function validate() {
-        console.log('hi');
+    function validate(e) {
+        e.preventDefault();
     }
 }
 
