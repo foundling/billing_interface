@@ -12,6 +12,10 @@ var Base_Details = function() {
     };
     var validation_url = '../scripts/validateProjectCode.php'; 
 
+
+    // bind events
+    $project_type_buttons.on('mousedown', uncheck);
+
     function uncheck(e) {
         var $self = $(this);
         if( $self.is(':checked') ){
