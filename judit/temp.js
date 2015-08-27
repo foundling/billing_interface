@@ -4,7 +4,9 @@ var Base_Details = function() {
     var $project_code_input = $('#project-code'); 
     var $project_type = $('input[name="project-type"]');
     var $project_code_msg = $('#project-code-validation-msg');
-    var $project_type_buttons = $(':radio');
+    var $project_type_buttons = $(':radio'); 
+
+
     var code_table = {
         'EXISTS' : 'The project exists and is valid',
         'NOEXIST' : 'There is no project code by that name',
@@ -13,9 +15,12 @@ var Base_Details = function() {
     var validation_url = '../scripts/validateProjectCode.php'; 
 
 
-    // bind events
+    // events
     $project_type_buttons.on('mousedown', uncheck);
 
+    // a function I jacked from HexInteractive's solution on SO: 
+    // http://stackoverflow.com/questions/4957207/how-to-check-uncheck-radio-button-on-click
+    // lets you uncheck radiobuttons
     function uncheck(e) {
         var $self = $(this);
         if( $self.is(':checked') ){
@@ -35,7 +40,44 @@ var Base_Details = function() {
         }
     }
 
+
     // PROJECT CODE VALIDATION
+    function validateProjectCode() {
+        var val = $project_code_input.val();
+        if (val.length === 3) { 
+
+            /*
+            $.get(validation_url ,{'code' : project_code }).
+                done( function(data) {
+                    if (data === 'EXISTS') {
+                        markAsValid();
+                    }
+                    updateMsg(data);
+                });
+            */
+            data = 'CLOSED';
+            data = 'NOEXIST';
+            data = 'EXISTS';
+
+            if (data === 'EXISTS') {
+                markAsValid();
+            }
+            if (data === 'NOEXIST') {
+                markAsInvalid();
+            }
+            if (data === 'CLOSED') {
+                markAsInvalid();
+            }
+
+            updateMsg(data);
+        }
+        else {
+            markAsInvalid();
+            clearValidationMsg();
+            removeValidationMsgStyle();
+        }
+    }
+
     function markAsValid() {
         $project_code_input.addClass('valid-input');
         $project_code_input.removeClass('invalid-input');
@@ -67,4 +109,8 @@ var Base_Details = function() {
     }
 
 
+    // bind events
+    $project_code_input.on('keyup',validateProjectCode);
 };
+
+var base_details = new Base_Details();
