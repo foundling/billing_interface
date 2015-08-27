@@ -52,6 +52,13 @@ var Radiotracer =  function() {
     }
 
     function validate() {
+        var invalid = $section_block.find('.invalid-input');
+        if (invalid.length === 0) {
+            return true;
+        }
+        else {
+            return false;
+        }
     }
 
     return {
